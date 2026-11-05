@@ -1,4 +1,4 @@
-DEBUG:KiBot 1.9.2 verbose level: 0 started on 2026-11-05 21:21:50.799562 (kibot - __main__.py:856)
+DEBUG:KiBot 1.9.2 verbose level: 0 started on 2026-11-05 22:16:30.298345 (kibot - __main__.py:856)
 DEBUG:Filtering warnings we always get on CI/CD (kibot - __main__.py:759)
 DEBUG:Command line options: {'--banner': None,
  '--board-file': None,
@@ -3265,7 +3265,7 @@ DEBUG:- PCB Material/s: FR4_7628 / FR4 (kibot.globals - globals.py:604)
 DEBUG:- Copper thickness: 35 (kibot.globals - globals.py:606)
 DEBUG:Configuring from default: aliases_for_3d_models -> [] (kibot - optionable.py:380)
 DEBUG:Configuring from default: extra_os -> [] (kibot - optionable.py:380)
-DEBUG:Configuring from default: environment -> <kibot.globals.Environment object at 0x7ff1cf370ec0> (kibot - optionable.py:380)
+DEBUG:Configuring from default: environment -> <kibot.globals.Environment object at 0x7fcccfb60ec0> (kibot - optionable.py:380)
 DEBUG:Configuring from default: field_tolerance -> ['tolerance', 'tol'] (kibot - optionable.py:616)
 DEBUG:Configuring from default: field_voltage -> ['voltage', 'v'] (kibot - optionable.py:616)
 DEBUG:Configuring from default: field_package -> ['package', 'pkg'] (kibot - optionable.py:616)
@@ -3319,8 +3319,8 @@ DEBUG:Adding groups: {'all_group': ['netlist', 'bom', '3d', 'fab', 'assembly', '
 DEBUG:Importing variants from the schematic (kibot - var_kicad.py:74)
 DEBUG:Mapping schematic `jones_mixer.kicad_sch` to UUID `f9e05184-c88b-4a88-ae9c-ab2bdb32be7c` found in `/github/workspace/jones_mixer.kicad_pro` (kibot - kiplot.py:367)
 DEBUG:Loading sheet from /github/workspace/jones_mixer.kicad_sch (kibot - v6_sch.py:2976)
-DEBUG:Current text variables: {'ASSEMBLY_NOTES': '', 'BOARD_NAME': 'BOARD_NAME', 'BUILD_VARIANT': 'DRAFT', 'COMPANY': 'LTU', 'DESCRIPTION': 'One-line description of what this board does.', 'DESIGNER': 'Author', 'FABRICATION_NOTES': '', 'GIT_HASH_PCB': '18b8740', 'GIT_HASH_SCH': '18b8740', 'GIT_URL': 'https://github.com/BDMPowertrain/PLACEHOLDER', 'PROJECT_NAME': 'Board Name', 'RELEASE_BODY_1.0.0': '', 'RELEASE_BODY_1.0.1': '', 'RELEASE_BODY_1.0.2': '', 'RELEASE_BODY_1.1.0': '', 'RELEASE_BODY_UNRELEASED': 'Version Unreleased not found.', 'RELEASE_DATE': '09-Sep-2026', 'RELEASE_DATE_NUM': '2026-09-09', 'RELEASE_TITLE_1.0.0': '', 'RELEASE_TITLE_1.0.1': '', 'RELEASE_TITLE_1.0.2': '', 'RELEASE_TITLE_1.1.0': '', 'RELEASE_TITLE_UNRELEASED': 'Version Unreleased not found.', 'REVISION': '0.1.0', 'SHEET_NAME_1': 'Cover Page', 'SHEET_NAME_10': '......................................', 'SHEET_NAME_11': '......................................', 'SHEET_NAME_12': '......................................', 'SHEET_NAME_13': '......................................', 'SHEET_NAME_14': '......................................', 'SHEET_NAME_15': '......................................', 'SHEET_NAME_16': '......................................', 'SHEET_NAME_17': '......................................', 'SHEET_NAME_18': '......................................', 'SHEET_NAME_19': '......................................', 'SHEET_NAME_2': 'Block Diagram', 'SHEET_NAME_20': '......................................', 'SHEET_NAME_21': '......................................', 'SHEET_NAME_22': '......................................', 'SHEET_NAME_23': '......................................', 'SHEET_NAME_24': '......................................', 'SHEET_NAME_25': '......................................', 'SHEET_NAME_26': '......................................', 'SHEET_NAME_27': '......................................', 'SHEET_NAME_28': '......................................', 'SHEET_NAME_29': '......................................', 'SHEET_NAME_3': 'Project Architecture', 'SHEET_NAME_30': '......................................', 'SHEET_NAME_31': '......................................', 'SHEET_NAME_32': '......................................', 'SHEET_NAME_33': '......................................', 'SHEET_NAME_34': '......................................', 'SHEET_NAME_35': '......................................', 'SHEET_NAME_36': '......................................', 'SHEET_NAME_37': '......................................', 'SHEET_NAME_38': '......................................', 'SHEET_NAME_39': '......................................', 'SHEET_NAME_4': 'Section A - Title A', 'SHEET_NAME_40': '......................................', 'SHEET_NAME_5': 'Section B - Title B', 'SHEET_NAME_6': 'Power - Sequencing', 'SHEET_NAME_7': 'Revision History', 'SHEET_NAME_8': '......................................', 'SHEET_NAME_9': '......................................'} (kibot.gs - gs.py:373)
-DEBUG:Replacing KiCad text variables: ${REVISION} -> 0.1.0 (kibot.gs - gs.py:641)
+DEBUG:Current text variables: {'ASSEMBLY_NOTES': '', 'BOARD_NAME': 'JONES_MIXER', 'BRANCH': 'dev', 'BUILD_VARIANT': 'DRAFT', 'COMPANY': 'LTU', 'DESCRIPTION': 'Simple Jones Mixer.', 'DESIGNER': 'Aidan Brzezinski, Chloe LaBell, Andres Vega', 'FABRICATION_NOTES': '', 'GIT_HASH_PCB': 'b9dc517', 'GIT_HASH_SCH': 'b9dc517', 'GIT_URL': 'https://github.com/aidanbrzezinski/jones_mixer', 'PROJECT_NAME': 'Jones Mixer', 'RELEASE_BODY_1.0.0': '', 'RELEASE_BODY_1.0.1': '', 'RELEASE_BODY_1.0.2': '', 'RELEASE_BODY_1.1.0': '', 'RELEASE_BODY_UNRELEASED': 'Version Unreleased not found.', 'RELEASE_DATE': '05-Nov-2026', 'RELEASE_DATE_NUM': '2026-11-05', 'RELEASE_TITLE_1.0.0': '', 'RELEASE_TITLE_1.0.1': '', 'RELEASE_TITLE_1.0.2': '', 'RELEASE_TITLE_1.1.0': '', 'RELEASE_TITLE_UNRELEASED': 'Version Unreleased not found.', 'REVISION': '+ (Unreleased)', 'SHEET_NAME_1': 'Cover Page', 'SHEET_NAME_10': '......................................', 'SHEET_NAME_11': '......................................', 'SHEET_NAME_12': '......................................', 'SHEET_NAME_13': '......................................', 'SHEET_NAME_14': '......................................', 'SHEET_NAME_15': '......................................', 'SHEET_NAME_16': '......................................', 'SHEET_NAME_17': '......................................', 'SHEET_NAME_18': '......................................', 'SHEET_NAME_19': '......................................', 'SHEET_NAME_2': '......................................', 'SHEET_NAME_20': '......................................', 'SHEET_NAME_21': '......................................', 'SHEET_NAME_22': '......................................', 'SHEET_NAME_23': '......................................', 'SHEET_NAME_24': '......................................', 'SHEET_NAME_25': '......................................', 'SHEET_NAME_26': '......................................', 'SHEET_NAME_27': '......................................', 'SHEET_NAME_28': '......................................', 'SHEET_NAME_29': '......................................', 'SHEET_NAME_3': '......................................', 'SHEET_NAME_30': '......................................', 'SHEET_NAME_31': '......................................', 'SHEET_NAME_32': '......................................', 'SHEET_NAME_33': '......................................', 'SHEET_NAME_34': '......................................', 'SHEET_NAME_35': '......................................', 'SHEET_NAME_36': '......................................', 'SHEET_NAME_37': '......................................', 'SHEET_NAME_38': '......................................', 'SHEET_NAME_39': '......................................', 'SHEET_NAME_4': '......................................', 'SHEET_NAME_40': '......................................', 'SHEET_NAME_5': '......................................', 'SHEET_NAME_6': '......................................', 'SHEET_NAME_7': '......................................', 'SHEET_NAME_8': '......................................', 'SHEET_NAME_9': '......................................'} (kibot.gs - gs.py:373)
+DEBUG:Replacing KiCad text variables: ${REVISION} -> + (Unreleased) (kibot.gs - gs.py:641)
 DEBUG:Replacing KiCad text variables: ${COMPANY} -> LTU (kibot.gs - gs.py:641)
 DEBUG:SCH title: `None` (kibot - v6_sch.py:2531)
 DEBUG:SCH date: `2026-11-05` (kibot - v6_sch.py:2532)
@@ -3388,7 +3388,7 @@ DEBUG:Skipping `draw_fancy_stackup` (kibot - kiplot.py:695)
 DEBUG:Skipping `erc` (kibot - kiplot.py:695)
 DEBUG:Skipping `drc` (kibot - kiplot.py:695)
 DEBUG:Preflight apply set_text_variables (kibot.pre_base - pre_base.py:161)
-DEBUG:- Current variables: {'ASSEMBLY_NOTES': '', 'BOARD_NAME': 'BOARD_NAME', 'BUILD_VARIANT': 'DRAFT', 'COMPANY': 'LTU', 'DESCRIPTION': 'One-line description of what this board does.', 'DESIGNER': 'Author', 'FABRICATION_NOTES': '', 'GIT_HASH_PCB': '18b8740', 'GIT_HASH_SCH': '18b8740', 'GIT_URL': 'https://github.com/BDMPowertrain/PLACEHOLDER', 'PROJECT_NAME': 'Board Name', 'RELEASE_BODY_1.0.0': '', 'RELEASE_BODY_1.0.1': '', 'RELEASE_BODY_1.0.2': '', 'RELEASE_BODY_1.1.0': '', 'RELEASE_BODY_UNRELEASED': 'Version Unreleased not found.', 'RELEASE_DATE': '09-Sep-2026', 'RELEASE_DATE_NUM': '2026-09-09', 'RELEASE_TITLE_1.0.0': '', 'RELEASE_TITLE_1.0.1': '', 'RELEASE_TITLE_1.0.2': '', 'RELEASE_TITLE_1.1.0': '', 'RELEASE_TITLE_UNRELEASED': 'Version Unreleased not found.', 'REVISION': '0.1.0', 'SHEET_NAME_1': 'Cover Page', 'SHEET_NAME_10': '......................................', 'SHEET_NAME_11': '......................................', 'SHEET_NAME_12': '......................................', 'SHEET_NAME_13': '......................................', 'SHEET_NAME_14': '......................................', 'SHEET_NAME_15': '......................................', 'SHEET_NAME_16': '......................................', 'SHEET_NAME_17': '......................................', 'SHEET_NAME_18': '......................................', 'SHEET_NAME_19': '......................................', 'SHEET_NAME_2': 'Block Diagram', 'SHEET_NAME_20': '......................................', 'SHEET_NAME_21': '......................................', 'SHEET_NAME_22': '......................................', 'SHEET_NAME_23': '......................................', 'SHEET_NAME_24': '......................................', 'SHEET_NAME_25': '......................................', 'SHEET_NAME_26': '......................................', 'SHEET_NAME_27': '......................................', 'SHEET_NAME_28': '......................................', 'SHEET_NAME_29': '......................................', 'SHEET_NAME_3': 'Project Architecture', 'SHEET_NAME_30': '......................................', 'SHEET_NAME_31': '......................................', 'SHEET_NAME_32': '......................................', 'SHEET_NAME_33': '......................................', 'SHEET_NAME_34': '......................................', 'SHEET_NAME_35': '......................................', 'SHEET_NAME_36': '......................................', 'SHEET_NAME_37': '......................................', 'SHEET_NAME_38': '......................................', 'SHEET_NAME_39': '......................................', 'SHEET_NAME_4': 'Section A - Title A', 'SHEET_NAME_40': '......................................', 'SHEET_NAME_5': 'Section B - Title B', 'SHEET_NAME_6': 'Power - Sequencing', 'SHEET_NAME_7': 'Revision History', 'SHEET_NAME_8': '......................................', 'SHEET_NAME_9': '......................................'} (kibot - pre_set_text_variables.py:141)
+DEBUG:- Current variables: {'ASSEMBLY_NOTES': '', 'BOARD_NAME': 'JONES_MIXER', 'BRANCH': 'dev', 'BUILD_VARIANT': 'DRAFT', 'COMPANY': 'LTU', 'DESCRIPTION': 'Simple Jones Mixer.', 'DESIGNER': 'Aidan Brzezinski, Chloe LaBell, Andres Vega', 'FABRICATION_NOTES': '', 'GIT_HASH_PCB': 'b9dc517', 'GIT_HASH_SCH': 'b9dc517', 'GIT_URL': 'https://github.com/aidanbrzezinski/jones_mixer', 'PROJECT_NAME': 'Jones Mixer', 'RELEASE_BODY_1.0.0': '', 'RELEASE_BODY_1.0.1': '', 'RELEASE_BODY_1.0.2': '', 'RELEASE_BODY_1.1.0': '', 'RELEASE_BODY_UNRELEASED': 'Version Unreleased not found.', 'RELEASE_DATE': '05-Nov-2026', 'RELEASE_DATE_NUM': '2026-11-05', 'RELEASE_TITLE_1.0.0': '', 'RELEASE_TITLE_1.0.1': '', 'RELEASE_TITLE_1.0.2': '', 'RELEASE_TITLE_1.1.0': '', 'RELEASE_TITLE_UNRELEASED': 'Version Unreleased not found.', 'REVISION': '+ (Unreleased)', 'SHEET_NAME_1': 'Cover Page', 'SHEET_NAME_10': '......................................', 'SHEET_NAME_11': '......................................', 'SHEET_NAME_12': '......................................', 'SHEET_NAME_13': '......................................', 'SHEET_NAME_14': '......................................', 'SHEET_NAME_15': '......................................', 'SHEET_NAME_16': '......................................', 'SHEET_NAME_17': '......................................', 'SHEET_NAME_18': '......................................', 'SHEET_NAME_19': '......................................', 'SHEET_NAME_2': '......................................', 'SHEET_NAME_20': '......................................', 'SHEET_NAME_21': '......................................', 'SHEET_NAME_22': '......................................', 'SHEET_NAME_23': '......................................', 'SHEET_NAME_24': '......................................', 'SHEET_NAME_25': '......................................', 'SHEET_NAME_26': '......................................', 'SHEET_NAME_27': '......................................', 'SHEET_NAME_28': '......................................', 'SHEET_NAME_29': '......................................', 'SHEET_NAME_3': '......................................', 'SHEET_NAME_30': '......................................', 'SHEET_NAME_31': '......................................', 'SHEET_NAME_32': '......................................', 'SHEET_NAME_33': '......................................', 'SHEET_NAME_34': '......................................', 'SHEET_NAME_35': '......................................', 'SHEET_NAME_36': '......................................', 'SHEET_NAME_37': '......................................', 'SHEET_NAME_38': '......................................', 'SHEET_NAME_39': '......................................', 'SHEET_NAME_4': '......................................', 'SHEET_NAME_40': '......................................', 'SHEET_NAME_5': '......................................', 'SHEET_NAME_6': '......................................', 'SHEET_NAME_7': '......................................', 'SHEET_NAME_8': '......................................', 'SHEET_NAME_9': '......................................'} (kibot - pre_set_text_variables.py:141)
 DEBUG:  - REVISION -> + (Unreleased) (kibot - pre_set_text_variables.py:173)
 DEBUG:Starting tool check for Git (kibot - dep_downloader.py:866)
 DEBUG:- Checking binary tool Git (kibot - dep_downloader.py:772)
@@ -3441,7 +3441,7 @@ DEBUG:- No particular version needed (kibot - dep_downloader.py:681)
 DEBUG:- Cached version (2, 47, 3, 0) (kibot - dep_downloader.py:687)
 DEBUG:- Returning `/usr/bin/git` (kibot - dep_downloader.py:873)
 DEBUG:Executing: /usr/bin/bash -c '/usr/bin/git log -1 --format="%h" $KIBOT_PCB_NAME' (kibot - pre_set_text_variables.py:160)
-DEBUG:  - GIT_HASH_PCB -> b9dc517 (kibot - pre_set_text_variables.py:173)
+DEBUG:  - GIT_HASH_PCB -> c0df124 (kibot - pre_set_text_variables.py:173)
 DEBUG:  - GIT_URL -> https://github.com/aidanbrzezinski/jones_mixer (kibot - pre_set_text_variables.py:173)
 DEBUG:  - BRANCH -> dev (kibot - pre_set_text_variables.py:173)
 DEBUG:  - PROJECT_NAME -> Jones Mixer (kibot - pre_set_text_variables.py:173)
@@ -3550,8 +3550,8 @@ DEBUG:Expanding `2026-11-05` in SCH context for set_text_variables (REVISION, RE
 DEBUG:Expanded `2026-11-05` (kibot - optionable.py:557)
 DEBUG:Expanding `b9dc517` in SCH context for set_text_variables (REVISION, RELEASE_DATE, RELEASE_DATE_NUM, GIT_HASH_SCH, GIT_HASH_PCB, GIT_URL, BRANCH, PROJECT_NAME, BOARD_NAME, DESCRIPTION, COMPANY, DESIGNER, BUILD_VARIANT, RELEASE_TITLE_UNRELEASED, RELEASE_BODY_UNRELEASED, FABRICATION_NOTES, ASSEMBLY_NOTES, SHEET_NAME_1, SHEET_NAME_2, SHEET_NAME_3, SHEET_NAME_4, SHEET_NAME_5, SHEET_NAME_6, SHEET_NAME_7, SHEET_NAME_8, SHEET_NAME_9, SHEET_NAME_10, SHEET_NAME_11, SHEET_NAME_12, SHEET_NAME_13, SHEET_NAME_14, SHEET_NAME_15, SHEET_NAME_16, SHEET_NAME_17, SHEET_NAME_18, SHEET_NAME_19, SHEET_NAME_20, SHEET_NAME_21, SHEET_NAME_22, SHEET_NAME_23, SHEET_NAME_24, SHEET_NAME_25, SHEET_NAME_26, SHEET_NAME_27, SHEET_NAME_28, SHEET_NAME_29, SHEET_NAME_30, SHEET_NAME_31, SHEET_NAME_32, SHEET_NAME_33, SHEET_NAME_34, SHEET_NAME_35, SHEET_NAME_36, SHEET_NAME_37, SHEET_NAME_38, SHEET_NAME_39 and SHEET_NAME_40) parent: None (kibot - optionable.py:511)
 DEBUG:Expanded `b9dc517` (kibot - optionable.py:557)
-DEBUG:Expanding `b9dc517` in SCH context for set_text_variables (REVISION, RELEASE_DATE, RELEASE_DATE_NUM, GIT_HASH_SCH, GIT_HASH_PCB, GIT_URL, BRANCH, PROJECT_NAME, BOARD_NAME, DESCRIPTION, COMPANY, DESIGNER, BUILD_VARIANT, RELEASE_TITLE_UNRELEASED, RELEASE_BODY_UNRELEASED, FABRICATION_NOTES, ASSEMBLY_NOTES, SHEET_NAME_1, SHEET_NAME_2, SHEET_NAME_3, SHEET_NAME_4, SHEET_NAME_5, SHEET_NAME_6, SHEET_NAME_7, SHEET_NAME_8, SHEET_NAME_9, SHEET_NAME_10, SHEET_NAME_11, SHEET_NAME_12, SHEET_NAME_13, SHEET_NAME_14, SHEET_NAME_15, SHEET_NAME_16, SHEET_NAME_17, SHEET_NAME_18, SHEET_NAME_19, SHEET_NAME_20, SHEET_NAME_21, SHEET_NAME_22, SHEET_NAME_23, SHEET_NAME_24, SHEET_NAME_25, SHEET_NAME_26, SHEET_NAME_27, SHEET_NAME_28, SHEET_NAME_29, SHEET_NAME_30, SHEET_NAME_31, SHEET_NAME_32, SHEET_NAME_33, SHEET_NAME_34, SHEET_NAME_35, SHEET_NAME_36, SHEET_NAME_37, SHEET_NAME_38, SHEET_NAME_39 and SHEET_NAME_40) parent: None (kibot - optionable.py:511)
-DEBUG:Expanded `b9dc517` (kibot - optionable.py:557)
+DEBUG:Expanding `c0df124` in SCH context for set_text_variables (REVISION, RELEASE_DATE, RELEASE_DATE_NUM, GIT_HASH_SCH, GIT_HASH_PCB, GIT_URL, BRANCH, PROJECT_NAME, BOARD_NAME, DESCRIPTION, COMPANY, DESIGNER, BUILD_VARIANT, RELEASE_TITLE_UNRELEASED, RELEASE_BODY_UNRELEASED, FABRICATION_NOTES, ASSEMBLY_NOTES, SHEET_NAME_1, SHEET_NAME_2, SHEET_NAME_3, SHEET_NAME_4, SHEET_NAME_5, SHEET_NAME_6, SHEET_NAME_7, SHEET_NAME_8, SHEET_NAME_9, SHEET_NAME_10, SHEET_NAME_11, SHEET_NAME_12, SHEET_NAME_13, SHEET_NAME_14, SHEET_NAME_15, SHEET_NAME_16, SHEET_NAME_17, SHEET_NAME_18, SHEET_NAME_19, SHEET_NAME_20, SHEET_NAME_21, SHEET_NAME_22, SHEET_NAME_23, SHEET_NAME_24, SHEET_NAME_25, SHEET_NAME_26, SHEET_NAME_27, SHEET_NAME_28, SHEET_NAME_29, SHEET_NAME_30, SHEET_NAME_31, SHEET_NAME_32, SHEET_NAME_33, SHEET_NAME_34, SHEET_NAME_35, SHEET_NAME_36, SHEET_NAME_37, SHEET_NAME_38, SHEET_NAME_39 and SHEET_NAME_40) parent: None (kibot - optionable.py:511)
+DEBUG:Expanded `c0df124` (kibot - optionable.py:557)
 DEBUG:Expanding `https://github.com/aidanbrzezinski/jones_mixer` in SCH context for set_text_variables (REVISION, RELEASE_DATE, RELEASE_DATE_NUM, GIT_HASH_SCH, GIT_HASH_PCB, GIT_URL, BRANCH, PROJECT_NAME, BOARD_NAME, DESCRIPTION, COMPANY, DESIGNER, BUILD_VARIANT, RELEASE_TITLE_UNRELEASED, RELEASE_BODY_UNRELEASED, FABRICATION_NOTES, ASSEMBLY_NOTES, SHEET_NAME_1, SHEET_NAME_2, SHEET_NAME_3, SHEET_NAME_4, SHEET_NAME_5, SHEET_NAME_6, SHEET_NAME_7, SHEET_NAME_8, SHEET_NAME_9, SHEET_NAME_10, SHEET_NAME_11, SHEET_NAME_12, SHEET_NAME_13, SHEET_NAME_14, SHEET_NAME_15, SHEET_NAME_16, SHEET_NAME_17, SHEET_NAME_18, SHEET_NAME_19, SHEET_NAME_20, SHEET_NAME_21, SHEET_NAME_22, SHEET_NAME_23, SHEET_NAME_24, SHEET_NAME_25, SHEET_NAME_26, SHEET_NAME_27, SHEET_NAME_28, SHEET_NAME_29, SHEET_NAME_30, SHEET_NAME_31, SHEET_NAME_32, SHEET_NAME_33, SHEET_NAME_34, SHEET_NAME_35, SHEET_NAME_36, SHEET_NAME_37, SHEET_NAME_38, SHEET_NAME_39 and SHEET_NAME_40) parent: None (kibot - optionable.py:511)
 DEBUG:Expanded `https://github.com/aidanbrzezinski/jones_mixer` (kibot - optionable.py:557)
 DEBUG:Expanding `dev` in SCH context for set_text_variables (REVISION, RELEASE_DATE, RELEASE_DATE_NUM, GIT_HASH_SCH, GIT_HASH_PCB, GIT_URL, BRANCH, PROJECT_NAME, BOARD_NAME, DESCRIPTION, COMPANY, DESIGNER, BUILD_VARIANT, RELEASE_TITLE_UNRELEASED, RELEASE_BODY_UNRELEASED, FABRICATION_NOTES, ASSEMBLY_NOTES, SHEET_NAME_1, SHEET_NAME_2, SHEET_NAME_3, SHEET_NAME_4, SHEET_NAME_5, SHEET_NAME_6, SHEET_NAME_7, SHEET_NAME_8, SHEET_NAME_9, SHEET_NAME_10, SHEET_NAME_11, SHEET_NAME_12, SHEET_NAME_13, SHEET_NAME_14, SHEET_NAME_15, SHEET_NAME_16, SHEET_NAME_17, SHEET_NAME_18, SHEET_NAME_19, SHEET_NAME_20, SHEET_NAME_21, SHEET_NAME_22, SHEET_NAME_23, SHEET_NAME_24, SHEET_NAME_25, SHEET_NAME_26, SHEET_NAME_27, SHEET_NAME_28, SHEET_NAME_29, SHEET_NAME_30, SHEET_NAME_31, SHEET_NAME_32, SHEET_NAME_33, SHEET_NAME_34, SHEET_NAME_35, SHEET_NAME_36, SHEET_NAME_37, SHEET_NAME_38, SHEET_NAME_39 and SHEET_NAME_40) parent: None (kibot - optionable.py:511)
@@ -3657,7 +3657,7 @@ DEBUG:Expanding `Error: XML File not found` in SCH context for set_text_variable
 DEBUG:Expanded `Error: XML File not found` (kibot - optionable.py:557)
 DEBUG:Expanding `Error: XML File not found` in SCH context for set_text_variables (REVISION, RELEASE_DATE, RELEASE_DATE_NUM, GIT_HASH_SCH, GIT_HASH_PCB, GIT_URL, BRANCH, PROJECT_NAME, BOARD_NAME, DESCRIPTION, COMPANY, DESIGNER, BUILD_VARIANT, RELEASE_TITLE_UNRELEASED, RELEASE_BODY_UNRELEASED, FABRICATION_NOTES, ASSEMBLY_NOTES, SHEET_NAME_1, SHEET_NAME_2, SHEET_NAME_3, SHEET_NAME_4, SHEET_NAME_5, SHEET_NAME_6, SHEET_NAME_7, SHEET_NAME_8, SHEET_NAME_9, SHEET_NAME_10, SHEET_NAME_11, SHEET_NAME_12, SHEET_NAME_13, SHEET_NAME_14, SHEET_NAME_15, SHEET_NAME_16, SHEET_NAME_17, SHEET_NAME_18, SHEET_NAME_19, SHEET_NAME_20, SHEET_NAME_21, SHEET_NAME_22, SHEET_NAME_23, SHEET_NAME_24, SHEET_NAME_25, SHEET_NAME_26, SHEET_NAME_27, SHEET_NAME_28, SHEET_NAME_29, SHEET_NAME_30, SHEET_NAME_31, SHEET_NAME_32, SHEET_NAME_33, SHEET_NAME_34, SHEET_NAME_35, SHEET_NAME_36, SHEET_NAME_37, SHEET_NAME_38, SHEET_NAME_39 and SHEET_NAME_40) parent: None (kibot - optionable.py:511)
 DEBUG:Expanded `Error: XML File not found` (kibot - optionable.py:557)
-DEBUG:- New list of variables: {'ASSEMBLY_NOTES': '', 'BOARD_NAME': 'JONES_MIXER', 'BUILD_VARIANT': 'DRAFT', 'COMPANY': 'LTU', 'DESCRIPTION': 'Simple Jones Mixer.', 'DESIGNER': 'Aidan Brzezinski, Chloe LaBell, Andres Vega', 'FABRICATION_NOTES': '', 'GIT_HASH_PCB': 'b9dc517', 'GIT_HASH_SCH': 'b9dc517', 'GIT_URL': 'https://github.com/aidanbrzezinski/jones_mixer', 'PROJECT_NAME': 'Jones Mixer', 'RELEASE_BODY_1.0.0': '', 'RELEASE_BODY_1.0.1': '', 'RELEASE_BODY_1.0.2': '', 'RELEASE_BODY_1.1.0': '', 'RELEASE_BODY_UNRELEASED': 'Version Unreleased not found.', 'RELEASE_DATE': '05-Nov-2026', 'RELEASE_DATE_NUM': '2026-11-05', 'RELEASE_TITLE_1.0.0': '', 'RELEASE_TITLE_1.0.1': '', 'RELEASE_TITLE_1.0.2': '', 'RELEASE_TITLE_1.1.0': '', 'RELEASE_TITLE_UNRELEASED': 'Version Unreleased not found.', 'REVISION': '+ (Unreleased)', 'SHEET_NAME_1': 'Cover Page', 'SHEET_NAME_10': 'Error: XML File not found', 'SHEET_NAME_11': 'Error: XML File not found', 'SHEET_NAME_12': 'Error: XML File not found', 'SHEET_NAME_13': 'Error: XML File not found', 'SHEET_NAME_14': 'Error: XML File not found', 'SHEET_NAME_15': 'Error: XML File not found', 'SHEET_NAME_16': 'Error: XML File not found', 'SHEET_NAME_17': 'Error: XML File not found', 'SHEET_NAME_18': 'Error: XML File not found', 'SHEET_NAME_19': 'Error: XML File not found', 'SHEET_NAME_2': 'Error: XML File not found', 'SHEET_NAME_20': 'Error: XML File not found', 'SHEET_NAME_21': 'Error: XML File not found', 'SHEET_NAME_22': 'Error: XML File not found', 'SHEET_NAME_23': 'Error: XML File not found', 'SHEET_NAME_24': 'Error: XML File not found', 'SHEET_NAME_25': 'Error: XML File not found', 'SHEET_NAME_26': 'Error: XML File not found', 'SHEET_NAME_27': 'Error: XML File not found', 'SHEET_NAME_28': 'Error: XML File not found', 'SHEET_NAME_29': 'Error: XML File not found', 'SHEET_NAME_3': 'Error: XML File not found', 'SHEET_NAME_30': 'Error: XML File not found', 'SHEET_NAME_31': 'Error: XML File not found', 'SHEET_NAME_32': 'Error: XML File not found', 'SHEET_NAME_33': 'Error: XML File not found', 'SHEET_NAME_34': 'Error: XML File not found', 'SHEET_NAME_35': 'Error: XML File not found', 'SHEET_NAME_36': 'Error: XML File not found', 'SHEET_NAME_37': 'Error: XML File not found', 'SHEET_NAME_38': 'Error: XML File not found', 'SHEET_NAME_39': 'Error: XML File not found', 'SHEET_NAME_4': 'Error: XML File not found', 'SHEET_NAME_40': 'Error: XML File not found', 'SHEET_NAME_5': 'Error: XML File not found', 'SHEET_NAME_6': 'Error: XML File not found', 'SHEET_NAME_7': 'Error: XML File not found', 'SHEET_NAME_8': 'Error: XML File not found', 'SHEET_NAME_9': 'Error: XML File not found', 'BRANCH': 'dev'} (kibot - pre_set_text_variables.py:184)
+DEBUG:- New list of variables: {'ASSEMBLY_NOTES': '', 'BOARD_NAME': 'JONES_MIXER', 'BRANCH': 'dev', 'BUILD_VARIANT': 'DRAFT', 'COMPANY': 'LTU', 'DESCRIPTION': 'Simple Jones Mixer.', 'DESIGNER': 'Aidan Brzezinski, Chloe LaBell, Andres Vega', 'FABRICATION_NOTES': '', 'GIT_HASH_PCB': 'c0df124', 'GIT_HASH_SCH': 'b9dc517', 'GIT_URL': 'https://github.com/aidanbrzezinski/jones_mixer', 'PROJECT_NAME': 'Jones Mixer', 'RELEASE_BODY_1.0.0': '', 'RELEASE_BODY_1.0.1': '', 'RELEASE_BODY_1.0.2': '', 'RELEASE_BODY_1.1.0': '', 'RELEASE_BODY_UNRELEASED': 'Version Unreleased not found.', 'RELEASE_DATE': '05-Nov-2026', 'RELEASE_DATE_NUM': '2026-11-05', 'RELEASE_TITLE_1.0.0': '', 'RELEASE_TITLE_1.0.1': '', 'RELEASE_TITLE_1.0.2': '', 'RELEASE_TITLE_1.1.0': '', 'RELEASE_TITLE_UNRELEASED': 'Version Unreleased not found.', 'REVISION': '+ (Unreleased)', 'SHEET_NAME_1': 'Cover Page', 'SHEET_NAME_10': 'Error: XML File not found', 'SHEET_NAME_11': 'Error: XML File not found', 'SHEET_NAME_12': 'Error: XML File not found', 'SHEET_NAME_13': 'Error: XML File not found', 'SHEET_NAME_14': 'Error: XML File not found', 'SHEET_NAME_15': 'Error: XML File not found', 'SHEET_NAME_16': 'Error: XML File not found', 'SHEET_NAME_17': 'Error: XML File not found', 'SHEET_NAME_18': 'Error: XML File not found', 'SHEET_NAME_19': 'Error: XML File not found', 'SHEET_NAME_2': 'Error: XML File not found', 'SHEET_NAME_20': 'Error: XML File not found', 'SHEET_NAME_21': 'Error: XML File not found', 'SHEET_NAME_22': 'Error: XML File not found', 'SHEET_NAME_23': 'Error: XML File not found', 'SHEET_NAME_24': 'Error: XML File not found', 'SHEET_NAME_25': 'Error: XML File not found', 'SHEET_NAME_26': 'Error: XML File not found', 'SHEET_NAME_27': 'Error: XML File not found', 'SHEET_NAME_28': 'Error: XML File not found', 'SHEET_NAME_29': 'Error: XML File not found', 'SHEET_NAME_3': 'Error: XML File not found', 'SHEET_NAME_30': 'Error: XML File not found', 'SHEET_NAME_31': 'Error: XML File not found', 'SHEET_NAME_32': 'Error: XML File not found', 'SHEET_NAME_33': 'Error: XML File not found', 'SHEET_NAME_34': 'Error: XML File not found', 'SHEET_NAME_35': 'Error: XML File not found', 'SHEET_NAME_36': 'Error: XML File not found', 'SHEET_NAME_37': 'Error: XML File not found', 'SHEET_NAME_38': 'Error: XML File not found', 'SHEET_NAME_39': 'Error: XML File not found', 'SHEET_NAME_4': 'Error: XML File not found', 'SHEET_NAME_40': 'Error: XML File not found', 'SHEET_NAME_5': 'Error: XML File not found', 'SHEET_NAME_6': 'Error: XML File not found', 'SHEET_NAME_7': 'Error: XML File not found', 'SHEET_NAME_8': 'Error: XML File not found', 'SHEET_NAME_9': 'Error: XML File not found'} (kibot - pre_set_text_variables.py:184)
 DEBUG:Forcing PCB text variables reset (kibot - pre_set_text_variables.py:195)
 DEBUG:Preflight apply update_xml (kibot.pre_base - pre_base.py:161)
 DEBUG:Preflight run update_xml (kibot.pre_base - pre_base.py:165)
@@ -3701,10 +3701,10 @@ DEBUG:Configuring from default: exclude_filter -> _null (kibot - optionable.py:3
 DEBUG:Configuring from default: dnf_filter -> _null (kibot - optionable.py:380)
 DEBUG:Configuring from default: groups -> [] (kibot - optionable.py:380)
 - 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d]
-DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf372510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb62510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `/github/workspace/./Images` (kibot - optionable.py:557)
 DEBUG:Output destination: /github/workspace/Images (kibot - kiplot.py:704)
-DEBUG:Expanding `%f-top%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf372510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `%f-top%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb62510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
 DEBUG:Replacing KiCad text variables: ${REVISION} -> + (Unreleased) (kibot.gs - gs.py:641)
 DEBUG:Replacing KiCad text variables: ${COMPANY} -> LTU (kibot.gs - gs.py:641)
 DEBUG:PCB title: `jones_mixer` (kibot.gs - gs.py:684)
@@ -3749,8 +3749,48 @@ DEBUG:Also exporting KICAD7_3RD_PARTY="/github/home/.local/share/kicad/10.0/3rdp
 DEBUG:Also exporting KICAD8_3RD_PARTY="/github/home/.local/share/kicad/10.0/3rdparty" (kibot - config.py:487)
 DEBUG:Also exporting KICAD9_3RD_PARTY="/github/home/.local/share/kicad/10.0/3rdparty" (kibot - config.py:487)
 DEBUG:No 3D aliases (/github/home/.config/kicad/10.0/3d/3Dresolver.cfg) (kibot - config.py:636)
+WARNING:(W013) `C4` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including C4 (3858e28c-d5e9-4f77-b846-788d1b8ac6af) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `C3` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including C3 (43b9ba1e-b856-4bc3-bb6a-40105b0da1ab) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `C7` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including C7 (5460a22c-1b6b-429b-bee2-e613997017e0) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R6` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R6 (6094aaf5-bee4-4722-923d-ddd77da19273) only found in PCB (kibot - kiplot.py:546)
 WARNING:(W013) `R1` component in board, but not in schematic (kibot - kiplot.py:537)
-DEBUG:Including R1 (5d7f24ed-9567-4fe1-b32a-fd5207425d17) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R1 (60fde70e-97fe-49b1-8e6b-987b59fd8764) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R3` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R3 (63c14739-d2a3-4bdb-9c55-4be5a9c9113e) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R9` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R9 (6b96fe65-05b1-4b65-b035-8c353e66fbc5) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R11` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R11 (95be4c4e-a922-4e86-b5a1-8aa48f7b9e72) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R2` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R2 (adc6f453-7823-4fb1-b2cc-843a2b93df3b) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `Q3` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including Q3 (b171386e-7ede-4fb7-b286-ae0d8077cb84) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R8` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R8 (b31ce31b-d432-44a9-99c0-3c1c9dc570e5) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R10` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R10 (bb2aa756-38ce-4735-bbb3-3601a5a2277f) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R5` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R5 (c6eae0ae-de36-4370-8fe5-b9b8caefd5df) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `Q1` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including Q1 (d9069d7c-97ce-4b08-a208-be007752b2c4) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `C2` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including C2 (da3c290e-c30c-4421-b153-10fcdfa6331a) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R4` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R4 (dd720c93-57ec-4444-aa86-57ea983d9c74) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `C5` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including C5 (de2b4287-3f7a-47bd-9c02-6541cb73e2ca) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `R7` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including R7 (eb0fb07e-6971-4c47-a7b4-d8d849401ccc) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `C6` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including C6 (eb46c480-f599-424e-997c-6940e59b1372) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `C1` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including C1 (ee3ff804-9a09-4860-a592-1a58ee604685) only found in PCB (kibot - kiplot.py:546)
+WARNING:(W013) `Q2` component in board, but not in schematic (kibot - kiplot.py:537)
+DEBUG:Including Q2 (f3d4d655-e2a1-455d-a157-6cac9bdea56a) only found in PCB (kibot - kiplot.py:546)
 DEBUG:Filters reset (kibot - fil_base.py:196)
 DEBUG:Applying filter `_kibom_dnf_Config` to fitted (kibot - fil_base.py:216)
 DEBUG:Applying filter `_kibom_dnc_Config` to fixed (kibot - fil_base.py:226)
@@ -3773,7 +3813,27 @@ DEBUG:- Returning `/usr/bin/convert` (kibot - dep_downloader.py:873)
 DEBUG:Crossing modules (kibot - out_base.py:388)
 DEBUG:Removing paste, mask and/or glue (kibot - out_base.py:539)
 DEBUG:Disable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
 DEBUG:Removing 3D models that aren't fitted (kibot - out_base.py:775)
 DEBUG:VARIANT* processing (kibot - out_base_3d.py:710)
 DEBUG:Looking for LCSC field name (kibot - optionable.py:710)
@@ -3782,7 +3842,7 @@ DEBUG:After collapse: (kibot - v5_sch.py:1771)
 DEBUG:- No LCSC field found (kibot - optionable.py:697)
 DEBUG:Using  as LCSC field name (kibot - optionable.py:712)
 DEBUG:Using `/github/home/.cache/kibot/3d` as dir for downloaded 3D models (kibot - out_base_3d.py:546)
-DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
 DEBUG:Filtered warning: (W011) Missing default symbol library table (kibot - log.py:130)
 DEBUG:Detected lib alias `MountingEquipment` -> `/usr/share/kicad/footprints/MountingEquipment.pretty` (kibot - config.py:544)
 DEBUG:Detected lib alias `Module` -> `/usr/share/kicad/footprints/Module.pretty` (kibot - config.py:544)
@@ -3940,23 +4000,127 @@ DEBUG:Detected lib alias `Buzzer_Beeper` -> `/usr/share/kicad/footprints/Buzzer_
 DEBUG:Detected lib alias `RF_GPS` -> `/usr/share/kicad/footprints/RF_GPS.pretty` (kibot - config.py:544)
 DEBUG:Detected lib alias `Connector_Dsub` -> `/usr/share/kicad/footprints/Connector_Dsub.pretty` (kibot - config.py:544)
 DEBUG:Detected lib alias `kikit` -> `/usr/share/kicad/footprints/kikit.pretty` (kibot - config.py:544)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG:Downloading `https://gitlab.com/api/v4/projects/21604637/repository/files/Capacitor_SMD.3dshapes%2FC_0603_1608Metric.step/raw?ref=10.0.5` (kibot - out_base_3d.py:190)
+DEBUG:- Downloaded /github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (43450) (kibot - out_base_3d.py:201)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
 DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
 DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
 DEBUG:Downloading `https://gitlab.com/api/v4/projects/21604637/repository/files/Resistor_SMD.3dshapes%2FR_0603_1608Metric.step/raw?ref=10.0.5` (kibot - out_base_3d.py:190)
 DEBUG:- Downloaded /github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step (40618) (kibot - out_base_3d.py:201)
 DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
-DEBUG:Filtered warning: (W098)  1 3D models downloaded or cached (kibot - log.py:130)
-DEBUG:Writing modified PCB to /github/workspace/kibot_7z_osp73.kicad_pcb (kibot - gs.py:1548)
-DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_7z_osp73.kicad_pro` (kibot.gs - gs.py:713)
-DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_7z_osp73.kicad_prl` (kibot.gs - gs.py:721)
-DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_7z_osp73.kicad_dru` (kibot.gs - gs.py:729)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG:Downloading `https://gitlab.com/api/v4/projects/21604637/repository/files/Package_TO_SOT_SMD.3dshapes%2FSOT-23-3.step/raw?ref=10.0.5` (kibot - out_base_3d.py:190)
+DEBUG:- Downloaded /github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (60306) (kibot - out_base_3d.py:201)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:Filtered warning: (W098)  3 3D models downloaded or cached (kibot - log.py:130)
+DEBUG:Writing modified PCB to /github/workspace/kibot_yrs2eh0i.kicad_pcb (kibot - gs.py:1548)
+DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_yrs2eh0i.kicad_pro` (kibot.gs - gs.py:713)
+DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_yrs2eh0i.kicad_prl` (kibot.gs - gs.py:721)
+DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_yrs2eh0i.kicad_dru` (kibot.gs - gs.py:729)
 DEBUG:Restoring paste, mask and/or glue (kibot - out_base.py:629)
 DEBUG:Enable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
-DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-top.png --width 2016 --height 2016 --side top --background transparent --quality high --preset _kibot_preset --pan 0,0,0 --pivot 0,0,0 --rotate 0,0,0 /github/workspace/kibot_7z_osp73.kicad_pcb (kibot - kiplot.py:162)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
+DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-top.png --width 2016 --height 2016 --side top --background transparent --quality high --preset _kibot_preset --pan 0,0,0 --pivot 0,0,0 --rotate 0,0,0 /github/workspace/kibot_yrs2eh0i.kicad_pcb (kibot - kiplot.py:162)
 DEBUG:- Output from command: Loading…
 Build board outline
-Board outline is missing or malformed. Run DRC for a full analysis.
+
 Create layers
 Create tracks and vias
 Create zones
@@ -4025,42 +4189,51 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.025 s
+Reload time 0.103 s
 Rendering: 4 %
 Rendering: 8 %
-Rendering: 13 %
-Rendering: 18 %
+Rendering: 11 %
+Rendering: 14 %
+Rendering: 17 %
+Rendering: 19 %
 Rendering: 22 %
-Rendering: 26 %
-Rendering: 29 %
-Rendering: 32 %
-Rendering: 36 %
-Rendering: 40 %
-Rendering: 43 %
-Rendering: 47 %
+Rendering: 25 %
+Rendering: 28 %
+Rendering: 31 %
+Rendering: 35 %
+Rendering: 39 %
+Rendering: 42 %
+Rendering: 45 %
+Rendering: 48 %
 Rendering: 51 %
+Rendering: 53 %
 Rendering: 55 %
 Rendering: 58 %
-Rendering: 62 %
-Rendering: 66 %
-Rendering: 69 %
+Rendering: 61 %
+Rendering: 64 %
+Rendering: 67 %
+Rendering: 71 %
 Rendering: 73 %
 Rendering: 76 %
-Rendering: 80 %
+Rendering: 79 %
+Rendering: 81 %
 Rendering: 83 %
+Rendering: 86 %
 Rendering: 88 %
-Rendering: 93 %
-Rendering: 97 %
+Rendering: 91 %
+Rendering: 94 %
+Rendering: 96 %
+Rendering: 100 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 20.852 s
+Rendering time 26.831 s
 Successfully created 3D render image
  (kibot - kiplot.py:153)
 DEBUG:Removing temporal files (kibot - out_base.py:1267)
-DEBUG:- File `/github/workspace/kibot_7z_osp73.kicad_pcb` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_7z_osp73.kicad_pro` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_7z_osp73.kicad_prl` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_7z_osp73.kicad_dru` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_yrs2eh0i.kicad_pcb` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_yrs2eh0i.kicad_pro` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_yrs2eh0i.kicad_prl` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_yrs2eh0i.kicad_dru` (kibot - out_base.py:1270)
 DEBUG:- Executing: /usr/bin/convert /github/workspace/Images/jones_mixer-top.png -trim +repage -trim +repage /github/workspace/Images/jones_mixer-top.png (kibot - kiplot.py:162)
 DEBUG:Using global `output`=`%f-%i%I%v.%x` (kibot - optionable.py:58)
 DEBUG:Using global `variant`=`DRAFT` (kibot - optionable.py:58)
@@ -4071,14 +4244,34 @@ DEBUG:Configuring from default: exclude_filter -> _null (kibot - optionable.py:3
 DEBUG:Configuring from default: dnf_filter -> _null (kibot - optionable.py:380)
 DEBUG:Configuring from default: groups -> [] (kibot - optionable.py:380)
 - 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d]
-DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06d950> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb43c50> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `/github/workspace/./Images` (kibot - optionable.py:557)
 DEBUG:Output destination: /github/workspace/Images (kibot - kiplot.py:704)
-DEBUG:Expanding `%f-bottom%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06d950> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `%f-bottom%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb43c50> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `jones_mixer-bottom.png` (kibot - optionable.py:557)
 DEBUG:Before collapse: (kibot - v5_sch.py:1729)
 DEBUG:After collapse: (kibot - v5_sch.py:1771)
-DEBUG:Including R1 (5d7f24ed-9567-4fe1-b32a-fd5207425d17) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C4 (3858e28c-d5e9-4f77-b846-788d1b8ac6af) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C3 (43b9ba1e-b856-4bc3-bb6a-40105b0da1ab) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C7 (5460a22c-1b6b-429b-bee2-e613997017e0) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R6 (6094aaf5-bee4-4722-923d-ddd77da19273) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R1 (60fde70e-97fe-49b1-8e6b-987b59fd8764) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R3 (63c14739-d2a3-4bdb-9c55-4be5a9c9113e) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R9 (6b96fe65-05b1-4b65-b035-8c353e66fbc5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R11 (95be4c4e-a922-4e86-b5a1-8aa48f7b9e72) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R2 (adc6f453-7823-4fb1-b2cc-843a2b93df3b) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q3 (b171386e-7ede-4fb7-b286-ae0d8077cb84) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R8 (b31ce31b-d432-44a9-99c0-3c1c9dc570e5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R10 (bb2aa756-38ce-4735-bbb3-3601a5a2277f) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R5 (c6eae0ae-de36-4370-8fe5-b9b8caefd5df) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q1 (d9069d7c-97ce-4b08-a208-be007752b2c4) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C2 (da3c290e-c30c-4421-b153-10fcdfa6331a) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R4 (dd720c93-57ec-4444-aa86-57ea983d9c74) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C5 (de2b4287-3f7a-47bd-9c02-6541cb73e2ca) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R7 (eb0fb07e-6971-4c47-a7b4-d8d849401ccc) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C6 (eb46c480-f599-424e-997c-6940e59b1372) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C1 (ee3ff804-9a09-4860-a592-1a58ee604685) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q2 (f3d4d655-e2a1-455d-a157-6cac9bdea56a) only found in PCB (kibot - kiplot.py:546)
 DEBUG:Filters reset (kibot - fil_base.py:196)
 DEBUG:Applying filter `_kibom_dnf_Config` to fitted (kibot - fil_base.py:216)
 DEBUG:Applying filter `_kibom_dnc_Config` to fixed (kibot - fil_base.py:226)
@@ -4094,29 +4287,151 @@ DEBUG:- Returning `/usr/bin/convert` (kibot - dep_downloader.py:873)
 DEBUG:Crossing modules (kibot - out_base.py:388)
 DEBUG:Removing paste, mask and/or glue (kibot - out_base.py:539)
 DEBUG:Disable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
 DEBUG:Removing 3D models that aren't fitted (kibot - out_base.py:775)
 DEBUG:VARIANT* processing (kibot - out_base_3d.py:710)
 DEBUG:Looking for LCSC field name (kibot - optionable.py:710)
 DEBUG:Using  as LCSC field name (kibot - optionable.py:712)
 DEBUG:Using `/github/home/.cache/kibot/3d` as dir for downloaded 3D models (kibot - out_base_3d.py:546)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG:Using cached model `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450) (kibot - out_base_3d.py:188)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
 DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
 DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
 DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
 DEBUG:Using cached model `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618) (kibot - out_base_3d.py:188)
 DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
-DEBUG:Filtered warning: (W098)  1 3D models downloaded or cached (kibot - log.py:130)
-DEBUG:Writing modified PCB to /github/workspace/kibot_wmf5t0ba.kicad_pcb (kibot - gs.py:1548)
-DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_wmf5t0ba.kicad_pro` (kibot.gs - gs.py:713)
-DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_wmf5t0ba.kicad_prl` (kibot.gs - gs.py:721)
-DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_wmf5t0ba.kicad_dru` (kibot.gs - gs.py:729)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG:Using cached model `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306) (kibot - out_base_3d.py:188)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:Filtered warning: (W098)  3 3D models downloaded or cached (kibot - log.py:130)
+DEBUG:Writing modified PCB to /github/workspace/kibot_5t7dbsb2.kicad_pcb (kibot - gs.py:1548)
+DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_5t7dbsb2.kicad_pro` (kibot.gs - gs.py:713)
+DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_5t7dbsb2.kicad_prl` (kibot.gs - gs.py:721)
+DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_5t7dbsb2.kicad_dru` (kibot.gs - gs.py:729)
 DEBUG:Restoring paste, mask and/or glue (kibot - out_base.py:629)
 DEBUG:Enable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
-DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-bottom.png --width 2016 --height 2016 --side bottom --background transparent --quality high --preset _kibot_preset --pan 0,0,0 --pivot 0,0,0 --rotate 0,0,0 /github/workspace/kibot_wmf5t0ba.kicad_pcb (kibot - kiplot.py:162)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
+DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-bottom.png --width 2016 --height 2016 --side bottom --background transparent --quality high --preset _kibot_preset --pan 0,0,0 --pivot 0,0,0 --rotate 0,0,0 /github/workspace/kibot_5t7dbsb2.kicad_pcb (kibot - kiplot.py:162)
 DEBUG:- Output from command: Loading…
 Build board outline
-Board outline is missing or malformed. Run DRC for a full analysis.
+
 Create layers
 Create tracks and vias
 Create zones
@@ -4185,39 +4500,41 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.001 s
+Reload time 0.028 s
 Rendering: 4 %
-Rendering: 9 %
-Rendering: 13 %
-Rendering: 18 %
-Rendering: 22 %
-Rendering: 27 %
-Rendering: 31 %
-Rendering: 35 %
+Rendering: 8 %
+Rendering: 12 %
+Rendering: 16 %
+Rendering: 20 %
+Rendering: 24 %
+Rendering: 28 %
+Rendering: 32 %
+Rendering: 36 %
 Rendering: 40 %
 Rendering: 44 %
-Rendering: 49 %
-Rendering: 53 %
-Rendering: 58 %
-Rendering: 62 %
-Rendering: 67 %
-Rendering: 71 %
-Rendering: 76 %
-Rendering: 80 %
+Rendering: 48 %
+Rendering: 52 %
+Rendering: 56 %
+Rendering: 60 %
+Rendering: 64 %
+Rendering: 68 %
+Rendering: 73 %
+Rendering: 77 %
+Rendering: 81 %
 Rendering: 85 %
 Rendering: 89 %
-Rendering: 94 %
-Rendering: 98 %
+Rendering: 93 %
+Rendering: 97 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 18.322 s
+Rendering time 19.669 s
 Successfully created 3D render image
  (kibot - kiplot.py:153)
 DEBUG:Removing temporal files (kibot - out_base.py:1267)
-DEBUG:- File `/github/workspace/kibot_wmf5t0ba.kicad_pcb` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_wmf5t0ba.kicad_pro` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_wmf5t0ba.kicad_prl` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_wmf5t0ba.kicad_dru` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5t7dbsb2.kicad_pcb` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5t7dbsb2.kicad_pro` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5t7dbsb2.kicad_prl` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5t7dbsb2.kicad_dru` (kibot - out_base.py:1270)
 DEBUG:- Executing: /usr/bin/convert /github/workspace/Images/jones_mixer-bottom.png -trim +repage -trim +repage /github/workspace/Images/jones_mixer-bottom.png (kibot - kiplot.py:162)
 DEBUG:Using global `output`=`%f-%i%I%v.%x` (kibot - optionable.py:58)
 DEBUG:Using global `variant`=`DRAFT` (kibot - optionable.py:58)
@@ -4228,14 +4545,34 @@ DEBUG:Configuring from default: exclude_filter -> _null (kibot - optionable.py:3
 DEBUG:Configuring from default: dnf_filter -> _null (kibot - optionable.py:380)
 DEBUG:Configuring from default: groups -> [] (kibot - optionable.py:380)
 - 'Top (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_top) [render_3d]
-DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06e350> parent: 'Top (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_top) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb35090> parent: 'Top (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_top) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `/github/workspace/./Images` (kibot - optionable.py:557)
 DEBUG:Output destination: /github/workspace/Images (kibot - kiplot.py:704)
-DEBUG:Expanding `%f-angled_top%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06e350> parent: 'Top (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_top) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `%f-angled_top%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb35090> parent: 'Top (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_top) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `jones_mixer-angled_top.png` (kibot - optionable.py:557)
 DEBUG:Before collapse: (kibot - v5_sch.py:1729)
 DEBUG:After collapse: (kibot - v5_sch.py:1771)
-DEBUG:Including R1 (5d7f24ed-9567-4fe1-b32a-fd5207425d17) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C4 (3858e28c-d5e9-4f77-b846-788d1b8ac6af) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C3 (43b9ba1e-b856-4bc3-bb6a-40105b0da1ab) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C7 (5460a22c-1b6b-429b-bee2-e613997017e0) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R6 (6094aaf5-bee4-4722-923d-ddd77da19273) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R1 (60fde70e-97fe-49b1-8e6b-987b59fd8764) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R3 (63c14739-d2a3-4bdb-9c55-4be5a9c9113e) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R9 (6b96fe65-05b1-4b65-b035-8c353e66fbc5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R11 (95be4c4e-a922-4e86-b5a1-8aa48f7b9e72) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R2 (adc6f453-7823-4fb1-b2cc-843a2b93df3b) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q3 (b171386e-7ede-4fb7-b286-ae0d8077cb84) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R8 (b31ce31b-d432-44a9-99c0-3c1c9dc570e5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R10 (bb2aa756-38ce-4735-bbb3-3601a5a2277f) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R5 (c6eae0ae-de36-4370-8fe5-b9b8caefd5df) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q1 (d9069d7c-97ce-4b08-a208-be007752b2c4) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C2 (da3c290e-c30c-4421-b153-10fcdfa6331a) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R4 (dd720c93-57ec-4444-aa86-57ea983d9c74) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C5 (de2b4287-3f7a-47bd-9c02-6541cb73e2ca) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R7 (eb0fb07e-6971-4c47-a7b4-d8d849401ccc) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C6 (eb46c480-f599-424e-997c-6940e59b1372) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C1 (ee3ff804-9a09-4860-a592-1a58ee604685) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q2 (f3d4d655-e2a1-455d-a157-6cac9bdea56a) only found in PCB (kibot - kiplot.py:546)
 DEBUG:Filters reset (kibot - fil_base.py:196)
 DEBUG:Applying filter `_kibom_dnf_Config` to fitted (kibot - fil_base.py:216)
 DEBUG:Applying filter `_kibom_dnc_Config` to fixed (kibot - fil_base.py:226)
@@ -4251,29 +4588,151 @@ DEBUG:- Returning `/usr/bin/convert` (kibot - dep_downloader.py:873)
 DEBUG:Crossing modules (kibot - out_base.py:388)
 DEBUG:Removing paste, mask and/or glue (kibot - out_base.py:539)
 DEBUG:Disable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
 DEBUG:Removing 3D models that aren't fitted (kibot - out_base.py:775)
 DEBUG:VARIANT* processing (kibot - out_base_3d.py:710)
 DEBUG:Looking for LCSC field name (kibot - optionable.py:710)
 DEBUG:Using  as LCSC field name (kibot - optionable.py:712)
 DEBUG:Using `/github/home/.cache/kibot/3d` as dir for downloaded 3D models (kibot - out_base_3d.py:546)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG:Using cached model `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450) (kibot - out_base_3d.py:188)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
 DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
 DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
 DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
 DEBUG:Using cached model `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618) (kibot - out_base_3d.py:188)
 DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
-DEBUG:Filtered warning: (W098)  1 3D models downloaded or cached (kibot - log.py:130)
-DEBUG:Writing modified PCB to /github/workspace/kibot_yq_6vhfd.kicad_pcb (kibot - gs.py:1548)
-DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_yq_6vhfd.kicad_pro` (kibot.gs - gs.py:713)
-DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_yq_6vhfd.kicad_prl` (kibot.gs - gs.py:721)
-DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_yq_6vhfd.kicad_dru` (kibot.gs - gs.py:729)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG:Using cached model `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306) (kibot - out_base_3d.py:188)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:Filtered warning: (W098)  3 3D models downloaded or cached (kibot - log.py:130)
+DEBUG:Writing modified PCB to /github/workspace/kibot_5e4q2z2e.kicad_pcb (kibot - gs.py:1548)
+DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_5e4q2z2e.kicad_pro` (kibot.gs - gs.py:713)
+DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_5e4q2z2e.kicad_prl` (kibot.gs - gs.py:721)
+DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_5e4q2z2e.kicad_dru` (kibot.gs - gs.py:729)
 DEBUG:Restoring paste, mask and/or glue (kibot - out_base.py:629)
 DEBUG:Enable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
-DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-angled_top.png --width 2016 --height 2016 --side top --background transparent --quality high --preset _kibot_preset --pan 0,0,-4 --pivot 0,0,0 --rotate -20,10,-10 --perspective /github/workspace/kibot_yq_6vhfd.kicad_pcb (kibot - kiplot.py:162)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
+DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-angled_top.png --width 2016 --height 2016 --side top --background transparent --quality high --preset _kibot_preset --pan 0,0,-4 --pivot 0,0,0 --rotate -20,10,-10 --perspective /github/workspace/kibot_5e4q2z2e.kicad_pcb (kibot - kiplot.py:162)
 DEBUG:- Output from command: Loading…
 Build board outline
-Board outline is missing or malformed. Run DRC for a full analysis.
+
 Create layers
 Create tracks and vias
 Create zones
@@ -4342,39 +4801,46 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.001 s
+Reload time 0.028 s
 Rendering: 4 %
 Rendering: 8 %
-Rendering: 11 %
+Rendering: 12 %
+Rendering: 15 %
 Rendering: 17 %
-Rendering: 24 %
-Rendering: 27 %
+Rendering: 20 %
+Rendering: 23 %
+Rendering: 28 %
 Rendering: 31 %
 Rendering: 35 %
 Rendering: 39 %
-Rendering: 44 %
-Rendering: 48 %
+Rendering: 43 %
+Rendering: 47 %
+Rendering: 49 %
 Rendering: 52 %
-Rendering: 56 %
-Rendering: 60 %
-Rendering: 65 %
-Rendering: 71 %
+Rendering: 54 %
+Rendering: 57 %
+Rendering: 61 %
+Rendering: 66 %
+Rendering: 70 %
 Rendering: 74 %
 Rendering: 78 %
+Rendering: 81 %
+Rendering: 83 %
 Rendering: 85 %
-Rendering: 91 %
-Rendering: 95 %
-Rendering: 99 %
+Rendering: 88 %
+Rendering: 90 %
+Rendering: 94 %
+Rendering: 97 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 18.261 s
+Rendering time 23.535 s
 Successfully created 3D render image
  (kibot - kiplot.py:153)
 DEBUG:Removing temporal files (kibot - out_base.py:1267)
-DEBUG:- File `/github/workspace/kibot_yq_6vhfd.kicad_pcb` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_yq_6vhfd.kicad_pro` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_yq_6vhfd.kicad_prl` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_yq_6vhfd.kicad_dru` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5e4q2z2e.kicad_pcb` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5e4q2z2e.kicad_pro` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5e4q2z2e.kicad_prl` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_5e4q2z2e.kicad_dru` (kibot - out_base.py:1270)
 DEBUG:- Executing: /usr/bin/convert /github/workspace/Images/jones_mixer-angled_top.png -trim +repage -trim +repage /github/workspace/Images/jones_mixer-angled_top.png (kibot - kiplot.py:162)
 DEBUG:Using global `output`=`%f-%i%I%v.%x` (kibot - optionable.py:58)
 DEBUG:Using global `variant`=`DRAFT` (kibot - optionable.py:58)
@@ -4385,14 +4851,34 @@ DEBUG:Configuring from default: exclude_filter -> _null (kibot - optionable.py:3
 DEBUG:Configuring from default: dnf_filter -> _null (kibot - optionable.py:380)
 DEBUG:Configuring from default: groups -> [] (kibot - optionable.py:380)
 - 'Bottom (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_bottom) [render_3d]
-DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06e850> parent: 'Bottom (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_bottom) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb36d50> parent: 'Bottom (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_bottom) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `/github/workspace/./Images` (kibot - optionable.py:557)
 DEBUG:Output destination: /github/workspace/Images (kibot - kiplot.py:704)
-DEBUG:Expanding `%f-angled_bottom%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06e850> parent: 'Bottom (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_bottom) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `%f-angled_bottom%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb36d50> parent: 'Bottom (angled) 3D viewer PCB render in PNG format' (png_3d_viewer_angled_bottom) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `jones_mixer-angled_bottom.png` (kibot - optionable.py:557)
 DEBUG:Before collapse: (kibot - v5_sch.py:1729)
 DEBUG:After collapse: (kibot - v5_sch.py:1771)
-DEBUG:Including R1 (5d7f24ed-9567-4fe1-b32a-fd5207425d17) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C4 (3858e28c-d5e9-4f77-b846-788d1b8ac6af) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C3 (43b9ba1e-b856-4bc3-bb6a-40105b0da1ab) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C7 (5460a22c-1b6b-429b-bee2-e613997017e0) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R6 (6094aaf5-bee4-4722-923d-ddd77da19273) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R1 (60fde70e-97fe-49b1-8e6b-987b59fd8764) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R3 (63c14739-d2a3-4bdb-9c55-4be5a9c9113e) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R9 (6b96fe65-05b1-4b65-b035-8c353e66fbc5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R11 (95be4c4e-a922-4e86-b5a1-8aa48f7b9e72) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R2 (adc6f453-7823-4fb1-b2cc-843a2b93df3b) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q3 (b171386e-7ede-4fb7-b286-ae0d8077cb84) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R8 (b31ce31b-d432-44a9-99c0-3c1c9dc570e5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R10 (bb2aa756-38ce-4735-bbb3-3601a5a2277f) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R5 (c6eae0ae-de36-4370-8fe5-b9b8caefd5df) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q1 (d9069d7c-97ce-4b08-a208-be007752b2c4) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C2 (da3c290e-c30c-4421-b153-10fcdfa6331a) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R4 (dd720c93-57ec-4444-aa86-57ea983d9c74) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C5 (de2b4287-3f7a-47bd-9c02-6541cb73e2ca) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R7 (eb0fb07e-6971-4c47-a7b4-d8d849401ccc) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C6 (eb46c480-f599-424e-997c-6940e59b1372) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C1 (ee3ff804-9a09-4860-a592-1a58ee604685) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q2 (f3d4d655-e2a1-455d-a157-6cac9bdea56a) only found in PCB (kibot - kiplot.py:546)
 DEBUG:Filters reset (kibot - fil_base.py:196)
 DEBUG:Applying filter `_kibom_dnf_Config` to fitted (kibot - fil_base.py:216)
 DEBUG:Applying filter `_kibom_dnc_Config` to fixed (kibot - fil_base.py:226)
@@ -4408,29 +4894,151 @@ DEBUG:- Returning `/usr/bin/convert` (kibot - dep_downloader.py:873)
 DEBUG:Crossing modules (kibot - out_base.py:388)
 DEBUG:Removing paste, mask and/or glue (kibot - out_base.py:539)
 DEBUG:Disable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
 DEBUG:Removing 3D models that aren't fitted (kibot - out_base.py:775)
 DEBUG:VARIANT* processing (kibot - out_base_3d.py:710)
 DEBUG:Looking for LCSC field name (kibot - optionable.py:710)
 DEBUG:Using  as LCSC field name (kibot - optionable.py:712)
 DEBUG:Using `/github/home/.cache/kibot/3d` as dir for downloaded 3D models (kibot - out_base_3d.py:546)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG:Using cached model `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450) (kibot - out_base_3d.py:188)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
 DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
 DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
 DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
 DEBUG:Using cached model `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618) (kibot - out_base_3d.py:188)
 DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
-DEBUG:Filtered warning: (W098)  1 3D models downloaded or cached (kibot - log.py:130)
-DEBUG:Writing modified PCB to /github/workspace/kibot_5v1lh9xz.kicad_pcb (kibot - gs.py:1548)
-DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_5v1lh9xz.kicad_pro` (kibot.gs - gs.py:713)
-DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_5v1lh9xz.kicad_prl` (kibot.gs - gs.py:721)
-DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_5v1lh9xz.kicad_dru` (kibot.gs - gs.py:729)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG:Using cached model `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306) (kibot - out_base_3d.py:188)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Resistor_SMD.3dshapes/R_0603_1608Metric.step` (40618 - 1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step -> ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` by `/github/home/.cache/kibot/3d/Capacitor_SMD.3dshapes/C_0603_1608Metric.step` (43450 - 4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1) (kibot - out_base_3d.py:514)
+DEBUG:- Expanded ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step -> ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:93)
+DEBUG:Missing 3D model file ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step) (kibot - out_base_3d.py:570)
+DEBUG:Forcing model extension to STEP ${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step (kibot - out_base_3d.py:244)
+DEBUG: - Replacing 3D model `${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` by `/github/home/.cache/kibot/3d/Package_TO_SOT_SMD.3dshapes/SOT-23-3.step` (60306 - 16964b14f93e6c778288a0c110b35f670fab733109c26f0da7dfc07cc3350040) (kibot - out_base_3d.py:514)
+DEBUG:Filtered warning: (W098)  3 3D models downloaded or cached (kibot - log.py:130)
+DEBUG:Writing modified PCB to /github/workspace/kibot_g971kc7k.kicad_pcb (kibot - gs.py:1548)
+DEBUG:Copying project `/github/workspace/jones_mixer.kicad_pro` to `/github/workspace/kibot_g971kc7k.kicad_pro` (kibot.gs - gs.py:713)
+DEBUG:Copying project local settings `/github/workspace/jones_mixer.kicad_prl` to `/github/workspace/kibot_g971kc7k.kicad_prl` (kibot.gs - gs.py:721)
+DEBUG:Copying project custom design rules `/github/workspace/jones_mixer.kicad_dru` to `/github/workspace/kibot_g971kc7k.kicad_dru` (kibot.gs - gs.py:729)
 DEBUG:Restoring paste, mask and/or glue (kibot - out_base.py:629)
 DEBUG:Enable 3D models that aren't for this variant (kibot - out_base.py:881)
+DEBUG:- Processing module C4 (kibot - out_base.py:886)
+DEBUG:- Processing module C3 (kibot - out_base.py:886)
+DEBUG:- Processing module C7 (kibot - out_base.py:886)
+DEBUG:- Processing module R6 (kibot - out_base.py:886)
 DEBUG:- Processing module R1 (kibot - out_base.py:886)
-DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-angled_bottom.png --width 2016 --height 2016 --side bottom --background transparent --quality high --preset _kibot_preset --pan 0,0,-4 --pivot 0,0,0 --rotate -20,10,10 --perspective /github/workspace/kibot_5v1lh9xz.kicad_pcb (kibot - kiplot.py:162)
+DEBUG:- Processing module R3 (kibot - out_base.py:886)
+DEBUG:- Processing module R9 (kibot - out_base.py:886)
+DEBUG:- Processing module R11 (kibot - out_base.py:886)
+DEBUG:- Processing module R2 (kibot - out_base.py:886)
+DEBUG:- Processing module Q3 (kibot - out_base.py:886)
+DEBUG:- Processing module R8 (kibot - out_base.py:886)
+DEBUG:- Processing module R10 (kibot - out_base.py:886)
+DEBUG:- Processing module R5 (kibot - out_base.py:886)
+DEBUG:- Processing module Q1 (kibot - out_base.py:886)
+DEBUG:- Processing module C2 (kibot - out_base.py:886)
+DEBUG:- Processing module R4 (kibot - out_base.py:886)
+DEBUG:- Processing module C5 (kibot - out_base.py:886)
+DEBUG:- Processing module R7 (kibot - out_base.py:886)
+DEBUG:- Processing module C6 (kibot - out_base.py:886)
+DEBUG:- Processing module C1 (kibot - out_base.py:886)
+DEBUG:- Processing module Q2 (kibot - out_base.py:886)
+DEBUG:- Executing: kicad-cli pcb render --output /github/workspace/Images/jones_mixer-angled_bottom.png --width 2016 --height 2016 --side bottom --background transparent --quality high --preset _kibot_preset --pan 0,0,-4 --pivot 0,0,0 --rotate -20,10,10 --perspective /github/workspace/kibot_g971kc7k.kicad_pcb (kibot - kiplot.py:162)
 DEBUG:- Output from command: Loading…
 Build board outline
-Board outline is missing or malformed. Run DRC for a full analysis.
+
 Create layers
 Create tracks and vias
 Create zones
@@ -4499,38 +5107,41 @@ Build BVH for holes and vias
 Load Raytracing: board
 Load Raytracing: layers
 Loading 3D models...
-Reload time 0.002 s
-Rendering: 5 %
+Reload time 0.028 s
+Rendering: 4 %
 Rendering: 8 %
 Rendering: 12 %
-Rendering: 17 %
-Rendering: 21 %
-Rendering: 26 %
-Rendering: 31 %
-Rendering: 35 %
+Rendering: 16 %
+Rendering: 19 %
+Rendering: 23 %
+Rendering: 27 %
+Rendering: 32 %
+Rendering: 36 %
 Rendering: 40 %
 Rendering: 45 %
-Rendering: 49 %
-Rendering: 54 %
-Rendering: 59 %
+Rendering: 48 %
+Rendering: 52 %
+Rendering: 56 %
+Rendering: 60 %
 Rendering: 64 %
-Rendering: 70 %
-Rendering: 75 %
-Rendering: 79 %
-Rendering: 84 %
+Rendering: 69 %
+Rendering: 73 %
+Rendering: 77 %
+Rendering: 82 %
+Rendering: 85 %
 Rendering: 89 %
 Rendering: 93 %
 Rendering: 98 %
 Rendering: 100 %
 Rendering: Post processing shader
-Rendering time 17.595 s
+Rendering time 19.655 s
 Successfully created 3D render image
  (kibot - kiplot.py:153)
 DEBUG:Removing temporal files (kibot - out_base.py:1267)
-DEBUG:- File `/github/workspace/kibot_5v1lh9xz.kicad_pcb` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_5v1lh9xz.kicad_pro` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_5v1lh9xz.kicad_prl` (kibot - out_base.py:1270)
-DEBUG:- File `/github/workspace/kibot_5v1lh9xz.kicad_dru` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_g971kc7k.kicad_pcb` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_g971kc7k.kicad_pro` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_g971kc7k.kicad_prl` (kibot - out_base.py:1270)
+DEBUG:- File `/github/workspace/kibot_g971kc7k.kicad_dru` (kibot - out_base.py:1270)
 DEBUG:- Executing: /usr/bin/convert /github/workspace/Images/jones_mixer-angled_bottom.png -trim +repage -trim +repage /github/workspace/Images/jones_mixer-angled_bottom.png (kibot - kiplot.py:162)
 DEBUG:Using global `output`=`%f-%i%I%v.%x` (kibot - optionable.py:58)
 DEBUG:Using global `variant`=`DRAFT` (kibot - optionable.py:58)
@@ -4539,14 +5150,34 @@ DEBUG:Configuring from default: exclude_filter -> _null (kibot - optionable.py:3
 DEBUG:Configuring from default: dnf_filter -> _null (kibot - optionable.py:380)
 DEBUG:Configuring from default: groups -> [] (kibot - optionable.py:380)
 - 'README file in Markdown format' (md_readme) [report]
-DEBUG:Expanding `/github/workspace/././` in PCB context for <kibot.out_report.ReportOptions object at 0x7ff1cf373770> parent: 'README file in Markdown format' (md_readme) [report] (kibot - optionable.py:511)
+DEBUG:Expanding `/github/workspace/././` in PCB context for <kibot.out_report.ReportOptions object at 0x7fcccfb63770> parent: 'README file in Markdown format' (md_readme) [report] (kibot - optionable.py:511)
 DEBUG:Expanded `/github/workspace/././` (kibot - optionable.py:557)
 DEBUG:Output destination: /github/workspace (kibot - kiplot.py:704)
-DEBUG:Expanding `README.md` in PCB context for <kibot.out_report.ReportOptions object at 0x7ff1cf373770> parent: 'README file in Markdown format' (md_readme) [report] (kibot - optionable.py:511)
+DEBUG:Expanding `README.md` in PCB context for <kibot.out_report.ReportOptions object at 0x7fcccfb63770> parent: 'README file in Markdown format' (md_readme) [report] (kibot - optionable.py:511)
 DEBUG:Expanded `README.md` (kibot - optionable.py:557)
 DEBUG:Before collapse: (kibot - v5_sch.py:1729)
 DEBUG:After collapse: (kibot - v5_sch.py:1771)
-DEBUG:Including R1 (5d7f24ed-9567-4fe1-b32a-fd5207425d17) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C4 (3858e28c-d5e9-4f77-b846-788d1b8ac6af) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C3 (43b9ba1e-b856-4bc3-bb6a-40105b0da1ab) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C7 (5460a22c-1b6b-429b-bee2-e613997017e0) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R6 (6094aaf5-bee4-4722-923d-ddd77da19273) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R1 (60fde70e-97fe-49b1-8e6b-987b59fd8764) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R3 (63c14739-d2a3-4bdb-9c55-4be5a9c9113e) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R9 (6b96fe65-05b1-4b65-b035-8c353e66fbc5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R11 (95be4c4e-a922-4e86-b5a1-8aa48f7b9e72) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R2 (adc6f453-7823-4fb1-b2cc-843a2b93df3b) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q3 (b171386e-7ede-4fb7-b286-ae0d8077cb84) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R8 (b31ce31b-d432-44a9-99c0-3c1c9dc570e5) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R10 (bb2aa756-38ce-4735-bbb3-3601a5a2277f) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R5 (c6eae0ae-de36-4370-8fe5-b9b8caefd5df) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q1 (d9069d7c-97ce-4b08-a208-be007752b2c4) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C2 (da3c290e-c30c-4421-b153-10fcdfa6331a) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R4 (dd720c93-57ec-4444-aa86-57ea983d9c74) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C5 (de2b4287-3f7a-47bd-9c02-6541cb73e2ca) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including R7 (eb0fb07e-6971-4c47-a7b4-d8d849401ccc) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C6 (eb46c480-f599-424e-997c-6940e59b1372) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including C1 (ee3ff804-9a09-4860-a592-1a58ee604685) only found in PCB (kibot - kiplot.py:546)
+DEBUG:Including Q2 (f3d4d655-e2a1-455d-a157-6cac9bdea56a) only found in PCB (kibot - kiplot.py:546)
 DEBUG:Filters reset (kibot - fil_base.py:196)
 DEBUG:Applying filter `_kibom_dnf_Config` to fitted (kibot - fil_base.py:216)
 DEBUG:Applying filter `_kibom_dnc_Config` to fixed (kibot - fil_base.py:226)
@@ -4554,22 +5185,22 @@ DEBUG:Applying KiBoM style variants `DRAFT` (kibot - var_kibom.py:91)
 DEBUG:Crossing modules (kibot - out_base.py:388)
 DEBUG:Removing paste, mask and/or glue (kibot - out_base.py:539)
 DEBUG:Eurocircuits Pattern class for `minimum` is 4 because the clearance is 0.2, track is 0.2 and OAR is 0.15 (kibot - out_report.py:100)
-DEBUG:Eurocircuits Pattern class for `measured` is 4 because the clearance is 0.2, track is inf and OAR is inf (kibot - out_report.py:100)
+DEBUG:Eurocircuits Pattern class for `measured` is 4 because the clearance is 0.2, track is 0.3 and OAR is 0.15 (kibot - out_report.py:100)
 DEBUG:Eurocircuits Pattern class for `defined` is 4 because the clearance is 0.2, track is 0.2 and OAR is 0.15 (kibot - out_report.py:100)
 DEBUG:Eurocircuits Drill class for `minimum` is D because the drill is 0.25 (kibot - out_report.py:113)
-DEBUG:Eurocircuits Drill class for `measured` is A because the drill is inf (kibot - out_report.py:113)
+DEBUG:Eurocircuits Drill class for `measured` is D because the drill is 0.25 (kibot - out_report.py:113)
 DEBUG:Eurocircuits Drill class for `defined` is D because the drill is 0.25 (kibot - out_report.py:113)
 DEBUG:Restoring paste, mask and/or glue (kibot - out_base.py:629)
 DEBUG:Report template: `kibot_resources/templates/readme.txt` (kibot - out_report.py:1095)
-DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf372510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb62510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `/github/workspace/./Images` (kibot - optionable.py:557)
 DEBUG:Output destination: /github/workspace/Images (kibot - kiplot.py:704)
-DEBUG:Expanding `%f-top%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf372510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `%f-top%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb62510> parent: 'Top 3D viewer PCB render in PNG format' (png_3d_viewer_top) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `jones_mixer-top.png` (kibot - optionable.py:557)
-DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06d950> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `/github/workspace/./Images` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb43c50> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `/github/workspace/./Images` (kibot - optionable.py:557)
 DEBUG:Output destination: /github/workspace/Images (kibot - kiplot.py:704)
-DEBUG:Expanding `%f-bottom%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7ff1cf06d950> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
+DEBUG:Expanding `%f-bottom%I%v.%x` in PCB context for <kibot.out_render_3d.Render3DOptions object at 0x7fcccfb43c50> parent: 'Bottom 3D viewer PCB render in PNG format' (png_3d_viewer_bottom) [render_3d] (kibot - optionable.py:511)
 DEBUG:Expanded `jones_mixer-bottom.png` (kibot - optionable.py:557)
 DEBUG:Report output: `/github/workspace/README.md` (kibot - out_report.py:1128)
-Found 2 unique warning/s (19 total, 12 filtered)
+Found 22 unique warning/s (119 total, 12 filtered)

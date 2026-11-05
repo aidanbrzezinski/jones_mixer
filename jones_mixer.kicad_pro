@@ -753,7 +753,7 @@
     "DESCRIPTION": "Simple Jones Mixer.",
     "DESIGNER": "Aidan Brzezinski, Chloe LaBell, Andres Vega",
     "FABRICATION_NOTES": "",
-    "GIT_HASH_PCB": "b9dc517",
+    "GIT_HASH_PCB": "c0df124",
     "GIT_HASH_SCH": "b9dc517",
     "GIT_URL": "https://github.com/aidanbrzezinski/jones_mixer",
     "PROJECT_NAME": "Jones Mixer",

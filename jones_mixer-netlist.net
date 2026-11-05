@@ -1,7 +1,7 @@
 (export
 	(version "E")
 	(design
-		(source "/tmp/tmp-kibot-net_sch_print-ko6__e_v/jones_mixer.kicad_sch")
+		(source "/tmp/tmp-kibot-net_sch_print-hwijqtas/jones_mixer.kicad_sch")
 		(date "Date")
 		(tool "Eeschema 10.0.5-unknown-202607221313~667fa36054~ubuntu25.10.1")
 		(textvar
@@ -23,7 +23,7 @@
 			(name "FABRICATION_NOTES")
 		)
 		(textvar
-			(name "GIT_HASH_PCB") "b9dc517")
+			(name "GIT_HASH_PCB") "c0df124")
 		(textvar
 			(name "GIT_HASH_SCH") "b9dc517")
 		(textvar
