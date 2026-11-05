@@ -587,7 +587,7 @@
     "annotate_start_num": 0,
     "annotation": {
       "method": 0,
-      "sort_order": 0
+      "sort_order": 1
     },
     "bom_export_filename": "Manufacturing/Assembly/jones_mixer-bom-k8.csv",
     "bom_fmt_presets": [],
@@ -686,7 +686,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
-      "hop_over_size_choice": 0,
+      "hop_over_size_choice": 3,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -731,7 +731,7 @@
         "uuid": "51cec768-0817-4dbb-80e6-9f264b30dc59"
       }
     ],
-    "used_designators": "#PWR1,Q1-2,R1-11",
+    "used_designators": "#PWR1-8,C1-7,Q1-3,R1-11,TP1",
     "variants": []
   },
   "sheets": [
