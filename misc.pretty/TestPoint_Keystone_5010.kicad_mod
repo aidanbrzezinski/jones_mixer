@@ -8,7 +8,7 @@
 	(property "Reference" "REF**"
 		(at 0 -2.75 0)
 		(layer "F.SilkS")
-		(uuid "66db7c1e-4944-45f5-aa99-8978cbf4f0ff")
+		(uuid "a84a2abd-a7c6-45f3-82aa-375a9aed8fec")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "TestPoint_Keystone_5010"
 		(at 0 2.75 0)
 		(layer "F.Fab")
-		(uuid "ac72f3e1-9249-4dbc-ae1e-65a3cfe60c51")
+		(uuid "248c97e2-46ed-41d4-a43d-b5145701a3f4")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d202747b-ad8b-494f-8004-069fceb8a5f8")
+		(uuid "49052b45-8467-4958-b416-421b8da7e2b0")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "31038514-ac8a-457d-b3bf-0bf79859c5fd")
+		(uuid "188d0998-78bf-4f70-bdfb-a4a82f8722e8")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -64,7 +64,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "47c3487a-f01d-44bd-a1c0-de1ebf9b0bf7")
+		(uuid "9e9794b8-f3fc-40bc-8d47-00d5156863fd")
 	)
 	(fp_circle
 		(center 0 0)
@@ -75,7 +75,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "16406277-73dc-4176-9213-cb02194af838")
+		(uuid "0928bed8-8ab2-40a3-907c-9d560671d0ff")
 	)
 	(fp_rect
 		(start -1.25 -0.4)
@@ -86,7 +86,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "2baeabcd-8354-4b66-94cc-bf4d98a7550b")
+		(uuid "77272a47-9eb8-47f7-94be-6f45b8f032b1")
 	)
 	(fp_circle
 		(center 0 0)
@@ -97,12 +97,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "051b5a69-cde8-4fe4-b03f-e2813653d143")
+		(uuid "b34bf5ce-b91f-4e42-b54b-3daf09379f44")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "116075e6-0331-4943-94f5-5c4c63a3c5ae")
+		(uuid "0a347faf-f5d1-4856-b284-fd736ef5be24")
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -116,7 +116,7 @@
 		(drill 1.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "05da4645-e6f9-4952-981d-cd7a3375c98e")
+		(uuid "5176f930-e490-4f6d-b53a-fbd9d89b62b5")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/step/5010.STEP"

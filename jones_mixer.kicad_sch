@@ -884,7 +884,7 @@
 		)
 		(uuid "8b821864-881a-4cb0-856b-2d9a97f6404e")
 	)
-	(text "${BOARD_NAME}"
+	(text "${PROJECT_NAME}"
 		(exclude_from_sim no)
 		(at 25.4 40.64 0)
 		(effects
@@ -1729,7 +1729,7 @@
 			(color 0 0 0 0)
 		)
 		(uuid "f49353b4-3b23-4991-ace3-1ececdc97875")
-		(property "Sheetname" "mixer"
+		(property "Sheetname" "Mixer"
 			(at 15.24 304.0884 0)
 			(show_name no)
 			(do_not_autoplace no)

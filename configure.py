@@ -541,14 +541,21 @@ def edit_in_text_editor(text, filename):
         tmp = Path(tmpdir) / filename
         with open(tmp, "w", encoding="utf-8", newline="") as f:
             f.write(text)
-        print(f"  Opening {filename} in {command[0]} - save and close it to continue.")
+        print(f"  Opening {filename} in {command[0]}.")
         try:
             subprocess.run(command + [str(tmp)], check=False)
         except OSError as e:
             print(f"    ! Couldn't start '{editor}' ({e}). Set the EDITOR environment variable to your editor.")
             return None
+        # Some editors (Windows 11's Notepad, `code` without --wait) return
+        # immediately, so don't read the file until the user says they're done.
+        _input("  Save the file, close the editor, then press Enter here...")
         with open(tmp, encoding="utf-8", newline="") as f:
-            return f.read().lstrip("﻿").replace("\r\n", "\n")
+            edited = f.read().lstrip("﻿").replace("\r\n", "\n")
+        if not edited.strip():
+            print("    ! The file came back empty - kept it as it was.")
+            return None
+        return edited
 
 
 def edit_notes_file(plan, label, path):
