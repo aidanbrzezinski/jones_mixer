@@ -8,7 +8,7 @@
 	(property "Reference" "REF**"
 		(at 0 -2.75 0)
 		(layer "F.SilkS")
-		(uuid "52f3d9a1-8459-4af4-b522-a6b3e712cd79")
+		(uuid "ccb84c8a-6cb8-4889-b931-d24c040dc3ab")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "TestPoint_Keystone_5012"
 		(at 0 2.75 0)
 		(layer "F.Fab")
-		(uuid "272f2974-178c-4dd4-9c27-4a97eab44314")
+		(uuid "dcc5dc22-f2ee-49ef-b8b8-f279c12b5037")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "77473b19-2371-4640-a471-392313e53b8d")
+		(uuid "b306b699-6d4d-41a6-8180-ad3b9bdb0480")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d915d983-6880-47b7-95bd-4f14e3a5ca55")
+		(uuid "917482c0-275a-4f1f-9fd8-11766badf867")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -64,7 +64,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "a70c30fc-3671-494c-bf5a-8cd8d64ab154")
+		(uuid "4acbd5ab-0fee-4d6b-8e63-9f9894ebb7b6")
 	)
 	(fp_circle
 		(center 0 0)
@@ -75,7 +75,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "bf66c12d-9b1e-4c0d-a661-8c7811c97d82")
+		(uuid "645e2cee-7703-4bec-bc43-cb99e3205bbb")
 	)
 	(fp_rect
 		(start -1.25 -0.4)
@@ -86,7 +86,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "2d0358c9-4ff5-4999-98e6-659b55b9ac50")
+		(uuid "9273e618-8e72-4763-bb3c-88c03fd370c1")
 	)
 	(fp_circle
 		(center 0 0)
@@ -97,12 +97,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "7c3d6ee1-5d80-4b52-ad62-a2efcd5f90af")
+		(uuid "24e0335b-4b4e-4d62-8a4d-c1128f1969ab")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "a845a14e-4ec3-4d1c-9ef8-91a1eba24371")
+		(uuid "b83af99a-c472-4082-94a3-426e06bb9c24")
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -116,10 +116,10 @@
 		(drill 1.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "0b9981f6-20f5-436c-be12-c67f2c09bd92")
+		(uuid "ea4d4db4-96c1-4399-a58d-1222a6c14c0a")
 	)
 	(embedded_fonts no)
-	(model "/home/aidan/Downloads/5012.STEP"
+	(model "${KIPRJMOD}/step/5012.STEP"
 		(offset
 			(xyz 0 0 0)
 		)
