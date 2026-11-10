@@ -777,7 +777,7 @@
         "uuid": "51cec768-0817-4dbb-80e6-9f264b30dc59"
       }
     ],
-    "used_designators": "#PWR1-8,C1-14,Q1-6,R1-20,TP1-12",
+    "used_designators": "#PWR1-12,C1-14,Q1-6,R1-20,TP1-12",
     "variants": []
   },
   "sheets": [
@@ -818,16 +818,16 @@
     "RELEASE_BODY_UNRELEASED": "Version Unreleased not found.",
     "RELEASE_DATE": "10-Nov-2026",
     "RELEASE_DATE_NUM": "2026-11-10",
-    "RELEASE_TITLE_1": "Version 1.0.1 - 2026-11-10",
+    "RELEASE_TITLE_1": "Version 1.0.2 - 2026-11-10",
     "RELEASE_TITLE_1.0.0": "",
     "RELEASE_TITLE_1.0.1": "",
     "RELEASE_TITLE_1.0.2": "",
     "RELEASE_TITLE_1.1.0": "",
-    "RELEASE_TITLE_2": "Version 1.0.0 - 2026-11-10",
-    "RELEASE_TITLE_3": "",
+    "RELEASE_TITLE_2": "Version 1.0.1 - 2026-11-10",
+    "RELEASE_TITLE_3": "Version 1.0.0 - 2026-11-10",
     "RELEASE_TITLE_4": "",
     "RELEASE_TITLE_UNRELEASED": "Version Unreleased not found.",
-    "REVISION": "1.0.1",
+    "REVISION": "1.0.2",
     "SHEET_NAME_1": "Cover Page",
     "SHEET_NAME_10": "......................................",
     "SHEET_NAME_11": "......................................",
