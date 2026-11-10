@@ -1,0 +1,88 @@
+** Drc report for jones_mixer.kicad_pcb **
+** Created on 2026-11-10T15:08:00 **
+
+** Found 0 DRC violations **
+
+** Found 0 unconnected pads **
+
+** Found 26 Footprint errors **
+[extra_footprint]: Extra footprint
+    ; warning
+    @(142.75 mm, 89.75 mm): Footprint TP3
+[extra_footprint]: Extra footprint
+    ; warning
+    @(162.0 mm, 86.575001 mm): Footprint C4
+[extra_footprint]: Extra footprint
+    ; warning
+    @(150.0 mm, 88.5 mm): Footprint C3
+[extra_footprint]: Extra footprint
+    ; warning
+    @(156.0 mm, 102.5 mm): Footprint TP5
+[extra_footprint]: Extra footprint
+    ; warning
+    @(161.0 mm, 91.25 mm): Footprint C7
+[extra_footprint]: Extra footprint
+    ; warning
+    @(163.75 mm, 86.625001 mm): Footprint R6
+[extra_footprint]: Extra footprint
+    ; warning
+    @(150.0 mm, 85.0 mm): Footprint R1
+[extra_footprint]: Extra footprint
+    ; warning
+    @(152.6875 mm, 84.0 mm): Footprint R3
+[extra_footprint]: Extra footprint
+    ; warning
+    @(155.025 mm, 95.25 mm): Footprint R9
+[extra_footprint]: Extra footprint
+    ; warning
+    @(142.75 mm, 76.0 mm): Footprint TP1
+[extra_footprint]: Extra footprint
+    ; warning
+    @(169.25 mm, 76.0 mm): Footprint TP2
+[extra_footprint]: Extra footprint
+    ; warning
+    @(159.25 mm, 84.0 mm): Footprint R2
+[extra_footprint]: Extra footprint
+    ; warning
+    @(156.0 mm, 76.0 mm): Footprint TP4
+[extra_footprint]: Extra footprint
+    ; warning
+    @(157.1375 mm, 92.55 mm): Footprint Q3
+[extra_footprint]: Extra footprint
+    ; warning
+    @(154.0 mm, 92.55 mm): Footprint R8
+[extra_footprint]: Extra footprint
+    ; warning
+    @(161.0 mm, 93.0 mm): Footprint R10
+[extra_footprint]: Extra footprint
+    ; warning
+    @(152.75 mm, 89.5 mm): Footprint R5
+[extra_footprint]: Extra footprint
+    ; warning
+    @(142.75 mm, 102.25 mm): Footprint TP6
+[extra_footprint]: Extra footprint
+    ; warning
+    @(153.0 mm, 86.75 mm): Footprint Q1
+[extra_footprint]: Extra footprint
+    ; warning
+    @(165.5 mm, 84.0 mm): Footprint C2
+[extra_footprint]: Extra footprint
+    ; warning
+    @(159.25 mm, 89.5 mm): Footprint R4
+[extra_footprint]: Extra footprint
+    ; warning
+    @(156.0 mm, 85.775 mm): Footprint C5
+[extra_footprint]: Extra footprint
+    ; warning
+    @(156.0 mm, 89.0 mm): Footprint R7
+[extra_footprint]: Extra footprint
+    ; warning
+    @(152.0 mm, 92.55 mm): Footprint C6
+[extra_footprint]: Extra footprint
+    ; warning
+    @(156.0 mm, 82.25 mm): Footprint C1
+[extra_footprint]: Extra footprint
+    ; warning
+    @(159.0 mm, 86.75 mm): Footprint Q2
+
+** End of Report **

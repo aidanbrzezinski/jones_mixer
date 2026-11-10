@@ -30,7 +30,7 @@
 
 | Parameter | Value |
 | --- | --- |
-| Dimensions | 25.0 × 25.0 mm |
+| Dimensions | 32.0 × 32.0 mm |
 | Company | LTU |
 | Designer | Aidan Brzezinski, Chloe LaBell, Andres Vega |
 | Revision | + (Unreleased) |
