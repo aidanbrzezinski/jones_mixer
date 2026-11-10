@@ -1,11 +1,63 @@
 ** Drc report for jones_mixer.kicad_pcb **
-** Created on 2026-11-10T19:44:48 **
+** Created on 2026-11-10T21:37:27 **
 
 ** Found 0 DRC violations **
 
 ** Found 0 unconnected pads **
 
-** Found 26 Footprint errors **
+** Found 52 Footprint errors **
+[missing_footprint]: Missing footprint C8 (10uF)
+    ; warning
+[missing_footprint]: Missing footprint C9 (10uF)
+    ; warning
+[missing_footprint]: Missing footprint C10 (1uF)
+    ; warning
+[missing_footprint]: Missing footprint C11 (1uF)
+    ; warning
+[missing_footprint]: Missing footprint C12 (0.1uF)
+    ; warning
+[missing_footprint]: Missing footprint C13 (1uF)
+    ; warning
+[missing_footprint]: Missing footprint C14 (0.1uF)
+    ; warning
+[missing_footprint]: Missing footprint Q4 (NPN)
+    ; warning
+[missing_footprint]: Missing footprint Q5 (NPN)
+    ; warning
+[missing_footprint]: Missing footprint Q6 (NPN)
+    ; warning
+[missing_footprint]: Missing footprint R11 (49.9k)
+    ; warning
+[missing_footprint]: Missing footprint R12 (49.9k)
+    ; warning
+[missing_footprint]: Missing footprint R13 (10k)
+    ; warning
+[missing_footprint]: Missing footprint R14 (10k)
+    ; warning
+[missing_footprint]: Missing footprint R15 (49.9k)
+    ; warning
+[missing_footprint]: Missing footprint R16 (49.9k)
+    ; warning
+[missing_footprint]: Missing footprint R17 (10k)
+    ; warning
+[missing_footprint]: Missing footprint R18 (6.81k)
+    ; warning
+[missing_footprint]: Missing footprint R19 (49.9k)
+    ; warning
+[missing_footprint]: Missing footprint R20 (2.2k)
+    ; warning
+[missing_footprint]: Missing footprint TP7 (TestPoint)
+    ; warning
+[missing_footprint]: Missing footprint TP8 (TestPoint)
+    ; warning
+[missing_footprint]: Missing footprint TP9 (TestPoint)
+    ; warning
+[missing_footprint]: Missing footprint TP10 (TestPoint)
+    ; warning
+[missing_footprint]: Missing footprint TP11 (TestPoint)
+    ; warning
+[missing_footprint]: Missing footprint TP12 (TestPoint)
+    ; warning
 [extra_footprint]: Extra footprint
     ; warning
     @(142.75 mm, 89.75 mm): Footprint TP3

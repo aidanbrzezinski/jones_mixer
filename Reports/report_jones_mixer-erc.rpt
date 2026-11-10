@@ -1,4 +1,83 @@
-ERC report (2026-11-10T19:44:42, Encoding UTF8)
+ERC report (2026-11-10T21:37:21, Encoding UTF8)
 
 ***** Sheet /
- ** ERC messages: 0  Errors 0  Warnings 0
+[lib_symbol_mismatch]: Symbol '+5V' doesn't match copy in library 'power'
+    ; warning
+    @(1.0922 mm, 1.3208 mm): Symbol #PWR06 [+5V]
+
+[lib_symbol_mismatch]: Symbol 'GND' doesn't match copy in library 'power'
+    ; warning
+    @(1.2446 mm, 0.5842 mm): Symbol #PWR03 [GND]
+
+[lib_symbol_mismatch]: Symbol '+5V' doesn't match copy in library 'power'
+    ; warning
+    @(1.4478 mm, 0.508 mm): Symbol #PWR01 [+5V]
+
+[lib_symbol_mismatch]: Symbol '+5V' doesn't match copy in library 'power'
+    ; warning
+    @(1.7526 mm, 0.508 mm): Symbol #PWR02 [+5V]
+
+[lib_symbol_mismatch]: Symbol 'GND' doesn't match copy in library 'power'
+    ; warning
+    @(1.9558 mm, 0.635 mm): Symbol #PWR04 [GND]
+
+[lib_symbol_mismatch]: Symbol 'GND' doesn't match copy in library 'power'
+    ; warning
+    @(1.9558 mm, 0.8382 mm): Symbol #PWR05 [GND]
+
+[duplicate_reference]: Duplicate reference designators
+    ; error (excluded)
+    @(1.0922 mm, 1.3208 mm): Symbol #PWR06 [+5V]
+    @(1.0922 mm, 1.3208 mm): Symbol #PWR06 [+5V]
+
+[duplicate_reference]: Duplicate reference designators
+    ; error (excluded)
+    @(1.2446 mm, 0.5842 mm): Symbol #PWR03 [GND]
+    @(1.2446 mm, 0.5842 mm): Symbol #PWR03 [GND]
+
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error (excluded)
+    @(1.2446 mm, 0.5842 mm): Symbol #PWR03 Pin 1 [Power input, Line]
+
+[duplicate_reference]: Duplicate reference designators
+    ; error (excluded)
+    @(1.4478 mm, 0.508 mm): Symbol #PWR01 [+5V]
+    @(1.4478 mm, 0.508 mm): Symbol #PWR01 [+5V]
+
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error (excluded)
+    @(1.4478 mm, 0.508 mm): Symbol #PWR01 Pin 1 [Power input, Line]
+
+[duplicate_reference]: Duplicate reference designators
+    ; error (excluded)
+    @(1.7526 mm, 0.508 mm): Symbol #PWR02 [+5V]
+    @(1.7526 mm, 0.508 mm): Symbol #PWR02 [+5V]
+
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error (excluded)
+    @(1.7526 mm, 0.508 mm): Symbol #PWR02 Pin 1 [Power input, Line]
+
+[duplicate_reference]: Duplicate reference designators
+    ; error (excluded)
+    @(1.9558 mm, 0.635 mm): Symbol #PWR04 [GND]
+    @(1.9558 mm, 0.635 mm): Symbol #PWR04 [GND]
+
+[duplicate_reference]: Duplicate reference designators
+    ; error (excluded)
+    @(1.9558 mm, 0.8382 mm): Symbol #PWR05 [GND]
+    @(1.9558 mm, 0.8382 mm): Symbol #PWR05 [GND]
+
+***** Sheet /mixer/
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error (excluded)
+    @(1.2446 mm, 0.5842 mm): Symbol #PWR03 Pin 1 [Power input, Line]
+
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error (excluded)
+    @(1.4478 mm, 0.508 mm): Symbol #PWR01 Pin 1 [Power input, Line]
+
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error (excluded)
+    @(1.7526 mm, 0.508 mm): Symbol #PWR02 Pin 1 [Power input, Line]
+
+ ** ERC messages: 6  Errors 0  Warnings 6
