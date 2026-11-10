@@ -513,7 +513,7 @@ definitions:
   DESCRIPTION: "Simple Jones Mixer."
 
   COMPANY: "LTU"
-  DESIGNER: "Aidan Brzezinski, Chloe LaBell, Andres Vega"
+  DESIGNER: "A.B., C.B., A.V."
 
   LOGO: 'Logos/bdm_logo.png'
   GIT_URL: "https://github.com/aidanbrzezinski/jones_mixer"

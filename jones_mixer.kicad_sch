@@ -1713,6 +1713,52 @@
 		)
 		(uuid "dee96870-b977-4804-a805-318fe8afe5f2")
 	)
+	(sheet
+		(at 15.24 304.8)
+		(size 22.86 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f49353b4-3b23-4991-ace3-1ececdc97875")
+		(property "Sheetname" "mixer"
+			(at 15.24 304.0884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mixer.kicad_sch"
+			(at 15.24 313.0046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "jones_mixer"
+				(path "/f9e05184-c88b-4a88-ae9c-ab2bdb32be7c"
+					(page "3")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
