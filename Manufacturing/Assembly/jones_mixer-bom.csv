@@ -1,0 +1,9 @@
+Row,Quantity Per PCB,References,Value,Datasheet,Footprint,Description,Manufacturer,Manufacturer Part Number,Supplier Part Number
+1,2,C5 C7,0.1uF,https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V,C_0603_1608Metric,,,,
+2,3,C3 C4 C6,1uF,https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD,C_0603_1608Metric,,,,
+3,2,C1 C2,10uF,https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/658/CL10A106MA8NRNC_Spec.pdf,C_0603_1608Metric,,,,
+4,3,Q1 Q2 Q3,NPN,https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf,SOT-23-3,Bipolar (BJT) Transistor NPN 40 V 200 mA 300MHz 300 mW Surface Mount SOT-23-3 (TO-236),,,
+5,1,R10,2.2k,,R_0603_1608Metric,,,,
+6,1,R8,6.81k,,R_0603_1608Metric,,,,
+7,3,R3 R4 R7,10k,,R_0603_1608Metric,,,,
+8,5,R1 R2 R5 R6 R9,49.9k,,R_0603_1608Metric,,,,

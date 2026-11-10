@@ -1,0 +1,224 @@
+(export
+	(version "E")
+	(design
+		(source "/tmp/tmp-kibot-net_sch_print-ixt4szyf/jones_mixer.kicad_sch")
+		(date "Date")
+		(tool "Eeschema 10.0.5-unknown-202607221313~667fa36054~ubuntu25.10.1")
+		(textvar
+			(name "ASSEMBLY_NOTES") "ASSEMBLY NOTES (UNLESS OTHERWISE SPECIFIED)\n\n1)	DO NOT POPULATE PARTS ARE MARKED WITH A RED CROSS.\n\n2)	DO NOT POPULATE PARTS ARE NOT PRESENT IN THE BOM.\n\n3)	IF CONFLICTING INFORMATION IS FOUND BETWEEN THE ASSEMBLY\n	FILE AND BOM, BOM SHOULD BE USED AS THE MAIN SOURCE.\n\n4)	CONFORMAL COATING IS NOT REQUIRED.\n\n5)	DOT IDENTIFIES PIN #1 LOCATION AND DEVICE ORIENTATION\n	WHEN VIEWED FROM THE TOP.")
+		(textvar
+			(name "BOARD_NAME") "JONES_MIXER")
+		(textvar
+			(name "BRANCH") "main")
+		(textvar
+			(name "BUILD_VARIANT") "RELEASED")
+		(textvar
+			(name "COMPANY") "LTU")
+		(textvar
+			(name "DESCRIPTION") "Simple Jones Mixer.")
+		(textvar
+			(name "DESIGNER") "Aidan Brzezinski, Chloe LaBell, Andres Vega")
+		(textvar
+			(name "FABRICATION_NOTES")
+		)
+		(textvar
+			(name "GIT_HASH_PCB") "e165eea")
+		(textvar
+			(name "GIT_HASH_SCH") "b9dc517")
+		(textvar
+			(name "GIT_URL") "https://github.com/aidanbrzezinski/jones_mixer")
+		(textvar
+			(name "PROJECT_NAME") "Jones Mixer")
+		(textvar
+			(name "RELEASE_BODY_1")
+		)
+		(textvar
+			(name "RELEASE_BODY_1.0.0")
+		)
+		(textvar
+			(name "RELEASE_BODY_1.0.1")
+		)
+		(textvar
+			(name "RELEASE_BODY_1.0.2")
+		)
+		(textvar
+			(name "RELEASE_BODY_1.1.0")
+		)
+		(textvar
+			(name "RELEASE_BODY_2")
+		)
+		(textvar
+			(name "RELEASE_BODY_3")
+		)
+		(textvar
+			(name "RELEASE_BODY_4")
+		)
+		(textvar
+			(name "RELEASE_BODY_UNRELEASED") "Version Unreleased not found.")
+		(textvar
+			(name "RELEASE_DATE") "10-Nov-2026")
+		(textvar
+			(name "RELEASE_DATE_NUM") "2026-11-10")
+		(textvar
+			(name "RELEASE_TITLE_1") "Version 1.0.0 - 2026-11-10")
+		(textvar
+			(name "RELEASE_TITLE_1.0.0")
+		)
+		(textvar
+			(name "RELEASE_TITLE_1.0.1")
+		)
+		(textvar
+			(name "RELEASE_TITLE_1.0.2")
+		)
+		(textvar
+			(name "RELEASE_TITLE_1.1.0")
+		)
+		(textvar
+			(name "RELEASE_TITLE_2")
+		)
+		(textvar
+			(name "RELEASE_TITLE_3")
+		)
+		(textvar
+			(name "RELEASE_TITLE_4")
+		)
+		(textvar
+			(name "RELEASE_TITLE_UNRELEASED") "Version Unreleased not found.")
+		(textvar
+			(name "REVISION") "1.0.0")
+		(textvar
+			(name "SHEET_NAME_1") "Cover Page")
+		(textvar
+			(name "SHEET_NAME_10") "......................................")
+		(textvar
+			(name "SHEET_NAME_11") "......................................")
+		(textvar
+			(name "SHEET_NAME_12") "......................................")
+		(textvar
+			(name "SHEET_NAME_13") "......................................")
+		(textvar
+			(name "SHEET_NAME_14") "......................................")
+		(textvar
+			(name "SHEET_NAME_15") "......................................")
+		(textvar
+			(name "SHEET_NAME_16") "......................................")
+		(textvar
+			(name "SHEET_NAME_17") "......................................")
+		(textvar
+			(name "SHEET_NAME_18") "......................................")
+		(textvar
+			(name "SHEET_NAME_19") "......................................")
+		(textvar
+			(name "SHEET_NAME_2") "......................................")
+		(textvar
+			(name "SHEET_NAME_20") "......................................")
+		(textvar
+			(name "SHEET_NAME_21") "......................................")
+		(textvar
+			(name "SHEET_NAME_22") "......................................")
+		(textvar
+			(name "SHEET_NAME_23") "......................................")
+		(textvar
+			(name "SHEET_NAME_24") "......................................")
+		(textvar
+			(name "SHEET_NAME_25") "......................................")
+		(textvar
+			(name "SHEET_NAME_26") "......................................")
+		(textvar
+			(name "SHEET_NAME_27") "......................................")
+		(textvar
+			(name "SHEET_NAME_28") "......................................")
+		(textvar
+			(name "SHEET_NAME_29") "......................................")
+		(textvar
+			(name "SHEET_NAME_3") "......................................")
+		(textvar
+			(name "SHEET_NAME_30") "......................................")
+		(textvar
+			(name "SHEET_NAME_31") "......................................")
+		(textvar
+			(name "SHEET_NAME_32") "......................................")
+		(textvar
+			(name "SHEET_NAME_33") "......................................")
+		(textvar
+			(name "SHEET_NAME_34") "......................................")
+		(textvar
+			(name "SHEET_NAME_35") "......................................")
+		(textvar
+			(name "SHEET_NAME_36") "......................................")
+		(textvar
+			(name "SHEET_NAME_37") "......................................")
+		(textvar
+			(name "SHEET_NAME_38") "......................................")
+		(textvar
+			(name "SHEET_NAME_39") "......................................")
+		(textvar
+			(name "SHEET_NAME_4") "......................................")
+		(textvar
+			(name "SHEET_NAME_40") "......................................")
+		(textvar
+			(name "SHEET_NAME_5") "......................................")
+		(textvar
+			(name "SHEET_NAME_6") "......................................")
+		(textvar
+			(name "SHEET_NAME_7") "......................................")
+		(textvar
+			(name "SHEET_NAME_8") "......................................")
+		(textvar
+			(name "SHEET_NAME_9") "......................................")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company "LTU")
+				(rev "1.0.0")
+				(date "Date")
+				(source "jones_mixer.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components)
+	(groups)
+	(variants)
+	(libparts)
+	(libraries)
+	(nets)
+)

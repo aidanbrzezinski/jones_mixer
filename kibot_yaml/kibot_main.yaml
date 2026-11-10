@@ -111,7 +111,7 @@ groups:
   - name: tables
     outputs:
       - @CSV_COMP_COUNT_OUPUT@
-      # - @CSV_IMPEDANCE_TABLE_OUTPUT@   # Tier 2 — configure.py uncomments this line when enabled
+      # - @CSV_IMPEDANCE_TABLE_OUTPUT@   # Tier 2 - enable via configure.py
       - @CSV_DRILL_TABLE_OUTPUT@
       - testpoints
       - notes
@@ -508,15 +508,15 @@ definitions:
 
   # Metadata — MEMBER: set once by configure.py, never by hand =================
 
-  PROJECT_NAME: Board Name
-  BOARD_NAME: BOARD_NAME
-  DESCRIPTION: One-line description of what this board does.
+  PROJECT_NAME: "Jones Mixer"
+  BOARD_NAME: "JONES_MIXER"
+  DESCRIPTION: "Simple Jones Mixer."
 
-  COMPANY: Blue Devil Motor Sports
-  DESIGNER: Author
+  COMPANY: "LTU"
+  DESIGNER: "Aidan Brzezinski, Chloe LaBell, Andres Vega"
 
   LOGO: 'Logos/bdm_logo.png'
-  GIT_URL: 'https://github.com/BDMPowertrain/PLACEHOLDER'
+  GIT_URL: "https://github.com/aidanbrzezinski/jones_mixer"
 
   # Preflight ==================================================================
 

@@ -1,0 +1,7 @@
+Testpoint Ref.,Net,Net Class,X,Y,Side,Pad Type,Value,Footprint
+TP1,/mixer/+5V,Default,2.7500,29.0000,top,THRU,TestPoint,TestPoint_Keystone_5010
+TP2,/mixer/-5V,Default,29.2500,29.0000,top,THRU,TestPoint,TestPoint_Keystone_5010
+TP3,/mixer/Vi2,Default,2.7500,15.2500,top,THRU,TestPoint,TestPoint_Keystone_5012
+TP4,/mixer/GND,Default,16.0000,29.0000,top,THRU,TestPoint,TestPoint_Keystone_5011
+TP5,/mixer/Vo,Default,16.0000,2.5000,top,THRU,TestPoint,TestPoint_Keystone_5012
+TP6,/mixer/Vi1,Default,2.7500,2.7500,top,THRU,TestPoint,TestPoint_Keystone_5012

@@ -9,14 +9,18 @@ Run with no arguments for an interactive menu (same script on every OS):
 
 This is the only supported way to change board metadata, rename a freshly
 templated project, or change a board's stage (KiBot variant). It owns the
-metadata in kibot_yaml/kibot_main.yaml, the `kibot_variant:` line in
-.github/workflows/ci.yaml, and COMPANY/REVISION in the .kicad_pro text
-variables. Don't hand-edit those.
+metadata in kibot_yaml/kibot_main.yaml, the `kibot_variant:` and
+`release_version:` lines in .github/workflows/ci.yaml, and COMPANY/REVISION in
+the .kicad_pro text variables. Don't hand-edit those. It also edits the
+fabrication/assembly notes templates in kibot_resources/templates/ (menu, and
+as part of releasing).
 
 Python 3 standard library only; no network access, no pip install.
 
 Non-interactive use (for scripts/CI):
     configure.py --stage CHECKED     set the stage directly
+    configure.py --stage RELEASED --version 1.0.0
+                                     release 1.0.0 on the next push
     configure.py --check             validate config, exit 1 on problems
     configure.py --dry-run           show what any action would change
 """
@@ -24,18 +28,25 @@ import argparse
 import json
 import os
 import re
+import shlex
+import shutil
 import subprocess
 import sys
+import tempfile
+import textwrap
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).resolve().parent
 KIBOT_MAIN = PROJECT_DIR / "kibot_yaml" / "kibot_main.yaml"
 CI_YAML = PROJECT_DIR / ".github" / "workflows" / "ci.yaml"
+CHANGELOG = PROJECT_DIR / "CHANGELOG.md"
 
 PLACEHOLDER_STEM = "BOARD_TEMPLATE"
 # Lowercase letters, digits, underscores. No car/year prefix, so the same
 # naming carries forward to future cars without renames.
 BOARD_NAME_RE = re.compile(r"^[a-z0-9]+(_[a-z0-9]+)*$")
+# Must match what ci.yaml accepts for release_version.
+RELEASE_VERSION_RE = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
 
 STAGES = [
     ("DRAFT", "Schematic still being drawn.",
@@ -44,6 +55,8 @@ STAGES = [
      "Generates all schematic and PCB documents. ERC/DRC not run."),
     ("CHECKED", "Board believed correct; ready for procurement/fab.",
      "Generates all documents and ENFORCES ERC/DRC - CI fails on errors."),
+    ("RELEASED", "Board is done; publish a numbered release.",
+     "Same as CHECKED, then CI tags the version, updates main and creates the GitHub Release."),
 ]
 STAGE_NAMES = [s[0] for s in STAGES]
 
@@ -131,6 +144,17 @@ def validate_board_name(value):
     if not BOARD_NAME_RE.match(value):
         return ("Lowercase letters, digits and single underscores only "
                 "(e.g. tim, bse_apps) - no spaces, hyphens or car/year prefix.")
+    return None
+
+
+def validate_release_version(value):
+    if not RELEASE_VERSION_RE.match(value):
+        return "Use three numbers, like 1.0.0 (no leading 'v')."
+    existing = git_version_tags()
+    if value in existing:
+        return f"{value} is already released. Pick a higher version."
+    if existing and version_key(value) <= version_key(existing[0]):
+        return f"Must be higher than the last release, {existing[0]}."
     return None
 
 
@@ -267,6 +291,287 @@ def read_stage():
     return m.group(1) if m else "DRAFT"
 
 
+def read_release_version():
+    m = re.search(r"^\s*release_version:\s*[\"']?([^\"'\s]*)", read(CI_YAML), re.MULTILINE)
+    return m.group(1) if m else ""
+
+
+def set_stage_lines(text, stage, version):
+    """Set `kibot_variant:` and `release_version:` in ci.yaml, adding the
+    latter right after the former if this repo's ci.yaml predates it."""
+    text = re.sub(r"^(\s*kibot_variant:\s*)\S+", rf"\g<1>{stage}", text, count=1, flags=re.MULTILINE)
+    line = f'release_version: "{version}"'
+    if re.search(r"^\s*release_version:", text, re.MULTILINE):
+        return re.sub(r"^(\s*)release_version:.*$", rf"\g<1>{line}", text, count=1, flags=re.MULTILINE)
+    return re.sub(r"^(\s*)(kibot_variant:.*)$", rf"\g<1>\g<2>\n\g<1>{line}", text, count=1, flags=re.MULTILINE)
+
+
+def version_key(v):
+    return tuple(int(n) for n in v.split("."))
+
+
+def git_version_tags():
+    """Release tags known locally, highest first. Tags made elsewhere only
+    show up after a `git pull`; CI re-checks against GitHub anyway."""
+    try:
+        out = subprocess.run(["git", "-C", str(PROJECT_DIR), "tag", "-l"],
+                             capture_output=True, text=True, check=True).stdout
+    except Exception:
+        return []
+    return sorted((t for t in out.split() if RELEASE_VERSION_RE.match(t)), key=version_key, reverse=True)
+
+
+# ----------------------------------------------------------------------------
+# CHANGELOG.md: the [Unreleased] section becomes the release notes
+# ----------------------------------------------------------------------------
+
+NOTE_CATEGORIES = ("Fixed", "Added", "Changed", "Removed")
+# The template's example bullets, which mean "nothing written yet".
+NOTE_PLACEHOLDERS = {"Fixes", "Additions", "Changes", "Deletions"}
+UNRELEASED_RE = re.compile(r"^## \[Unreleased\][^\n]*\n(.*?)(?=^## |\Z)", re.MULTILINE | re.DOTALL)
+
+
+def read_release_notes(text):
+    """{category: [bullet, ...]} from the [Unreleased] section, standard
+    categories first. Placeholder bullets are dropped; a non-bullet line is
+    kept as a continuation of the bullet above it."""
+    notes = {c: [] for c in NOTE_CATEGORIES}
+    m = UNRELEASED_RE.search(text)
+    if not m:
+        return notes
+    category = "Changed"
+    for line in m.group(1).split("\n"):
+        if line.startswith("### "):
+            category = line[4:].strip()
+            notes.setdefault(category, [])
+        elif re.match(r"^\s*[-*]\s+", line):
+            bullet = re.sub(r"^\s*[-*]\s+", "", line).strip()
+            if bullet not in NOTE_PLACEHOLDERS:
+                notes[category].append(bullet)
+        elif line.strip() and notes[category]:
+            notes[category][-1] += "\n    " + line.strip()
+    return notes
+
+
+def write_release_notes(text, notes):
+    body = "".join(f"### {c}\n\n" + "".join(f"-   {b}\n" for b in bullets) + "\n"
+                   for c, bullets in notes.items() if bullets)
+    section = "## [Unreleased]\n\n" + body
+    if UNRELEASED_RE.search(text):
+        return UNRELEASED_RE.sub(lambda _: section, text, count=1)
+    m = re.search(r"^## ", text, re.MULTILINE)
+    if m:
+        return text[:m.start()] + section + text[m.start():]
+    return (text.rstrip("\n") + "\n\n" if text.strip() else "# Changelog\n\n") + section
+
+
+def print_release_notes(notes):
+    if not any(notes.values()):
+        print("    (empty)")
+    for c, bullets in notes.items():
+        if bullets:
+            print(f"    {c}:")
+            for b in bullets:
+                print(f"      - {b}")
+
+
+def edit_release_notes(plan):
+    """Interactive editor for the [Unreleased] section; adds the edit to
+    `plan`. Returns False if the user backs out of releasing empty notes."""
+    text = plan.text_of(CHANGELOG) if CHANGELOG.exists() else ""
+    notes = read_release_notes(text)
+    heading("Release notes (CHANGELOG.md [Unreleased])")
+    print_release_notes(notes)
+    if ask_yes_no("Edit the release notes now?", default=not any(notes.values())):
+        for category, bullets in notes.items():
+            print(f"\n  {category}:")
+            while True:
+                for i, b in enumerate(bullets, start=1):
+                    print(f"    {i}. {b}")
+                hint = f", -1..-{len(bullets)} removes that line" if bullets else ""
+                entry = ask(f"Add a line (Enter for next section{hint})", validate=lambda v: validate_note(v, bullets))
+                if not entry:
+                    break
+                if re.match(r"^-\d+$", entry):
+                    bullets.pop(int(entry[1:]) - 1)
+                else:
+                    bullets.append(entry)
+        print("\n  Release notes will be:")
+        print_release_notes(notes)
+    if not any(notes.values()) and not ask_yes_no("The release notes are empty. Release anyway?", default=False):
+        print("Cancelled - nothing written.")
+        return False
+    plan.write(CHANGELOG, write_release_notes(text, notes), "release notes")
+    return True
+
+
+def validate_note(value, bullets):
+    if re.match(r"^-\d+$", value):
+        n = int(value[1:])
+        return None if 1 <= n <= len(bullets) else f"There's no line {n}."
+    if value in NOTE_PLACEHOLDERS:
+        return "Describe the actual change."
+    return None
+
+
+# ----------------------------------------------------------------------------
+# Manufacturing notes: the KiBot report templates spliced into the
+# fabrication and assembly drawings
+# ----------------------------------------------------------------------------
+
+NOTES_DIR = PROJECT_DIR / "kibot_resources" / "templates"
+MANUFACTURING_NOTES = (("Fabrication notes", NOTES_DIR / "fabrication_notes.txt"),
+                       ("Assembly notes", NOTES_DIR / "assembly_notes.txt"))
+NOTE_START_RE = re.compile(r"^(\d+)\)")
+NOTE_WRAP = 48  # matches the hand-wrapped width of the template notes
+
+
+def parse_notes(text):
+    """Split a notes template into its header and numbered notes. Each note
+    keeps its raw lines (tabs, ${var} references, KiBot `#?condition` lines),
+    so notes the user doesn't touch are written back byte-for-byte. The
+    blank and `#?` lines just before a note's `N)` line are its `sep`, so a
+    conditional note's condition moves or disappears with it."""
+    trailing = text.endswith("\n")
+    lines = (text[:-1] if trailing else text).split("\n")
+    starts = [i for i, line in enumerate(lines) if NOTE_START_RE.match(line)]
+
+    def sep_start(i):
+        while i > 0 and (not lines[i - 1].strip() or lines[i - 1].startswith("#?")):
+            i -= 1
+        return i
+    bounds = [sep_start(s) for s in starts]
+    notes = []
+    for k, s in enumerate(starts):
+        end = bounds[k + 1] if k + 1 < len(starts) else len(lines)
+        notes.append({"sep": lines[bounds[k]:s], "body": lines[s:end]})
+    return {"header": lines[:bounds[0]] if starts else lines, "notes": notes, "trailing": trailing}
+
+
+def render_notes(doc):
+    """Back to template text, renumbering the notes 1, 2, 3..."""
+    lines = list(doc["header"])
+    for n, note in enumerate(doc["notes"], start=1):
+        lines += note["sep"] + [NOTE_START_RE.sub(f"{n})", note["body"][0], count=1)] + note["body"][1:]
+    text = "\n".join(lines)
+    return text + "\n" if doc["trailing"] else text
+
+
+def print_notes(doc):
+    if not doc["notes"]:
+        print("    (no notes)")
+    for n, note in enumerate(doc["notes"], start=1):
+        conditions = sorted({line[2:].strip() for line in note["sep"] + note["body"] if line.startswith("#?")})
+        body = [line for line in note["body"] if not line.startswith("#?")]
+        first = NOTE_START_RE.sub("", body[0]).strip()
+        print(f"    {n:>2}) {first}" + (f"   [only if: {', '.join(conditions)}]" if conditions else ""))
+        for line in body[1:]:
+            print(("    " + line).expandtabs(8).rstrip())
+
+
+def format_note(text):
+    """A typed one-line note, wrapped and indented like the template's."""
+    wrapped = textwrap.wrap(text, NOTE_WRAP, break_long_words=False, break_on_hyphens=False) or [""]
+    return ["0)\t" + wrapped[0]] + ["\t" + w for w in wrapped[1:]]
+
+
+def validate_note_text(value):
+    if not value:
+        return "This can't be empty."
+    if value.startswith("#"):
+        return "A note can't start with '#' - KiBot reads that as a template directive."
+    if any(ord(c) < 32 for c in value):
+        return "Control characters aren't allowed."
+    return None
+
+
+def edit_in_text_editor(text, filename):
+    """Open `text` in the user's editor ($VISUAL/$EDITOR, else Notepad or
+    nano/vi) and return the saved result, or None if no editor could run."""
+    editor = os.environ.get("VISUAL") or os.environ.get("EDITOR")
+    if not editor:
+        editor = "notepad" if sys.platform == "win32" else (shutil.which("nano") or shutil.which("vi") or "vi")
+    command = [t.strip('"') for t in shlex.split(editor, posix=os.name != "nt")]
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmp = Path(tmpdir) / filename
+        with open(tmp, "w", encoding="utf-8", newline="") as f:
+            f.write(text)
+        print(f"  Opening {filename} in {command[0]} - save and close it to continue.")
+        try:
+            subprocess.run(command + [str(tmp)], check=False)
+        except OSError as e:
+            print(f"    ! Couldn't start '{editor}' ({e}). Set the EDITOR environment variable to your editor.")
+            return None
+        with open(tmp, encoding="utf-8", newline="") as f:
+            return f.read().lstrip("﻿").replace("\r\n", "\n")
+
+
+def edit_notes_file(plan, label, path):
+    """Interactive editor for one notes template; adds the edit to `plan`."""
+    doc = parse_notes(plan.text_of(path))
+    print("  Drawing notes are usually written in CAPITALS. Text like ${pcb_finish_cap}\n"
+          "  is filled in by KiBot from the board.")
+    while True:
+        count = len(doc["notes"])
+
+        def validate(v):
+            m = re.match(r"^([rd])\s*(\d+)$", v.lower())
+            if v.lower() in ("", "a", "o", "s"):
+                return None
+            if m:
+                return None if 1 <= int(m.group(2)) <= count else f"There's no note {m.group(2)}."
+            return "Enter a, r N, d N, o, s or just Enter."
+        cmd = ask("a = add, r N = reword N, d N = delete N, o = open in text editor, "
+                  "s = show, Enter = done", validate=validate).lower()
+        if not cmd:
+            break
+        if cmd == "s":
+            print_notes(doc)
+        elif cmd == "a":
+            text = ask("New note (one line; it's wrapped for you)", validate=validate_note_text)
+            doc["notes"].append({"sep": [""], "body": format_note(text)})
+            print_notes(doc)
+        elif cmd == "o":
+            edited = edit_in_text_editor(render_notes(doc), path.name)
+            if edited is not None:
+                doc = parse_notes(edited)
+                print_notes(doc)
+        else:
+            n = int(cmd[1:].strip())
+            note = doc["notes"][n - 1]
+            if cmd[0] == "d":
+                del doc["notes"][n - 1]
+            else:
+                if len(note["body"]) > 1:
+                    print("    (This replaces the whole note, including any table or sub-items -\n"
+                          "     use 'o' to change just part of it.)")
+                text = ask(f"New text for note {n} (Enter to keep)", validate=lambda v: v and validate_note_text(v))
+                if text:
+                    note["body"] = format_note(text)
+            print_notes(doc)
+    plan.write(path, render_notes(doc), label.lower())
+
+
+def review_manufacturing_notes(plan, ask_first):
+    """Show each notes template and edit it. With `ask_first` (release),
+    only edit the ones the user says are wrong."""
+    for label, path in MANUFACTURING_NOTES:
+        if not path.exists():
+            continue
+        heading(f"{label} ({path.relative_to(PROJECT_DIR).as_posix()})")
+        print_notes(parse_notes(plan.text_of(path)))
+        if ask_first and ask_yes_no(f"Are the {label.lower()} correct for this release?", default=True):
+            continue
+        edit_notes_file(plan, label, path)
+
+
+def suggest_next_version(tags):
+    if not tags:
+        return "1.0.0"
+    major, minor, _ = version_key(tags[0])
+    return f"{major}.{minor + 1}.0"
+
+
 def git_remote_url():
     try:
         url = subprocess.run(["git", "-C", str(PROJECT_DIR), "remote", "get-url", "origin"],
@@ -279,6 +584,173 @@ def git_remote_url():
 
 def kicad_is_open(stem):
     return sorted(p.name for p in PROJECT_DIR.glob(f"~{stem}.*.lck"))
+
+
+CONFLICT_MARKER_RE = re.compile(r"^(<<<<<<<|=======|>>>>>>>)(?: |$)", re.MULTILINE)
+
+
+def project_file_problems():
+    """Unresolved git merge conflicts in the KiCad files, and a .kicad_pro
+    that isn't valid JSON. CI commits GIT_HASH_* into the .kicad_pro on every
+    run, so pulling over local .kicad_pro edits can conflict; a conflicted
+    file committed as-is breaks CI and, once opened, KiCad."""
+    problems = []
+    files = [p for pattern in ("*.kicad_pro", "*.kicad_sch", "*.kicad_pcb")
+             for p in sorted(PROJECT_DIR.glob(pattern))]
+    files += [PROJECT_DIR / "fp-lib-table", PROJECT_DIR / "sym-lib-table"]
+    for path in files:
+        if not path.is_file():
+            continue
+        text = read(path)
+        m = CONFLICT_MARKER_RE.search(text)
+        if m:
+            line = text.count("\n", 0, m.start()) + 1
+            problems.append(f"{path.name} line {line}: unresolved git merge conflict ({m.group(1)})")
+        elif path.suffix == ".kicad_pro":
+            try:
+                json.loads(text)
+            except ValueError as e:
+                problems.append(f"{path.name}: not valid JSON ({e})")
+    return problems
+
+
+def load_project_json(path):
+    """The .kicad_pro as a dict, or a ConfigError that says how to repair it
+    (instead of a json traceback on a conflicted file)."""
+    text = read(path)
+    if CONFLICT_MARKER_RE.search(text):
+        raise ConfigError(f"{path.name} has an unresolved git merge conflict. Choose 'Check config' from the "
+                          "menu (or run configure.py --check --fix) to resolve it.")
+    try:
+        return json.loads(text)
+    except ValueError as e:
+        raise ConfigError(f"{path.name} is not valid JSON ({e}). Restore it from an earlier commit "
+                          f"(git log -- \"{path.name}\", then git checkout <commit> -- \"{path.name}\").")
+
+
+def project_json_text(data, like):
+    """Serialize a .kicad_pro the way KiCad writes it (2-space indent, raw
+    UTF-8 instead of \\u escapes), keeping `like`'s trailing newline or lack
+    of one, so an edit doesn't reformat lines nobody changed."""
+    return json.dumps(data, indent=2, ensure_ascii=False) + ("\n" if like.endswith("\n") else "")
+
+
+# Text variables KiBot's set_text_variables preflight rewrites on every CI
+# run (kibot_pre_set_text_variables.yaml). These are what make .kicad_pro
+# pull conflicts common, and either side of a conflict on them is fine
+# because the next CI run overwrites them anyway.
+CI_TEXT_VARIABLE_RE = re.compile(
+    r"^(REVISION|RELEASE_.*|GIT_HASH_.*|GIT_URL|BRANCH|PROJECT_NAME|BOARD_NAME|DESCRIPTION|"
+    r"COMPANY|DESIGNER|BUILD_VARIANT|FABRICATION_NOTES|ASSEMBLY_NOTES|SHEET_NAME_.*)$")
+_MISSING = object()
+
+
+def merge_json(base, ours, theirs, where=""):
+    """Three-way merge of parsed JSON. Returns (merged, conflicts) where
+    conflicts are the /key/paths both sides changed differently (ours is
+    kept there). Symmetric apart from that tie-break, so it doesn't matter
+    whether the conflict came from a merge or a rebase."""
+    if ours == theirs or theirs == base:
+        return ours, []
+    if ours == base:
+        return theirs, []
+    if isinstance(ours, dict) and isinstance(theirs, dict):
+        base = base if isinstance(base, dict) else {}
+        merged, conflicts = {}, []
+        for key in list(ours) + [k for k in theirs if k not in ours]:
+            value, c = merge_json(base.get(key, _MISSING), ours.get(key, _MISSING),
+                                  theirs.get(key, _MISSING), f"{where}/{key}")
+            if value is not _MISSING:
+                merged[key] = value
+            conflicts += c
+        return merged, conflicts
+    return ours, [where]
+
+
+def git_unmerged_versions(path):
+    """{1: base, 2: ours, 3: theirs} text of a file git has as unmerged
+    (mid-merge or mid-rebase), else {}."""
+    rel = path.relative_to(PROJECT_DIR).as_posix()
+    try:
+        out = subprocess.run(["git", "-C", str(PROJECT_DIR), "ls-files", "-u", "--", rel],
+                             capture_output=True, text=True, check=True).stdout
+        versions = {}
+        for line in out.splitlines():
+            _, sha, stage = line.split("\t", 1)[0].split()
+            blob = subprocess.run(["git", "-C", str(PROJECT_DIR), "cat-file", "blob", sha],
+                                  capture_output=True, check=True).stdout
+            versions[int(stage)] = blob.decode("utf-8").replace("\r\n", "\n")
+        return versions
+    except Exception:
+        return {}
+
+
+def resolve_project_conflict(path):
+    """Merged .kicad_pro text for a conflicted, still-unmerged file, or
+    (None, reason) if it needs a human."""
+    versions = git_unmerged_versions(path)
+    if 2 not in versions or 3 not in versions:
+        return None, ("git doesn't have both sides of the conflict any more (was the file committed "
+                      "with the markers in it?). Restore it from an earlier commit: "
+                      f"git log -- \"{path.name}\", then git checkout <commit> -- \"{path.name}\".")
+    try:
+        base, ours, theirs = (json.loads(versions[s]) if s in versions else {} for s in (1, 2, 3))
+    except ValueError as e:
+        return None, f"one side of the conflict isn't valid JSON ({e}); ask a lead."
+    merged, conflicts = merge_json(base, ours, theirs)
+    real = [c for c in conflicts
+            if not (c.startswith("/text_variables/") and CI_TEXT_VARIABLE_RE.match(c[len("/text_variables/"):]))]
+    if real:
+        return None, ("both sides changed the same project settings, so this needs a human: "
+                      + ", ".join(real) + ". Ask a lead.")
+    return project_json_text(merged, versions[2]), None
+
+
+def git_in_rebase():
+    try:
+        git_dir = subprocess.run(["git", "-C", str(PROJECT_DIR), "rev-parse", "--git-dir"],
+                                 capture_output=True, text=True, check=True).stdout.strip()
+    except Exception:
+        return False
+    git_dir = PROJECT_DIR / git_dir
+    return (git_dir / "rebase-merge").exists() or (git_dir / "rebase-apply").exists()
+
+
+_REMOTE_PATH_RE = re.compile(r'"[^"]*[\\/]RemoteLibrary[\\/]([^"]*)"')
+
+
+def fix_remote_library_paths(project_dir=PROJECT_DIR, dry_run=False):
+    """Rewrite machine-specific RemoteLibrary paths to ${KIPRJMOD}/RemoteLibrary/...
+
+    KiCad's Remote Symbols panel (used by Prism) writes the expanded absolute
+    download path into fp-lib-table / sym-lib-table and the 3D model paths in
+    downloaded footprints. Those break on any other machine and in CI.
+    Safe to run repeatedly: already-relative paths are left unchanged.
+    Returns the list of files that were (or, with dry_run, would be) modified.
+    """
+    project_dir = Path(project_dir)
+    files = [project_dir / "fp-lib-table", project_dir / "sym-lib-table"]
+    files += sorted((project_dir / "RemoteLibrary").rglob("*.kicad_mod"))
+
+    def repl(m):
+        rest = m.group(1).replace("\\", "/")
+        return '"${KIPRJMOD}/RemoteLibrary/' + rest + '"'
+
+    changed = []
+    for f in files:
+        if not f.is_file():
+            continue
+        # newline="" on read and write preserves CRLF/LF exactly
+        with open(f, encoding="utf-8", newline="") as fh:
+            text = fh.read()
+        new = _REMOTE_PATH_RE.sub(repl, text)
+        if new != text:
+            if not dry_run:
+                with open(f, "w", encoding="utf-8", newline="") as fh:
+                    fh.write(new)
+            changed.append(f)
+            print(f"  {'would fix' if dry_run else 'fixed'} RemoteLibrary paths in {f.relative_to(project_dir)}")
+    return changed
 
 
 # ----------------------------------------------------------------------------
@@ -311,7 +783,12 @@ class Plan:
 
     def apply(self):
         for old, new in self.renames:
-            old.rename(new)
+            if old.name.lower() == new.name.lower():  # case-only: go via a temp name
+                tmp = old.with_name(old.name + ".renaming")
+                old.rename(tmp)
+                tmp.rename(new)
+            else:
+                old.rename(new)
         for path, (text, _) in self.writes.items():
             target = path
             for old, new in self.renames:
@@ -356,36 +833,59 @@ def commit(plan, dry_run, confirm=True):
 # Actions
 # ----------------------------------------------------------------------------
 
-def action_stage(dry_run, requested=None):
+def action_stage(dry_run, requested=None, version=None):
     current = read_stage()
+    current_version = read_release_version() if current == "RELEASED" else ""
     if requested is None:
         heading("Project stage")
         for i, (name, when, what) in enumerate(STAGES, start=1):
             mark = "  <- current" if name == current else ""
             print(f"  {i}. {name}{mark}\n     {when}\n     {what}")
-        print("\n  RELEASED isn't chosen here - pushing a version tag sets it automatically.")
-        choice = ask("Choose 1-3 (Enter to cancel)", validate=lambda v: None if v in ("", "1", "2", "3") else "Enter 1, 2 or 3.")
+        choice = ask("Choose 1-4 (Enter to cancel)", validate=lambda v: None if v in ("", "1", "2", "3", "4") else "Enter 1-4.")
         if not choice:
             return
         requested = STAGES[int(choice) - 1][0]
 
     requested = requested.upper()
-    if requested == "RELEASED":
-        raise ConfigError("RELEASED is set by CI when a version tag is pushed, e.g.\n"
-                          "  git checkout main && git pull\n  git tag 1.0.0 && git push origin 1.0.0\n"
-                          "(Check with the Electrical Lead before tagging.)")
     if requested not in STAGE_NAMES:
         raise ConfigError(f"Unknown stage '{requested}'. Choose one of: {', '.join(STAGE_NAMES)}.")
-    if requested == current:
-        print(f"\nAlready at {current}.")
-        return
-    if requested == "CHECKED":
-        print("\n  Note: CHECKED enforces ERC/DRC. If the board still has errors, the next CI run fails until they're fixed.")
 
     plan = Plan()
-    text = read(CI_YAML)
-    plan.write(CI_YAML, re.sub(r"^(\s*kibot_variant:\s*)\S+", rf"\g<1>{requested}", text, count=1, flags=re.MULTILINE),
-               f"stage {current} -> {requested}")
+    if requested == "RELEASED":
+        tags = git_version_tags()
+        print(f"\n  Last release: {tags[0] if tags else 'none yet'}")
+        if version is None:
+            if not sys.stdin.isatty():
+                raise ConfigError("RELEASED needs a version: --stage RELEASED --version 1.0.0")
+            version = ask("Version to release", suggest_next_version(tags), validate_release_version)
+        error = validate_release_version(version)
+        if error:
+            raise ConfigError(error)
+        if sys.stdin.isatty():
+            if not edit_release_notes(plan):
+                return
+            review_manufacturing_notes(plan, ask_first=True)
+        elif not any(read_release_notes(read(CHANGELOG) if CHANGELOG.exists() else "").values()):
+            print("\n  Warning: CHANGELOG.md's [Unreleased] section is empty or placeholder text;"
+                  "\n  that's what the release notes will say.")
+        print(f"\n  On your next push, CI builds with ERC/DRC enforced, then tags {version},\n"
+              "  updates main and creates the GitHub Release, using the notes above.\n"
+              "  (Check with the Electrical Lead before pushing.)")
+    else:
+        if version is not None:
+            raise ConfigError("--version only applies to --stage RELEASED.")
+        version = ""
+        if requested == "CHECKED":
+            print("\n  Note: CHECKED enforces ERC/DRC. If the board still has errors, the next CI run fails until they're fixed.")
+
+    if (requested, version) == (current, current_version) and plan.empty():
+        print(f"\nAlready at {current}{' ' + version if version else ''}.")
+        return
+
+    def label(stage, v):
+        return f"{stage} {v}" if v else stage
+    plan.write(CI_YAML, set_stage_lines(read(CI_YAML), requested, version),
+               f"stage {label(current, current_version)} -> {label(requested, version)}")
     commit(plan, dry_run)
 
 
@@ -394,7 +894,7 @@ def action_board_info(dry_run, first_time=False):
     kibot_text = read(KIBOT_MAIN)
     defs = read_definitions(kibot_text)
     pro_path = PROJECT_DIR / f"{stem}.kicad_pro"
-    pro = json.loads(read(pro_path))
+    pro = load_project_json(pro_path)
     text_vars = pro.get("text_variables", {})
 
     heading("First-time setup" if first_time else "Board info")
@@ -406,8 +906,11 @@ def action_board_info(dry_run, first_time=False):
     description = ask("One-sentence description (shown in README)", defs.get("DESCRIPTION", ""), validate_free_text)
     designer = ask("Designer", defs.get("DESIGNER", ""), validate_free_text)
     company = ask("Company", defs.get("COMPANY") or "Blue Devil Motor Sports", validate_free_text)
+    # CI writes values like "+ (Unreleased)" here; don't offer those as a
+    # default the validator would then reject.
+    current_rev = text_vars.get("REVISION") or ""
     revision = ask("Revision (cosmetic; real revisions come from git tags)",
-                   text_vars.get("REVISION") or "0.1.0", validate_revision)
+                   current_rev if not validate_revision(current_rev) else "0.1.0", validate_revision)
 
     impedance_enabled = bool(re.search(r"^\s*-\s*@CSV_IMPEDANCE_TABLE_OUTPUT@", split_definitions(kibot_text)[0], re.MULTILINE))
     impedance = ask_yes_no("Controlled-impedance board (enable impedance table)?", impedance_enabled)
@@ -427,7 +930,7 @@ def action_board_info(dry_run, first_time=False):
     # .kicad_pro text variables
     if text_vars.get("COMPANY") != company or text_vars.get("REVISION") != revision:
         pro.setdefault("text_variables", {}).update({"COMPANY": company, "REVISION": revision})
-        plan.write(pro_path, json.dumps(pro, indent=2) + "\n", "COMPANY/REVISION text variables")
+        plan.write(pro_path, project_json_text(pro, read(pro_path)), "COMPANY/REVISION text variables")
 
     # Rename project files if the board name changed
     if board_name != stem:
@@ -458,21 +961,38 @@ def plan_rename(plan, old_stem, new_stem):
         old = PROJECT_DIR / f"{old_stem}{ext}"
         new = PROJECT_DIR / f"{new_stem}{ext}"
         if old.exists():
-            if new.exists():
+            # On Windows a case-only rename (BSPD -> bspd) makes `new.exists()`
+            # true for the same file; that's fine, apply() handles it.
+            if new.exists() and not os.path.samefile(old, new):
                 raise ConfigError(f"Can't rename {old.name}: {new.name} already exists.")
             plan.renames.append((old, new))
+    # Only replace the stem where it IS the project name: as a filename
+    # (`BSPD.kicad_sch`) or a whole quoted value (`(project "BSPD"`). A plain
+    # substring replace would also hit e.g. `BSPD_Compare.kicad_sch`, breaking
+    # that sheet reference on case-sensitive filesystems (Linux CI).
+    stem_re = re.compile(rf'(?<![\w.-]){re.escape(old_stem)}(?=\.kicad_\w+|")')
     for path in sorted(PROJECT_DIR.glob("*.kicad_sch")) + sorted(PROJECT_DIR.glob("*.kicad_pro")) + sorted(PROJECT_DIR.glob("*.kicad_pcb")):
         text = plan.text_of(path)
-        if old_stem in text:
-            plan.write(path, text.replace(old_stem, new_stem), f"project name {old_stem} -> {new_stem}")
+        new_text = stem_re.sub(new_stem, text)
+        if new_text != text:
+            plan.write(path, new_text, f"project name {old_stem} -> {new_stem}")
+
+
+def action_manufacturing_notes(dry_run):
+    plan = Plan()
+    review_manufacturing_notes(plan, ask_first=False)
+    commit(plan, dry_run)
 
 
 def action_show():
     stem = find_project_stem()
     defs = read_definitions(read(KIBOT_MAIN))
-    pro = json.loads(read(PROJECT_DIR / f"{stem}.kicad_pro"))
+    pro = load_project_json(PROJECT_DIR / f"{stem}.kicad_pro")
     heading("Current settings")
-    rows = [("Project file", stem), ("Stage", read_stage()),
+    stage = read_stage()
+    if stage == "RELEASED":
+        stage += f" {read_release_version()}"
+    rows = [("Project file", stem), ("Stage", stage),
             ("Title", defs.get("PROJECT_NAME", "")), ("Board name", defs.get("BOARD_NAME", "")),
             ("Description", defs.get("DESCRIPTION", "")), ("Designer", defs.get("DESIGNER", "")),
             ("Company", defs.get("COMPANY", "")), ("Revision", pro.get("text_variables", {}).get("REVISION", "")),
@@ -484,21 +1004,54 @@ def action_show():
 
 def action_check(fix=False, dry_run=False):
     text = read(KIBOT_MAIN)
-    problems = lint(text)
+    file_problems = project_file_problems()
+    problems = file_problems + lint(text)
     if not problems:
         print("\nConfig OK - no problems found.")
         return True
     print("\nProblems found:")
     for p in problems:
         print(f"  - {p}")
+
+    # Automatic fixes: quoting in kibot_main.yaml, and .kicad_pro merge
+    # conflicts (almost always just CI's regenerated text variables).
+    plan = Plan()
     fixed = quote_passthroughs(text)
-    if fix and fixed != text and not lint(fixed):
-        plan = Plan()
-        plan.write(KIBOT_MAIN, fixed, "quoted free-text @VAR@ passthroughs")
-        return commit(plan, dry_run)
     if fixed != text and not lint(fixed):
-        print("\n  These can be fixed automatically - choose 'Check config' from the menu, or run configure.py --check --fix.")
-    return False
+        plan.write(KIBOT_MAIN, fixed, "quoted free-text @VAR@ passthroughs")
+    unresolved = [p for p in file_problems if ".kicad_pro" not in p]
+    for pro in sorted(PROJECT_DIR.glob("*.kicad_pro")):
+        if not CONFLICT_MARKER_RE.search(read(pro)):
+            if any(p.startswith(pro.name) for p in file_problems):
+                unresolved.append(f"{pro.name}: not valid JSON - restore it from an earlier commit")
+            continue
+        merged, reason = resolve_project_conflict(pro)
+        if merged is None:
+            unresolved.append(f"{pro.name}: can't resolve the conflict automatically - {reason}")
+        else:
+            plan.write(pro, merged, "merge conflict resolved (both sides' changes kept)")
+
+    applied = False
+    if plan.empty():
+        pass
+    elif not fix:
+        print("\n  Some of these can be fixed automatically - choose 'Check config' from the menu,\n"
+              "  or run configure.py --check --fix.")
+    else:
+        applied = commit(plan, dry_run)
+        if applied and any(p.suffix == ".kicad_pro" for p in plan.writes) and git_in_rebase():
+            print("\n  (You're mid-rebase: instead of git commit, run git add -A then git rebase --continue.)")
+
+    if unresolved:
+        print("\nStill needs fixing by hand:" if fix else "\nNeeds fixing by hand:")
+        for p in unresolved:
+            print(f"  - {p}")
+        print("\n  Do this BEFORE opening the project in KiCad: KiCad replaces an unreadable\n"
+              "  .kicad_pro with default settings (text variables, net classes and design\n"
+              "  rules all gone), and can't open a conflicted schematic or board at all.\n"
+              "  For a .kicad_sch/.kicad_pcb conflict, keep one whole side - whoever owns\n"
+              "  that sheet decides which (see README section 11) - or ask a lead.")
+    return applied and not unresolved
 
 
 # ----------------------------------------------------------------------------
@@ -521,6 +1074,9 @@ def confirm_kicad_closed(stem):
 def menu(dry_run):
     stem = find_project_stem()
     confirm_kicad_closed(stem)
+    if project_file_problems():
+        print("\n  ! The project files have unresolved merge conflicts or invalid JSON.\n"
+              "    Choose 5. Check config to see them and resolve what can be resolved automatically.")
     if is_fresh_template(stem):
         print("\nThis looks like a fresh copy of the template - let's set it up.")
         action_board_info(dry_run, first_time=True)
@@ -528,20 +1084,23 @@ def menu(dry_run):
         stem = find_project_stem()
         defs = read_definitions(read(KIBOT_MAIN))
         heading(f"{defs.get('PROJECT_NAME') or stem}  -  stage: {read_stage()}")
-        print("  1. Change project stage (DRAFT / PRELIMINARY / CHECKED)\n"
+        print("  1. Change project stage (DRAFT / PRELIMINARY / CHECKED / RELEASED)\n"
               "  2. Edit board info (title, description, designer, revision...)\n"
-              "  3. Show current settings\n"
-              "  4. Check config for problems\n"
+              "  3. Edit fabrication / assembly notes\n"
+              "  4. Show current settings\n"
+              "  5. Check config for problems\n"
               "  q. Quit")
-        choice = ask("Choose", validate=lambda v: None if v.lower() in ("1", "2", "3", "4", "q") else "Enter 1-4 or q.").lower()
+        choice = ask("Choose", validate=lambda v: None if v.lower() in ("1", "2", "3", "4", "5", "q") else "Enter 1-5 or q.").lower()
         try:
             if choice == "1":
                 action_stage(dry_run)
             elif choice == "2":
                 action_board_info(dry_run)
             elif choice == "3":
-                action_show()
+                action_manufacturing_notes(dry_run)
             elif choice == "4":
+                action_show()
+            elif choice == "5":
                 action_check(fix=True, dry_run=dry_run)
             else:
                 return
@@ -552,7 +1111,8 @@ def menu(dry_run):
 def main():
     parser = argparse.ArgumentParser(description="BDM board configuration tool. Run with no arguments for the menu.")
     parser.add_argument("--stage", "--variant", dest="stage", metavar="NAME",
-                        help="Set the project stage directly (DRAFT, PRELIMINARY, CHECKED).")
+                        help="Set the project stage directly (DRAFT, PRELIMINARY, CHECKED, RELEASED).")
+    parser.add_argument("--version", metavar="X.Y.Z", help="With --stage RELEASED, the version to release.")
     parser.add_argument("--init", action="store_true", help="Run first-time setup (board info) directly.")
     parser.add_argument("--check", action="store_true", help="Validate the config; exit 1 if there are problems.")
     parser.add_argument("--fix", action="store_true", help="With --check, auto-fix fixable problems.")
@@ -560,11 +1120,12 @@ def main():
     args = parser.parse_args()
 
     try:
+        fix_remote_library_paths(dry_run=args.dry_run)
         if args.check:
             sys.exit(0 if action_check(fix=args.fix, dry_run=args.dry_run) else 1)
         if args.stage:
             confirm_kicad_closed(find_project_stem())
-            action_stage(args.dry_run, requested=args.stage)
+            action_stage(args.dry_run, requested=args.stage, version=args.version)
             return
         if not sys.stdin.isatty():
             raise ConfigError("The menu needs an interactive terminal. Use --stage or --check for scripts.")
