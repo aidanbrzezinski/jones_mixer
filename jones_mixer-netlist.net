@@ -1,7 +1,7 @@
 (export
 	(version "E")
 	(design
-		(source "/tmp/tmp-kibot-net_sch_print-b40fblp1/jones_mixer.kicad_sch")
+		(source "/tmp/tmp-kibot-net_sch_print-bmofuv5z/jones_mixer.kicad_sch")
 		(date "Date")
 		(tool "Eeschema 10.0.5-unknown-202607221313~667fa36054~ubuntu25.10.1")
 		(textvar
@@ -60,7 +60,7 @@
 		(textvar
 			(name "RELEASE_DATE_NUM") "2026-11-10")
 		(textvar
-			(name "RELEASE_TITLE_1") "Version 1.0.1 - 2026-11-10")
+			(name "RELEASE_TITLE_1") "Version 1.0.2 - 2026-11-10")
 		(textvar
 			(name "RELEASE_TITLE_1.0.0")
 		)
@@ -74,17 +74,16 @@
 			(name "RELEASE_TITLE_1.1.0")
 		)
 		(textvar
-			(name "RELEASE_TITLE_2") "Version 1.0.0 - 2026-11-10")
+			(name "RELEASE_TITLE_2") "Version 1.0.1 - 2026-11-10")
 		(textvar
-			(name "RELEASE_TITLE_3")
-		)
+			(name "RELEASE_TITLE_3") "Version 1.0.0 - 2026-11-10")
 		(textvar
 			(name "RELEASE_TITLE_4")
 		)
 		(textvar
 			(name "RELEASE_TITLE_UNRELEASED") "Version Unreleased not found.")
 		(textvar
-			(name "REVISION") "1.0.1")
+			(name "REVISION") "1.0.2")
 		(textvar
 			(name "SHEET_NAME_1") "Cover Page")
 		(textvar
@@ -172,7 +171,7 @@
 			(title_block
 				(title)
 				(company "LTU")
-				(rev "1.0.1")
+				(rev "1.0.2")
 				(date "Date")
 				(source "jones_mixer.kicad_sch")
 				(comment
@@ -220,7 +219,7 @@
 			(title_block
 				(title "Schematic")
 				(company "LTU")
-				(rev "1.0.1")
+				(rev "1.0.2")
 				(date "Date")
 				(source "mixer.kicad_sch")
 				(comment

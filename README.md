@@ -33,4 +33,4 @@
 | Dimensions | 32.0 × 32.0 mm |
 | Company | LTU |
 | Designer | A.B., C.B., A.V. |
-| Revision | 1.0.1 |
+| Revision | 1.0.2 |
