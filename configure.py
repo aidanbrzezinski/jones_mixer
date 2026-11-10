@@ -623,6 +623,49 @@ def impedance_enabled(kibot_text):
     return bool(re.search(r"^\s*-\s*@CSV_IMPEDANCE_TABLE_OUTPUT@", head, re.MULTILINE))
 
 
+# The fab drawing's include_table entry for the impedance table. It has to
+# follow the switch above too: KiBot generates any output include_table
+# names and fills the PCB's kibot_table_csv_impedance_table frame with it,
+# whether or not the output is in a group.
+PDF_FAB_YAML = KIBOT_MAIN.parent / "kibot_out_pdf_fabrication.yaml"
+IMPEDANCE_INCLUDE_RE = re.compile(
+    r"^[ \t]*# impedance-table-begin[^\n]*\n(?:[ \t]*#(?! -| {3})[^\n]*\n)*(.*?)^[ \t]*# impedance-table-end",
+    re.MULTILINE | re.DOTALL)
+
+
+def impedance_include_state(text):
+    """True/False for the include entry being active/commented out, or None
+    if this repo's kibot_out_pdf_fabrication.yaml has no marked entry."""
+    m = IMPEDANCE_INCLUDE_RE.search(text)
+    if not m:
+        return None
+    return any(line.strip() and not line.lstrip().startswith("#") for line in m.group(1).split("\n"))
+
+
+def toggle_impedance_include(text, enabled):
+    m = IMPEDANCE_INCLUDE_RE.search(text)
+    if not m:
+        return text
+    out = []
+    for line in m.group(1).split("\n"):
+        indent = line[:len(line) - len(line.lstrip())]
+        body = line[len(indent):]
+        if body:
+            body = (body[2:] if body.startswith("# ") else body) if enabled else \
+                   (body if body.startswith("#") else "# " + body)
+        out.append(indent + body)
+    return text[:m.start(1)] + "\n".join(out) + text[m.end(1):]
+
+
+def plan_impedance(plan, enabled):
+    """Switch the impedance table on or off everywhere it's wired in."""
+    plan.write(KIBOT_MAIN, toggle_impedance(plan.text_of(KIBOT_MAIN), enabled),
+               f"impedance table output {'on' if enabled else 'off'}")
+    if PDF_FAB_YAML.exists():
+        plan.write(PDF_FAB_YAML, toggle_impedance_include(plan.text_of(PDF_FAB_YAML), enabled),
+                   "fabrication drawing " + ("fills in" if enabled else "leaves blank") + " the impedance table")
+
+
 def parse_table(text):
     """{header, rows, trailing}. Rows keep their raw text (the template pads
     columns with tabs) until edited; fields split on commas."""
@@ -1189,8 +1232,8 @@ def action_board_info(dry_run, first_time=False):
                        ("DESIGNER", designer), ("COMPANY", company), ("GIT_URL", git_url)):
         if defs.get(key) != value or key in FREE_TEXT_KEYS:
             new_kibot = set_definition(new_kibot, key, value)
-    new_kibot = toggle_impedance(new_kibot, impedance)
     plan.write(KIBOT_MAIN, new_kibot, "board metadata")
+    plan_impedance(plan, impedance)
 
     # .kicad_pro text variables
     if text_vars.get("COMPANY") != company or text_vars.get("REVISION") != revision:
@@ -1275,7 +1318,20 @@ def action_check(fix=False, dry_run=False):
     defs = read_definitions(text)
     fit_problems = [f"{key}: {err} Change it with 'Edit board info'." for key in TITLE_BLOCK_FIELDS
                     if (err := validate_title_block(key, defs.get(key, "")))]
-    problems = file_problems + lint(text) + fit_problems
+    enabled = impedance_enabled(text)
+    pdf_text = read(PDF_FAB_YAML) if PDF_FAB_YAML.exists() else ""
+    include = impedance_include_state(pdf_text)
+    impedance_problems = []
+    if include is not None and include != enabled:
+        impedance_problems.append(
+            "The impedance table is " + ("off, but the fabrication drawing still fills it in"
+                                         if not enabled else "on, but the fabrication drawing leaves it blank")
+            + f" ({PDF_FAB_YAML.name}).")
+    elif include is None and not enabled and "@NAME_IMPEDANCE_TABLE@" in pdf_text:
+        impedance_problems.append(
+            f"The impedance table is off, but {PDF_FAB_YAML.name} predates the on/off switch, so the "
+            "fabrication drawing still fills it in. Copy that file from the current template.")
+    problems = file_problems + lint(text) + fit_problems + impedance_problems
     if not problems:
         print("\nConfig OK - no problems found.")
         return True
@@ -1289,7 +1345,11 @@ def action_check(fix=False, dry_run=False):
     fixed = quote_passthroughs(text)
     if fixed != text and not lint(fixed):
         plan.write(KIBOT_MAIN, fixed, "quoted free-text @VAR@ passthroughs")
-    unresolved = [p for p in file_problems if ".kicad_pro" not in p]
+    unresolved = [p for p in file_problems if ".kicad_pro" not in p] + fit_problems
+    if include is not None and include != enabled:
+        plan_impedance(plan, enabled)
+    else:
+        unresolved += impedance_problems
     for pro in sorted(PROJECT_DIR.glob("*.kicad_pro")):
         if not CONFLICT_MARKER_RE.search(read(pro)):
             if any(p.startswith(pro.name) for p in file_problems):
@@ -1316,6 +1376,7 @@ def action_check(fix=False, dry_run=False):
         print("\nStill needs fixing by hand:" if fix else "\nNeeds fixing by hand:")
         for p in unresolved:
             print(f"  - {p}")
+    if any(p in unresolved for p in file_problems) or any(".kicad_pro" in p for p in unresolved):
         print("\n  Do this BEFORE opening the project in KiCad: KiCad replaces an unreadable\n"
               "  .kicad_pro with default settings (text variables, net classes and design\n"
               "  rules all gone), and can't open a conflicted schematic or board at all.\n"
