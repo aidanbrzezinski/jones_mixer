@@ -1,7 +1,7 @@
 (export
 	(version "E")
 	(design
-		(source "/tmp/tmp-kibot-net_sch_print-bmofuv5z/jones_mixer.kicad_sch")
+		(source "/tmp/tmp-kibot-net_sch_print-vwfi2wjv/jones_mixer.kicad_sch")
 		(date "Date")
 		(tool "Eeschema 10.0.5-unknown-202607221313~667fa36054~ubuntu25.10.1")
 		(textvar
@@ -19,12 +19,11 @@
 		(textvar
 			(name "DESIGNER") "A.B., C.B., A.V.")
 		(textvar
-			(name "FABRICATION_NOTES")
-		)
+			(name "FABRICATION_NOTES") "FABRICATION NOTES (UNLESS OTHERWISE SPECIFIED)\n\n1)	OUTLINE DEFINED IN SEPARATE GERBER FILE WITH\n	\"Edge_Cuts.GBR\" SUFFIX.\n\n	DIMENSIONS OF CIRCUMSIZED RECTANGLE SHOWN ON THIS\n	DRAWING FOR REFERENCE ONLY.\n\n2)	SEE SEPARATE DRILL FILES WITH \".DRL\" SUFFIX \n	FOR HOLE LOCATIONS.\n\n	SELECTED HOLE LOCATIONS SHOWN ON THIS DRAWING \n	FOR REFERENCE ONLY.\n\n3)	SURFACE FINISH: IMMERSION GOLD\n\n4)	SOLDERMASK ON BOTH SIDES OF THE BOARD SHALL \n	BE LPI, COLOR BLUE.\n\n5)	SILK SCREEN LEGEND TO BE APPLIED PER LAYER \n	STACKUP USING WHITE.\n\n6)	ALL VIAS ARE TENTED ON BOTH SIDES UNLESS \n	SOLDERMASK OPENED IN GERBER.\n\n\n7)	DESIGN GEOMETRY MINIMUM FEATURE SIZES:\n\n	BOARD SIZE				32.000 × 32.000 mm\n	BOARD THICKNESS		1.581 mm\n	TRACE WIDTH			0.300 mm\n	TRACE TO TRACE		0.300 mm\n	MIN. HOLE (PTH)			0.250 mm\n	MIN. HOLE (NPTH)		N/A mm\n	ANNULAR RING			0.150 mm\n	COPPER TO HOLE		0.254 mm\n	COPPER TO EDGE		0.500 mm\n	HOLE TO HOLE			0.254 mm")
 		(textvar
-			(name "GIT_HASH_PCB") "e165eea")
+			(name "GIT_HASH_PCB") "9e800e4")
 		(textvar
-			(name "GIT_HASH_SCH") "0225f95")
+			(name "GIT_HASH_SCH") "9e800e4")
 		(textvar
 			(name "GIT_URL") "https://github.com/aidanbrzezinski/jones_mixer")
 		(textvar
@@ -74,12 +73,11 @@
 			(name "RELEASE_TITLE_1.1.0")
 		)
 		(textvar
-			(name "RELEASE_TITLE_2") "Version 1.0.1 - 2026-11-10")
+			(name "RELEASE_TITLE_2") "Version 1.0.2 - 2026-11-10")
 		(textvar
-			(name "RELEASE_TITLE_3") "Version 1.0.0 - 2026-11-10")
+			(name "RELEASE_TITLE_3") "Version 1.0.1 - 2026-11-10")
 		(textvar
-			(name "RELEASE_TITLE_4")
-		)
+			(name "RELEASE_TITLE_4") "Version 1.0.0 - 2026-11-10")
 		(textvar
 			(name "RELEASE_TITLE_UNRELEASED") "Version Unreleased not found.")
 		(textvar
@@ -107,7 +105,7 @@
 		(textvar
 			(name "SHEET_NAME_19") "......................................")
 		(textvar
-			(name "SHEET_NAME_2") "mixer")
+			(name "SHEET_NAME_2") "Mixer")
 		(textvar
 			(name "SHEET_NAME_20") "......................................")
 		(textvar
@@ -214,7 +212,7 @@
 		)
 		(sheet
 			(number "2")
-			(name "/mixer/")
+			(name "/Mixer/")
 			(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			(title_block
 				(title "Schematic")
@@ -289,7 +287,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -304,7 +302,7 @@
 				(value "C_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "fb3d382b-1d13-447f-b880-f4250e2f88df")
@@ -349,7 +347,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -364,7 +362,7 @@
 				(value "C_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "3b9f5721-ac30-49a8-8c21-1bf3efff414e")
@@ -409,7 +407,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -424,7 +422,7 @@
 				(value "C_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "5717180c-ad51-49b8-bd48-881e351e428d")
@@ -469,7 +467,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -484,7 +482,7 @@
 				(value "C_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "324bc883-a802-49af-a84f-1bd8ad263e02")
@@ -529,7 +527,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -544,7 +542,7 @@
 				(value "C_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "2e62979c-7d5b-4882-b576-67e52e805725")
@@ -589,7 +587,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -604,7 +602,7 @@
 				(value "C_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "f7552c58-6bab-4a6f-a5ac-405764e7f228")
@@ -649,7 +647,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -664,7 +662,7 @@
 				(value "C_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "e5ffb2a9-8458-435a-99d9-708cda126cac")
@@ -709,7 +707,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -720,7 +718,7 @@
 				(value "simulation")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "bbd125b3-a24d-4944-9d77-6375809f66be")
@@ -768,7 +766,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -779,7 +777,7 @@
 				(value "simulation")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "dd44b8ac-ef58-42cc-88a9-6b7843cf2f55")
@@ -827,7 +825,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -838,7 +836,7 @@
 				(value "simulation")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "dd88f25d-efd2-4da5-9c45-a46e9155101f")
@@ -886,7 +884,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -901,7 +899,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "9826f5de-98f7-4b8d-be38-6bffed3cc2de")
@@ -946,7 +944,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -961,7 +959,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "d6d17c9c-0fb9-4e42-b523-53791c102ef2")
@@ -1006,7 +1004,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1021,7 +1019,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "0dd30969-d72c-41a1-83bf-1c770de8b3d9")
@@ -1066,7 +1064,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1081,7 +1079,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "33900e9e-2e0f-4bae-99e4-1fb3011f67dc")
@@ -1126,7 +1124,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1141,7 +1139,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "c004f88d-cc1d-4737-92be-bbd1ceb19ab0")
@@ -1186,7 +1184,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1201,7 +1199,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "fce5ee1f-7c6e-403c-baa9-d6032bb6a720")
@@ -1246,7 +1244,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1261,7 +1259,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "f1b50b4c-4f76-4a33-9874-0a936ea37c7b")
@@ -1306,7 +1304,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1321,7 +1319,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "229ae26f-ef4d-47e3-a120-1eac331ce641")
@@ -1366,7 +1364,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1381,7 +1379,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "ce6bbf64-bb2f-4830-9844-5c13ee5d9799")
@@ -1426,7 +1424,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1441,7 +1439,7 @@
 				(value "R_*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "ca694eb0-0c4b-4f9b-90e1-20f4c69b7ad2")
@@ -1480,7 +1478,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1495,7 +1493,7 @@
 				(value "Pin* Test*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "eb4fffe1-5ae5-494a-a20a-bead4a052258")
@@ -1531,7 +1529,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1546,7 +1544,7 @@
 				(value "Pin* Test*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "172920b7-cfe4-4baa-9db8-7bd73c4d1bcc")
@@ -1582,7 +1580,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1597,7 +1595,7 @@
 				(value "Pin* Test*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "366aec4c-953e-42b2-a593-a448c74c5a85")
@@ -1633,7 +1631,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1648,7 +1646,7 @@
 				(value "Pin* Test*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "3c0e1fee-a37f-4509-8638-f5959c1e7f25")
@@ -1684,7 +1682,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1699,7 +1697,7 @@
 				(value "Pin* Test*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "173107bb-5cc7-4bfe-9d8d-94bbf9fa783c")
@@ -1735,7 +1733,7 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "mixer")
+				(value "Mixer")
 			)
 			(property
 				(name "Sheetfile")
@@ -1750,7 +1748,7 @@
 				(value "Pin* Test*")
 			)
 			(sheetpath
-				(names "/mixer/")
+				(names "/Mixer/")
 				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
 			)
 			(tstamps "7509c28d-7456-4d5d-bbf3-5e589e4b6036")
@@ -2010,7 +2008,7 @@
 		)
 		(net
 			(code "3")
-			(name "/mixer/Vi1")
+			(name "/Mixer/Vi1")
 			(class "Default")
 			(node
 				(ref "C13")
@@ -2026,7 +2024,7 @@
 		)
 		(net
 			(code "4")
-			(name "/mixer/Vi2")
+			(name "/Mixer/Vi2")
 			(class "Default")
 			(node
 				(ref "C10")
@@ -2042,7 +2040,7 @@
 		)
 		(net
 			(code "5")
-			(name "/mixer/Vo")
+			(name "/Mixer/Vo")
 			(class "Default")
 			(node
 				(ref "Q6")

@@ -1,4 +1,4 @@
-ERC report (2026-11-10T21:59:24, Encoding UTF8)
+ERC report (2026-11-10T23:04:08, Encoding UTF8)
 
 ***** Sheet /
 [lib_symbol_mismatch]: Symbol '+5V' doesn't match copy in library 'power'
@@ -67,7 +67,7 @@ ERC report (2026-11-10T21:59:24, Encoding UTF8)
     @(1.9558 mm, 0.8382 mm): Symbol #PWR05 [GND]
     @(1.9558 mm, 0.8382 mm): Symbol #PWR05 [GND]
 
-***** Sheet /mixer/
+***** Sheet /Mixer/
 [power_pin_not_driven]: Input Power pin not driven by any Output Power pins
     ; error (excluded)
     @(1.2446 mm, 0.5842 mm): Symbol #PWR03 Pin 1 [Power input, Line]
