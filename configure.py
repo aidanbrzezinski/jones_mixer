@@ -140,6 +140,51 @@ def validate_free_text(value, required=False):
     return None
 
 
+# Title block fit. Templates/*.kicad_wks draw these fields in Times New
+# Roman inside fixed boxes, and KiCad doesn't shrink or wrap them, so a long
+# value just runs out of its box. Advance widths per 1000 em for ASCII
+# 32..126, read from kibot_resources/fonts/Times New Roman.ttf.
+TIMES_WIDTHS = [
+    250, 333, 408, 500, 500, 833, 778, 180, 333, 333, 500, 564, 250, 333, 250, 278,
+    500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 278, 278, 564, 564, 564, 444,
+    921, 722, 667, 667, 722, 611, 556, 722, 722, 333, 389, 722, 611, 889, 722, 722,
+    556, 722, 667, 556, 611, 722, 722, 944, 722, 722, 611, 333, 278, 333, 469, 500,
+    333, 444, 500, 444, 500, 444, 333, 500, 500, 278, 278, 500, 278, 778, 500, 500,
+    500, 500, 333, 389, 278, 500, 500, 722, 500, 500, 444, 480, 200, 480, 541]
+OUTLINE_FONT_EM = 1.4  # KiCad draws an outline font's em at 1.4x the text size
+TYPICAL_EM_PER_CHAR = 0.44  # mixed-case names in Times New Roman
+# key: (field label, text size in mm, usable box width in mm), from the
+# .kicad_wks text position to the far edge of its box less a 0.5 mm margin.
+TITLE_BLOCK_FIELDS = {
+    "DESIGNER": ("Designer", 1.5, 25.0),
+    "PROJECT_NAME": ("Project Name", 2.5, 39.0),
+}
+
+
+def title_block_width(text, size):
+    em = sum(TIMES_WIDTHS[ord(c) - 32] if 32 <= ord(c) <= 126 else 1000 for c in text) / 1000
+    return em * size * OUTLINE_FONT_EM
+
+
+def title_block_max_chars(key):
+    _, size, room = TITLE_BLOCK_FIELDS[key]
+    return int(room / (size * OUTLINE_FONT_EM * TYPICAL_EM_PER_CHAR))
+
+
+def validate_title_block(key, value):
+    """Measured rather than a flat character count: 'Jim Li' and 'WILLIAM M'
+    differ a lot in width. The message still talks in characters."""
+    label, size, room = TITLE_BLOCK_FIELDS[key]
+    if title_block_width(value, size) <= room:
+        return None
+    fits = value
+    while fits and title_block_width(fits, size) > room:
+        fits = fits[:-1]
+    return (f"Too long for the title block's {label} box (about {title_block_max_chars(key)} characters fit, "
+            f"fewer in capitals). It would be cut off after \"{fits.rstrip()}\". Shorten it"
+            + (" - e.g. surnames or initials for several people." if key == "DESIGNER" else "."))
+
+
 def validate_board_name(value):
     if not BOARD_NAME_RE.match(value):
         return ("Lowercase letters, digits and single underscores only "
@@ -565,6 +610,220 @@ def review_manufacturing_notes(plan, ask_first):
         edit_notes_file(plan, label, path)
 
 
+# ----------------------------------------------------------------------------
+# Impedance table (Tier 2): a hand-written CSV-style template, one row per
+# controlled-impedance structure, spliced into the fabrication drawing
+# ----------------------------------------------------------------------------
+
+IMPEDANCE_TABLE = NOTES_DIR / "impedance_table.txt"
+
+
+def impedance_enabled(kibot_text):
+    head = split_definitions(kibot_text)[0]
+    return bool(re.search(r"^\s*-\s*@CSV_IMPEDANCE_TABLE_OUTPUT@", head, re.MULTILINE))
+
+
+def parse_table(text):
+    """{header, rows, trailing}. Rows keep their raw text (the template pads
+    columns with tabs) until edited; fields split on commas."""
+    trailing = text.endswith("\n")
+    lines = [line for line in (text[:-1] if trailing else text).split("\n")]
+    rows = [{"raw": line, "fields": [f.strip() for f in line.split(",")]} for line in lines[1:] if line.strip()]
+    return {"header": lines[0] if lines else "", "rows": rows, "trailing": trailing}
+
+
+def table_columns(table):
+    return [f.strip() for f in table["header"].split(",")]
+
+
+def render_table(table):
+    lines = [table["header"]] + [r["raw"] if r["raw"] is not None else ",\t".join(r["fields"])
+                                 for r in table["rows"]]
+    text = "\n".join(lines)
+    return text + "\n" if table["trailing"] else text
+
+
+def print_table(table):
+    columns = table_columns(table)
+    rows = [r["fields"] + [""] * (len(columns) - len(r["fields"])) for r in table["rows"]]
+    widths = [max([len(c)] + [len(r[i]) for r in rows]) for i, c in enumerate(columns)]
+    print("        " + "  ".join(c.ljust(w) for c, w in zip(columns, widths)).rstrip())
+    if not rows:
+        print("        (no rows)")
+    for n, r in enumerate(rows, start=1):
+        print(f"    {n:>2}) " + "  ".join(f.ljust(w) for f, w in zip(r, widths)).rstrip())
+
+
+def validate_cell(value):
+    if not value:
+        return "This can't be empty."
+    if "," in value:
+        return "Commas aren't allowed - they separate the columns."
+    if any(ord(c) < 32 for c in value):
+        return "Control characters aren't allowed."
+    return None
+
+
+def ask_row(columns, current=None):
+    return [ask(column, current[i] if current and i < len(current) else "", validate_cell)
+            for i, column in enumerate(columns)]
+
+
+def edit_impedance_table(plan):
+    table = parse_table(plan.text_of(IMPEDANCE_TABLE))
+    columns = table_columns(table)
+    print("  One row per controlled-impedance structure. Get the values from the\n"
+          "  impedance calculator / your fab's stackup, not from memory.")
+    while True:
+        count = len(table["rows"])
+
+        def validate(v):
+            m = re.match(r"^([ed])\s*(\d+)$", v.lower())
+            if v.lower() in ("", "a", "o", "s"):
+                return None
+            if m:
+                return None if 1 <= int(m.group(2)) <= count else f"There's no row {m.group(2)}."
+            return "Enter a, e N, d N, o, s or just Enter."
+        cmd = ask("a = add row, e N = edit row N, d N = delete row N, o = open in text editor, "
+                  "s = show, Enter = done", validate=validate).lower()
+        if not cmd:
+            break
+        if cmd == "a":
+            table["rows"].append({"raw": None, "fields": ask_row(columns)})
+        elif cmd == "o":
+            edited = edit_in_text_editor(render_table(table), IMPEDANCE_TABLE.name)
+            if edited is not None:
+                table = parse_table(edited)
+                columns = table_columns(table)
+        elif cmd != "s":
+            n = int(cmd[1:].strip())
+            if cmd[0] == "d":
+                del table["rows"][n - 1]
+            else:
+                row = table["rows"][n - 1]
+                print("    (Enter keeps a value)")
+                row["fields"] = ask_row(columns, row["fields"])
+                row["raw"] = None
+        print_table(table)
+    plan.write(IMPEDANCE_TABLE, render_table(table), "impedance table")
+
+
+def review_impedance_table(plan, ask_first):
+    if not impedance_enabled(plan.text_of(KIBOT_MAIN)):
+        if ask_first:
+            print("\n  Impedance table: off for this board, skipped (turn it on in 'Edit board info').")
+        return
+    if not IMPEDANCE_TABLE.exists():
+        return
+    heading(f"Impedance table ({IMPEDANCE_TABLE.relative_to(PROJECT_DIR).as_posix()})")
+    print_table(parse_table(plan.text_of(IMPEDANCE_TABLE)))
+    if ask_first and ask_yes_no("Is the impedance table correct for this release?", default=True):
+        return
+    edit_impedance_table(plan)
+
+
+# ----------------------------------------------------------------------------
+# Stackup: KiBot's draw_fancy_stackup draws the board's own stackup (KiCad
+# Board Setup) on the fabrication drawing, with STACKUP_TABLE_NOTE under it
+# ----------------------------------------------------------------------------
+
+def sexpr_block(text, start):
+    """The balanced (...) starting at text[start], skipping quoted strings."""
+    depth, i, in_str = 0, start, False
+    while i < len(text):
+        c = text[i]
+        if in_str:
+            if c == "\\":
+                i += 1
+            elif c == '"':
+                in_str = False
+        elif c == '"':
+            in_str = True
+        elif c == "(":
+            depth += 1
+        elif c == ")":
+            depth -= 1
+            if depth == 0:
+                return text[start:i + 1]
+        i += 1
+    return text[start:]
+
+
+def read_stackup(pcb_text):
+    """([{layer, type, material, thickness, epsilon_r, color}], copper finish),
+    or (None, None) if the board has no stackup defined."""
+    m = re.search(r"\(stackup\b", pcb_text)
+    if not m:
+        return None, None
+    block = sexpr_block(pcb_text, m.start())
+    layers = []
+    for lm in re.finditer(r'\(layer "([^"]*)"', block):
+        body = sexpr_block(block, lm.start())
+
+        def prop(name):
+            p = re.search(rf'\({name} (?:"([^"]*)"|([^\s)]+))\)', body)
+            return (p.group(1) if p.group(1) is not None else p.group(2)) if p else ""
+        layers.append({"layer": lm.group(1), "type": prop("type"), "material": prop("material"),
+                       "thickness": prop("thickness"), "epsilon_r": prop("epsilon_r"), "color": prop("color")})
+    finish = re.search(r'\(copper_finish "([^"]*)"\)', block)
+    return layers, finish.group(1) if finish else ""
+
+
+def print_stackup(layers, finish):
+    columns = [("Layer", "layer"), ("Type", "type"), ("Material", "material"),
+               ("Thickness mm", "thickness"), ("Er", "epsilon_r"), ("Color", "color")]
+    widths = [max([len(c)] + [len(layer[k]) for layer in layers]) for c, k in columns]
+    print("    " + "  ".join(c.ljust(w) for (c, _), w in zip(columns, widths)).rstrip())
+    for layer in layers:
+        print("    " + "  ".join(layer[k].ljust(w) for (_, k), w in zip(columns, widths)).rstrip())
+    total = 0.0
+    for layer in layers:
+        try:
+            total += float(layer["thickness"] or 0)
+        except ValueError:
+            pass
+    print(f"\n    Total thickness: {total:.3f} mm    Copper finish: {finish or '(not set)'}")
+
+
+def validate_stackup_note(value):
+    # Lands unquoted in kibot_main.yaml and inside '...' in
+    # kibot_pre_draw_stackup.yaml, so ': ', ' #' and ' are out too.
+    error = validate_free_text(value)
+    if error:
+        return error
+    if "'" in value or ":" in value or "#" in value:
+        return "Apostrophes, ':' and '#' aren't allowed here - they break KiBot's config."
+    return None
+
+
+def review_stackup(plan, releasing):
+    """Show the stackup and its note. Returns False when the stackup itself
+    is wrong during a release (it can only be fixed in KiCad), so the
+    release is cancelled."""
+    stem = find_project_stem()
+    layers, finish = read_stackup(read(PROJECT_DIR / f"{stem}.kicad_pcb"))
+    heading("Stackup (drawn on the fabrication drawing, from the .kicad_pcb)")
+    if layers:
+        print_stackup(layers, finish)
+    else:
+        print("    (no stackup defined - KiBot can't draw one)")
+    note = read_definitions(plan.text_of(KIBOT_MAIN)).get("STACKUP_TABLE_NOTE", "")
+    print(f"    Note under the table: {note or '(none)'}")
+    if ask_yes_no("Is the stackup correct" + (" for this release?" if releasing else "?"), default=bool(layers)):
+        return True
+    if ask_yes_no("Is it only the note under the table that needs changing?", default=False):
+        new_note = ask("Note under the stackup table", note, validate_stackup_note)
+        plan.write(KIBOT_MAIN, set_definition(plan.text_of(KIBOT_MAIN), "STACKUP_TABLE_NOTE", new_note),
+                   "stackup table note")
+        return True
+    print("\n  The stackup itself is set in KiCad: PCB Editor > File > Board Setup >\n"
+          "  Board Stackup > Physical Stackup. Change it there, save, close KiCad,\n"
+          "  commit, and " + ("run the release again." if releasing else "check it here again."))
+    if releasing:
+        print("Cancelled - nothing written.")
+    return not releasing
+
+
 def suggest_next_version(tags):
     if not tags:
         return "1.0.0"
@@ -862,9 +1121,14 @@ def action_stage(dry_run, requested=None, version=None):
         if error:
             raise ConfigError(error)
         if sys.stdin.isatty():
+            # Stackup first: if it's wrong the fix is in KiCad, so cancel
+            # before anyone has typed release notes that would be thrown away.
+            if not review_stackup(plan, releasing=True):
+                return
             if not edit_release_notes(plan):
                 return
             review_manufacturing_notes(plan, ask_first=True)
+            review_impedance_table(plan, ask_first=True)
         elif not any(read_release_notes(read(CHANGELOG) if CHANGELOG.exists() else "").values()):
             print("\n  Warning: CHANGELOG.md's [Unreleased] section is empty or placeholder text;"
                   "\n  that's what the release notes will say.")
@@ -902,9 +1166,11 @@ def action_board_info(dry_run, first_time=False):
 
     board_name = ask("Board name (repo name, e.g. bms_slave)",
                      "" if stem == PLACEHOLDER_STEM else stem.lower(), validate_board_name)
-    title = ask("Board title", defs.get("PROJECT_NAME", ""), lambda v: validate_free_text(v, required=True))
+    title = ask("Board title", defs.get("PROJECT_NAME", ""),
+                lambda v: validate_free_text(v, required=True) or validate_title_block("PROJECT_NAME", v))
     description = ask("One-sentence description (shown in README)", defs.get("DESCRIPTION", ""), validate_free_text)
-    designer = ask("Designer", defs.get("DESIGNER", ""), validate_free_text)
+    designer = ask(f"Designer (max ~{title_block_max_chars('DESIGNER')} characters)", defs.get("DESIGNER", ""),
+                   lambda v: validate_free_text(v) or validate_title_block("DESIGNER", v))
     company = ask("Company", defs.get("COMPANY") or "Blue Devil Motor Sports", validate_free_text)
     # CI writes values like "+ (Unreleased)" here; don't offer those as a
     # default the validator would then reject.
@@ -912,8 +1178,7 @@ def action_board_info(dry_run, first_time=False):
     revision = ask("Revision (cosmetic; real revisions come from git tags)",
                    current_rev if not validate_revision(current_rev) else "0.1.0", validate_revision)
 
-    impedance_enabled = bool(re.search(r"^\s*-\s*@CSV_IMPEDANCE_TABLE_OUTPUT@", split_definitions(kibot_text)[0], re.MULTILINE))
-    impedance = ask_yes_no("Controlled-impedance board (enable impedance table)?", impedance_enabled)
+    impedance = ask_yes_no("Controlled-impedance board (enable impedance table)?", impedance_enabled(kibot_text))
 
     plan = Plan()
 
@@ -978,9 +1243,11 @@ def plan_rename(plan, old_stem, new_stem):
             plan.write(path, new_text, f"project name {old_stem} -> {new_stem}")
 
 
-def action_manufacturing_notes(dry_run):
+def action_manufacturing_docs(dry_run):
     plan = Plan()
     review_manufacturing_notes(plan, ask_first=False)
+    review_impedance_table(plan, ask_first=False)
+    review_stackup(plan, releasing=False)
     commit(plan, dry_run)
 
 
@@ -1005,7 +1272,10 @@ def action_show():
 def action_check(fix=False, dry_run=False):
     text = read(KIBOT_MAIN)
     file_problems = project_file_problems()
-    problems = file_problems + lint(text)
+    defs = read_definitions(text)
+    fit_problems = [f"{key}: {err} Change it with 'Edit board info'." for key in TITLE_BLOCK_FIELDS
+                    if (err := validate_title_block(key, defs.get(key, "")))]
+    problems = file_problems + lint(text) + fit_problems
     if not problems:
         print("\nConfig OK - no problems found.")
         return True
@@ -1086,7 +1356,7 @@ def menu(dry_run):
         heading(f"{defs.get('PROJECT_NAME') or stem}  -  stage: {read_stage()}")
         print("  1. Change project stage (DRAFT / PRELIMINARY / CHECKED / RELEASED)\n"
               "  2. Edit board info (title, description, designer, revision...)\n"
-              "  3. Edit fabrication / assembly notes\n"
+              "  3. Review fab / assembly notes, impedance table, stackup\n"
               "  4. Show current settings\n"
               "  5. Check config for problems\n"
               "  q. Quit")
@@ -1097,7 +1367,7 @@ def menu(dry_run):
             elif choice == "2":
                 action_board_info(dry_run)
             elif choice == "3":
-                action_manufacturing_notes(dry_run)
+                action_manufacturing_docs(dry_run)
             elif choice == "4":
                 action_show()
             elif choice == "5":

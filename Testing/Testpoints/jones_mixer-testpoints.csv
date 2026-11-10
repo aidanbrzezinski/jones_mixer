@@ -5,3 +5,9 @@ TP3,/mixer/Vi2,Default,2.7500,15.2500,top,THRU,TestPoint,TestPoint_Keystone_5012
 TP4,/mixer/GND,Default,16.0000,29.0000,top,THRU,TestPoint,TestPoint_Keystone_5011
 TP5,/mixer/Vo,Default,16.0000,2.5000,top,THRU,TestPoint,TestPoint_Keystone_5012
 TP6,/mixer/Vi1,Default,2.7500,2.7500,top,THRU,TestPoint,TestPoint_Keystone_5012
+TP7,,,-140.0000,105.0000,top,SMT,TestPoint,TestPoint_Keystone_5010
+TP8,,,-140.0000,105.0000,top,SMT,TestPoint,TestPoint_Keystone_5010
+TP9,,,-140.0000,105.0000,top,SMT,TestPoint,TestPoint_Keystone_5012
+TP10,,,-140.0000,105.0000,top,SMT,TestPoint,TestPoint_Keystone_5011
+TP11,,,-140.0000,105.0000,top,SMT,TestPoint,TestPoint_Keystone_5012
+TP12,,,-140.0000,105.0000,top,SMT,TestPoint,TestPoint_Keystone_5012

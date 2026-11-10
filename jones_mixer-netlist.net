@@ -1,7 +1,7 @@
 (export
 	(version "E")
 	(design
-		(source "/tmp/tmp-kibot-net_sch_print-ixt4szyf/jones_mixer.kicad_sch")
+		(source "/tmp/tmp-kibot-net_sch_print-b40fblp1/jones_mixer.kicad_sch")
 		(date "Date")
 		(tool "Eeschema 10.0.5-unknown-202607221313~667fa36054~ubuntu25.10.1")
 		(textvar
@@ -17,14 +17,14 @@
 		(textvar
 			(name "DESCRIPTION") "Simple Jones Mixer.")
 		(textvar
-			(name "DESIGNER") "Aidan Brzezinski, Chloe LaBell, Andres Vega")
+			(name "DESIGNER") "A.B., C.B., A.V.")
 		(textvar
 			(name "FABRICATION_NOTES")
 		)
 		(textvar
 			(name "GIT_HASH_PCB") "e165eea")
 		(textvar
-			(name "GIT_HASH_SCH") "b9dc517")
+			(name "GIT_HASH_SCH") "0225f95")
 		(textvar
 			(name "GIT_URL") "https://github.com/aidanbrzezinski/jones_mixer")
 		(textvar
@@ -60,7 +60,7 @@
 		(textvar
 			(name "RELEASE_DATE_NUM") "2026-11-10")
 		(textvar
-			(name "RELEASE_TITLE_1") "Version 1.0.0 - 2026-11-10")
+			(name "RELEASE_TITLE_1") "Version 1.0.1 - 2026-11-10")
 		(textvar
 			(name "RELEASE_TITLE_1.0.0")
 		)
@@ -74,8 +74,7 @@
 			(name "RELEASE_TITLE_1.1.0")
 		)
 		(textvar
-			(name "RELEASE_TITLE_2")
-		)
+			(name "RELEASE_TITLE_2") "Version 1.0.0 - 2026-11-10")
 		(textvar
 			(name "RELEASE_TITLE_3")
 		)
@@ -85,7 +84,7 @@
 		(textvar
 			(name "RELEASE_TITLE_UNRELEASED") "Version Unreleased not found.")
 		(textvar
-			(name "REVISION") "1.0.0")
+			(name "REVISION") "1.0.1")
 		(textvar
 			(name "SHEET_NAME_1") "Cover Page")
 		(textvar
@@ -109,7 +108,7 @@
 		(textvar
 			(name "SHEET_NAME_19") "......................................")
 		(textvar
-			(name "SHEET_NAME_2") "......................................")
+			(name "SHEET_NAME_2") "mixer")
 		(textvar
 			(name "SHEET_NAME_20") "......................................")
 		(textvar
@@ -173,7 +172,7 @@
 			(title_block
 				(title)
 				(company "LTU")
-				(rev "1.0.0")
+				(rev "1.0.1")
 				(date "Date")
 				(source "jones_mixer.kicad_sch")
 				(comment
@@ -214,11 +213,2043 @@
 				)
 			)
 		)
+		(sheet
+			(number "2")
+			(name "/mixer/")
+			(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			(title_block
+				(title "Schematic")
+				(company "LTU")
+				(rev "1.0.1")
+				(date "Date")
+				(source "mixer.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
 	)
-	(components)
+	(components
+		(comp
+			(ref "C8")
+			(value "10uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(datasheet "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/658/CL10A106MA8NRNC_Spec.pdf")
+			(fields
+				(field
+					(name "MPN") "CL10A106MA8NRNC")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet") "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/658/CL10A106MA8NRNC_Spec.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL10A106MA8NRNC")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "fb3d382b-1d13-447f-b880-f4250e2f88df")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C9")
+			(value "10uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(datasheet "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/658/CL10A106MA8NRNC_Spec.pdf")
+			(fields
+				(field
+					(name "MPN") "CL10A106MA8NRNC")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet") "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/658/CL10A106MA8NRNC_Spec.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CL10A106MA8NRNC")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "3b9f5721-ac30-49a8-8c21-1bf3efff414e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C10")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(datasheet "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD")
+			(fields
+				(field
+					(name "MPN") "C0603C105K3RACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet") "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "C0603C105K3RACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "5717180c-ad51-49b8-bd48-881e351e428d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(datasheet "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD")
+			(fields
+				(field
+					(name "MPN") "C0603C105K3RACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet") "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "C0603C105K3RACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "324bc883-a802-49af-a84f-1bd8ad263e02")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12")
+			(value "0.1uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(datasheet "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V")
+			(fields
+				(field
+					(name "MPN") "CC0603KRX7R9BB104")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet") "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CC0603KRX7R9BB104")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "2e62979c-7d5b-4882-b576-67e52e805725")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C13")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(datasheet "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD")
+			(fields
+				(field
+					(name "MPN") "C0603C105K3RACTU")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet") "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "C0603C105K3RACTU")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "f7552c58-6bab-4a6f-a5ac-405764e7f228")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C14")
+			(value "0.1uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(datasheet "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V")
+			(fields
+				(field
+					(name "MPN") "CC0603KRX7R9BB104")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet") "https://yageogroup.com/content/datasheet/asset/file/UPY-GPHC_X7R_6_3V-TO-250V")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "CC0603KRX7R9BB104")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "e5ffb2a9-8458-435a-99d9-708cda126cac")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q4")
+			(value "NPN")
+			(footprint "Package_TO_SOT_SMD:SOT-23-3")
+			(datasheet "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf")
+			(description "Bipolar (BJT) Transistor NPN 40 V 200 mA 300MHz 300 mW Surface Mount SOT-23-3 (TO-236)")
+			(fields
+				(field
+					(name "MPN") "MMBT3904LT1G")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23-3")
+				(field
+					(name "Datasheet") "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf")
+				(field
+					(name "Description") "Bipolar (BJT) Transistor NPN 40 V 200 mA 300MHz 300 mW Surface Mount SOT-23-3 (TO-236)")
+			)
+			(libsource
+				(lib "Simulation_SPICE")
+				(part "NPN")
+				(description "Bipolar transistor symbol for simulation only, substrate tied to the emitter")
+			)
+			(property
+				(name "MPN")
+				(value "MMBT3904LT1G")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "simulation")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "bbd125b3-a24d-4944-9d77-6375809f66be")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q5")
+			(value "NPN")
+			(footprint "Package_TO_SOT_SMD:SOT-23-3")
+			(datasheet "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf")
+			(description "Bipolar (BJT) Transistor NPN 40 V 200 mA 300MHz 300 mW Surface Mount SOT-23-3 (TO-236)")
+			(fields
+				(field
+					(name "MPN") "MMBT3904LT1G")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23-3")
+				(field
+					(name "Datasheet") "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf")
+				(field
+					(name "Description") "Bipolar (BJT) Transistor NPN 40 V 200 mA 300MHz 300 mW Surface Mount SOT-23-3 (TO-236)")
+			)
+			(libsource
+				(lib "Simulation_SPICE")
+				(part "NPN")
+				(description "Bipolar transistor symbol for simulation only, substrate tied to the emitter")
+			)
+			(property
+				(name "MPN")
+				(value "MMBT3904LT1G")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "simulation")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "dd44b8ac-ef58-42cc-88a9-6b7843cf2f55")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q6")
+			(value "NPN")
+			(footprint "Package_TO_SOT_SMD:SOT-23-3")
+			(datasheet "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf")
+			(description "Bipolar (BJT) Transistor NPN 40 V 200 mA 300MHz 300 mW Surface Mount SOT-23-3 (TO-236)")
+			(fields
+				(field
+					(name "MPN") "MMBT3904LT1G")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23-3")
+				(field
+					(name "Datasheet") "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf")
+				(field
+					(name "Description") "Bipolar (BJT) Transistor NPN 40 V 200 mA 300MHz 300 mW Surface Mount SOT-23-3 (TO-236)")
+			)
+			(libsource
+				(lib "Simulation_SPICE")
+				(part "NPN")
+				(description "Bipolar transistor symbol for simulation only, substrate tied to the emitter")
+			)
+			(property
+				(name "MPN")
+				(value "MMBT3904LT1G")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "simulation")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "dd88f25d-efd2-4da5-9c45-a46e9155101f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R11")
+			(value "49.9k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AF0603FR-0749K9L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AF0603FR-0749K9L")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "9826f5de-98f7-4b8d-be38-6bffed3cc2de")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R12")
+			(value "49.9k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AF0603FR-0749K9L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AF0603FR-0749K9L")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "d6d17c9c-0fb9-4e42-b523-53791c102ef2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R13")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AC0603FR-0710KL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AC0603FR-0710KL")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "0dd30969-d72c-41a1-83bf-1c770de8b3d9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R14")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AC0603FR-0710KL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AC0603FR-0710KL")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "33900e9e-2e0f-4bae-99e4-1fb3011f67dc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R15")
+			(value "49.9k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AF0603FR-0749K9L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AF0603FR-0749K9L")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "c004f88d-cc1d-4737-92be-bbd1ceb19ab0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R16")
+			(value "49.9k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AF0603FR-0749K9L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AF0603FR-0749K9L")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "fce5ee1f-7c6e-403c-baa9-d6032bb6a720")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R17")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AC0603FR-0710KL")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AC0603FR-0710KL")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "f1b50b4c-4f76-4a33-9874-0a936ea37c7b")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R18")
+			(value "6.81k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "ERJ-3EKF6811V")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "ERJ-3EKF6811V")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "229ae26f-ef4d-47e3-a120-1eac331ce641")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R19")
+			(value "49.9k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "AF0603FR-0749K9L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "AF0603FR-0749K9L")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "ce6bbf64-bb2f-4830-9844-5c13ee5d9799")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R20")
+			(value "2.2k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "RC0603FR-072K2L")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R_US")
+				(description "Resistor, US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-072K2L")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "ca694eb0-0c4b-4f9b-90e1-20f4c69b7ad2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP7")
+			(value "TestPoint")
+			(footprint "misc:TestPoint_Keystone_5010")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint") "misc:TestPoint_Keystone_5010")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "eb4fffe1-5ae5-494a-a20a-bead4a052258")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP8")
+			(value "TestPoint")
+			(footprint "misc:TestPoint_Keystone_5010")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint") "misc:TestPoint_Keystone_5010")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "172920b7-cfe4-4baa-9db8-7bd73c4d1bcc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP9")
+			(value "TestPoint")
+			(footprint "misc:TestPoint_Keystone_5012")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint") "misc:TestPoint_Keystone_5012")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "366aec4c-953e-42b2-a593-a448c74c5a85")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP10")
+			(value "TestPoint")
+			(footprint "misc:TestPoint_Keystone_5011")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint") "misc:TestPoint_Keystone_5011")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "3c0e1fee-a37f-4509-8638-f5959c1e7f25")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP11")
+			(value "TestPoint")
+			(footprint "misc:TestPoint_Keystone_5012")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint") "misc:TestPoint_Keystone_5012")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "173107bb-5cc7-4bfe-9d8d-94bbf9fa783c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP12")
+			(value "TestPoint")
+			(footprint "misc:TestPoint_Keystone_5012")
+			(description "test point")
+			(fields
+				(field
+					(name "Footprint") "misc:TestPoint_Keystone_5012")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(libsource
+				(lib "Connector")
+				(part "TestPoint")
+				(description "test point")
+			)
+			(property
+				(name "Sheetname")
+				(value "mixer")
+			)
+			(property
+				(name "Sheetfile")
+				(value "mixer.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "test point tp")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Pin* Test*")
+			)
+			(sheetpath
+				(names "/mixer/")
+				(tstamps "/f49353b4-3b23-4991-ace3-1ececdc97875/")
+			)
+			(tstamps "7509c28d-7456-4d5d-bbf3-5e589e4b6036")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+	)
 	(groups)
 	(variants)
-	(libparts)
-	(libraries)
-	(nets)
+	(libparts
+		(libpart
+			(lib "Connector")
+			(part "TestPoint")
+			(description "test point")
+			(footprints
+				(fp "Pin*")
+				(fp "Test*")
+			)
+			(fields
+				(field
+					(name "Reference") "TP")
+				(field
+					(name "Value") "TestPoint")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "test point")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R_US")
+			(description "Resistor, US symbol")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R_US")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, US symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Simulation_SPICE")
+			(part "NPN")
+			(description "Bipolar transistor symbol for simulation only, substrate tied to the emitter")
+			(docs "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs")
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "NPN")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet") "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#cha_BJTs")
+				(field
+					(name "Description") "Bipolar transistor symbol for simulation only, substrate tied to the emitter")
+				(field
+					(name "Sim.Device") "NPN")
+				(field
+					(name "Sim.Type") "GUMMELPOON")
+				(field
+					(name "Sim.Pins") "1=C 2=B 3=E")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "C")
+					(type "open_collector")
+				)
+				(pin
+					(num "2")
+					(name "B")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "E")
+					(type "open_emitter")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Connector")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "Simulation_SPICE")
+			(uri "${KICAD10_SYMBOL_DIR}/Simulation_SPICE.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+5V")
+			(class "Default")
+			(node
+				(ref "C12")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C8")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R12")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R14")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R19")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "2")
+			(name "-5V")
+			(class "Default")
+			(node
+				(ref "C11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C9")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q5")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "input")
+			)
+			(node
+				(ref "R12")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R16")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "/mixer/Vi1")
+			(class "Default")
+			(node
+				(ref "C13")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP12")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/mixer/Vi2")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/mixer/Vo")
+			(class "Default")
+			(node
+				(ref "Q6")
+				(pin "1")
+				(pinfunction "C_1")
+				(pintype "open_collector")
+			)
+			(node
+				(ref "R17")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C8")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C9")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "Net-(C14-Pad2)")
+			(class "Default")
+			(node
+				(ref "C14")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R15")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R16")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R18")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R20")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "Net-(Q4-B)")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q4")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "input")
+			)
+			(node
+				(ref "R11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R15")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "Net-(Q4-C)")
+			(class "Default")
+			(node
+				(ref "Q4")
+				(pin "1")
+				(pinfunction "C_1")
+				(pintype "open_collector")
+			)
+			(node
+				(ref "R13")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "Net-(Q4-E)")
+			(class "Default")
+			(node
+				(ref "C12")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q4")
+				(pin "3")
+				(pinfunction "E_3")
+				(pintype "open_emitter")
+			)
+			(node
+				(ref "Q5")
+				(pin "3")
+				(pinfunction "E_3")
+				(pintype "open_emitter")
+			)
+			(node
+				(ref "R17")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "Net-(Q5-C)")
+			(class "Default")
+			(node
+				(ref "Q5")
+				(pin "1")
+				(pinfunction "C_1")
+				(pintype "open_collector")
+			)
+			(node
+				(ref "R14")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "Net-(Q6-B)")
+			(class "Default")
+			(node
+				(ref "C13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q6")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "input")
+			)
+			(node
+				(ref "R18")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R19")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "Net-(Q6-E)")
+			(class "Default")
+			(node
+				(ref "C14")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q6")
+				(pin "3")
+				(pinfunction "E_3")
+				(pintype "open_emitter")
+			)
+			(node
+				(ref "R20")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+	)
 )
