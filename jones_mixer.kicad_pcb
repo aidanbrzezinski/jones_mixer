@@ -114,7 +114,6 @@
 		)
 		(capping no)
 		(filling no)
-		(zone_defaults)
 		(aux_axis_origin 140 105)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
@@ -608,6 +607,12 @@
 		(path "/366aec4c-953e-42b2-a593-a448c74c5a85")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -2541,6 +2546,12 @@
 		(path "/324bc883-a802-49af-a84f-1bd8ad263e02")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4479,6 +4490,12 @@
 		(path "/5717180c-ad51-49b8-bd48-881e351e428d")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4999,6 +5016,12 @@
 		(path "/173107bb-5cc7-4bfe-9d8d-94bbf9fa783c")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -7081,6 +7104,12 @@
 		(path "/e5ffb2a9-8458-435a-99d9-708cda126cac")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8018,6 +8047,12 @@
 		(path "/fce5ee1f-7c6e-403c-baa9-d6032bb6a720")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8949,6 +8984,12 @@
 		(path "/9826f5de-98f7-4b8d-be38-6bffed3cc2de")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9825,6 +9866,12 @@
 		(path "/0dd30969-d72c-41a1-83bf-1c770de8b3d9")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10776,6 +10823,12 @@
 		(path "/ce6bbf64-bb2f-4830-9844-5c13ee5d9799")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11282,6 +11335,12 @@
 		(path "/eb4fffe1-5ae5-494a-a20a-bead4a052258")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -11777,6 +11836,12 @@
 		(path "/172920b7-cfe4-4baa-9db8-7bd73c4d1bcc")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -12708,6 +12773,12 @@
 		(path "/d6d17c9c-0fb9-4e42-b523-53791c102ef2")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13206,6 +13277,12 @@
 		(path "/3c0e1fee-a37f-4509-8638-f5959c1e7f25")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -15807,6 +15884,12 @@
 		(path "/dd88f25d-efd2-4da5-9c45-a46e9155101f")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "1" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16928,6 +17011,12 @@
 		(path "/229ae26f-ef4d-47e3-a120-1eac331ce641")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17857,6 +17946,12 @@
 		(path "/ca694eb0-0c4b-4f9b-90e1-20f4c69b7ad2")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18803,6 +18898,12 @@
 		(path "/c004f88d-cc1d-4737-92be-bbd1ceb19ab0")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19320,6 +19421,12 @@
 		(path "/7509c28d-7456-4d5d-bbf3-5e589e4b6036")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -21920,6 +22027,12 @@
 		(path "/bbd125b3-a24d-4944-9d77-6375809f66be")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "1" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24411,6 +24524,12 @@
 		(path "/3b9f5721-ac30-49a8-8c21-1bf3efff414e")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25282,6 +25401,12 @@
 		(path "/33900e9e-2e0f-4bae-99e4-1fb3011f67dc")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -27361,6 +27486,12 @@
 		(path "/2e62979c-7d5b-4882-b576-67e52e805725")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -28234,6 +28365,12 @@
 		(path "/f1b50b4c-4f76-4a33-9874-0a936ea37c7b")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -30170,6 +30307,12 @@
 		(path "/f7552c58-6bab-4a6f-a5ac-405764e7f228")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32437,6 +32580,12 @@
 		(path "/fb3d382b-1d13-447f-b880-f4250e2f88df")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35033,6 +35182,12 @@
 		(path "/dd44b8ac-ef58-42cc-88a9-6b7843cf2f55")
 		(sheetname "/mixer/")
 		(sheetfile "mixer.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "1" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -41471,6 +41626,30 @@
 			)
 		)
 	)
+	(segment
+		(start 149.975 89.25)
+		(end 143.25 89.25)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "/mixer/Vi2")
+		(uuid "ddc7fcd5-4f64-49bd-938a-d5e06c6d6ef4")
+	)
+	(segment
+		(start 150 89.275)
+		(end 149.975 89.25)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "/mixer/Vi2")
+		(uuid "f1c94c76-4039-493a-98a3-8e7e7bec8105")
+	)
+	(segment
+		(start 143.25 89.25)
+		(end 142.75 89.75)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "/mixer/Vi2")
+		(uuid "fdeb84b2-bc96-43e5-823c-a229be3d6f18")
+	)
 	(via
 		(at 148.6255 97.874214)
 		(size 0.55)
@@ -42608,6 +42787,38 @@
 		(uuid "c8707325-971e-48ee-8ae5-9b7c16db660a")
 	)
 	(segment
+		(start 156 91.6)
+		(end 156 92.5)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/mixer/Vo")
+		(uuid "61852d2d-a238-4562-9e4b-e767218c05c9")
+	)
+	(segment
+		(start 156 91.6)
+		(end 156 89.825)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "/mixer/Vo")
+		(uuid "64ecb3cd-8ddc-4322-93b3-3ab496d9e434")
+	)
+	(via
+		(at 156 92.5)
+		(size 0.55)
+		(drill 0.25)
+		(layers "F.Cu" "B.Cu")
+		(net "/mixer/Vo")
+		(uuid "858ac7c4-1a17-4445-8d43-f8c1f0500c16")
+	)
+	(segment
+		(start 156 92.5)
+		(end 156 102.5)
+		(width 0.3)
+		(layer "B.Cu")
+		(net "/mixer/Vo")
+		(uuid "4f02f8a8-ebec-49a1-8544-4760dfa85bef")
+	)
+	(segment
 		(start 160.175 93)
 		(end 159.925 93.25)
 		(width 0.3)
@@ -42888,6 +43099,30 @@
 		(uuid "eab25d68-f23d-40ad-91fd-ef92ae72a395")
 	)
 	(segment
+		(start 152 91.775)
+		(end 150.725 91.775)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "/mixer/Vi1")
+		(uuid "18bfd00c-e8e3-4dda-9b17-880d2e42e348")
+	)
+	(segment
+		(start 142.75 99.75)
+		(end 142.75 102.25)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "/mixer/Vi1")
+		(uuid "33f73269-60bb-4a8e-a115-bf673eb2d72c")
+	)
+	(segment
+		(start 150.725 91.775)
+		(end 142.75 99.75)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "/mixer/Vi1")
+		(uuid "52a5f061-92d9-4fd1-8d48-b970d20ae9fc")
+	)
+	(segment
 		(start 154.1375 86.75)
 		(end 157.8625 86.75)
 		(width 0.3)
@@ -42918,86 +43153,6 @@
 		(layer "F.Cu")
 		(net "Net-(Q2-C)")
 		(uuid "99ac3095-0709-4b99-ae4b-058918d53f77")
-	)
-	(segment
-		(start 149.975 89.25)
-		(end 143.25 89.25)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "/mixer/Vi2")
-		(uuid "ddc7fcd5-4f64-49bd-938a-d5e06c6d6ef4")
-	)
-	(segment
-		(start 150 89.275)
-		(end 149.975 89.25)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "/mixer/Vi2")
-		(uuid "f1c94c76-4039-493a-98a3-8e7e7bec8105")
-	)
-	(segment
-		(start 143.25 89.25)
-		(end 142.75 89.75)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "/mixer/Vi2")
-		(uuid "fdeb84b2-bc96-43e5-823c-a229be3d6f18")
-	)
-	(segment
-		(start 152 91.775)
-		(end 150.725 91.775)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "/mixer/Vi1")
-		(uuid "18bfd00c-e8e3-4dda-9b17-880d2e42e348")
-	)
-	(segment
-		(start 142.75 99.75)
-		(end 142.75 102.25)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "/mixer/Vi1")
-		(uuid "33f73269-60bb-4a8e-a115-bf673eb2d72c")
-	)
-	(segment
-		(start 150.725 91.775)
-		(end 142.75 99.75)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "/mixer/Vi1")
-		(uuid "52a5f061-92d9-4fd1-8d48-b970d20ae9fc")
-	)
-	(segment
-		(start 156 91.6)
-		(end 156 92.5)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/mixer/Vo")
-		(uuid "61852d2d-a238-4562-9e4b-e767218c05c9")
-	)
-	(segment
-		(start 156 91.6)
-		(end 156 89.825)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "/mixer/Vo")
-		(uuid "64ecb3cd-8ddc-4322-93b3-3ab496d9e434")
-	)
-	(via
-		(at 156 92.5)
-		(size 0.55)
-		(drill 0.25)
-		(layers "F.Cu" "B.Cu")
-		(net "/mixer/Vo")
-		(uuid "858ac7c4-1a17-4445-8d43-f8c1f0500c16")
-	)
-	(segment
-		(start 156 92.5)
-		(end 156 102.5)
-		(width 0.3)
-		(layer "B.Cu")
-		(net "/mixer/Vo")
-		(uuid "4f02f8a8-ebec-49a1-8544-4760dfa85bef")
 	)
 	(zone
 		(net "/mixer/+5V")

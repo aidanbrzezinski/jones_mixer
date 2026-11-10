@@ -8,7 +8,7 @@
 	(property "Reference" "REF**"
 		(at 0 -2.75 0)
 		(layer "F.SilkS")
-		(uuid "a7e06e67-7233-44ba-9a09-11d12094c482")
+		(uuid "52f3d9a1-8459-4af4-b522-a6b3e712cd79")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "TestPoint_Keystone_5012"
 		(at 0 2.75 0)
 		(layer "F.Fab")
-		(uuid "d1487a60-02a5-4512-9f31-bff7a2c1a3f5")
+		(uuid "272f2974-178c-4dd4-9c27-4a97eab44314")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "419393b3-d198-4dea-92c6-c696674eb93a")
+		(uuid "77473b19-2371-4640-a471-392313e53b8d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1a7e0a7f-43f2-4b50-bbea-e97310fd2cf7")
+		(uuid "d915d983-6880-47b7-95bd-4f14e3a5ca55")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -64,7 +64,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "0b4fb7cd-75d9-41e9-a0f7-d5798bc95512")
+		(uuid "a70c30fc-3671-494c-bf5a-8cd8d64ab154")
 	)
 	(fp_circle
 		(center 0 0)
@@ -75,7 +75,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "010508ff-8254-4cc3-ba41-e8f2940978e9")
+		(uuid "bf66c12d-9b1e-4c0d-a661-8c7811c97d82")
 	)
 	(fp_rect
 		(start -1.25 -0.4)
@@ -86,7 +86,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "75b4f9c7-ce93-44d9-84a2-df42d3b312d5")
+		(uuid "2d0358c9-4ff5-4999-98e6-659b55b9ac50")
 	)
 	(fp_circle
 		(center 0 0)
@@ -97,12 +97,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "8bcd9bb0-c7c5-43e9-a632-ae0d725423a9")
+		(uuid "7c3d6ee1-5d80-4b52-ad62-a2efcd5f90af")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "7faa81ff-4991-4ed3-9dac-b990ccf45e60")
+		(uuid "a845a14e-4ec3-4d1c-9ef8-91a1eba24371")
 		(effects
 			(font
 				(size 0.6 0.6)
@@ -116,7 +116,7 @@
 		(drill 1.6)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "c2753e82-6b42-4267-9fcc-3a81595a03a0")
+		(uuid "0b9981f6-20f5-436c-be12-c67f2c09bd92")
 	)
 	(embedded_fonts no)
 	(model "/home/aidan/Downloads/5012.STEP"

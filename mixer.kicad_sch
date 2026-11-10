@@ -4139,6 +4139,7 @@
 		)
 		(property "Footprint" "misc:TestPoint_Keystone_5010"
 			(at 139.7 55.88 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
